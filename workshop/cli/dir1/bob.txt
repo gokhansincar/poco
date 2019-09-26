@@ -1,0 +1,6 @@
+something inside bob.txt file
+salut ca va
+hey another line
+and one more line
+and one more
+
