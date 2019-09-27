@@ -1,5 +1,4 @@
 # poco
-just for looking
 # My really important ptoject
 By Sincar
 
