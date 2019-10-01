@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>CSS - border-radius</title>
+
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/prism.css">
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+	<style>
+		/* LAYOUT - COMMON
+			------------------------------------*/
+		.container {
+			display: flex;
+			margin-top: 1em;
+			padding: 2em;
+			background-color: #eee;
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			margin: 0 2em;
+			text-align: center;
+			font-size: 14px;
+			line-height: 100px;
+			color: #fff;
+			background-color: #333;
+		}
+
+
+		/* BORDER-RADIUS
+			------------------------------------*/
+		#radius-1 {
+			border-radius: 20px;
+		}
+
+		#radius-2 {
+			border-radius: 20% 0;
+		}
+
+		#radius-3 {
+			border-radius: 50%;
+		}
+
+		#radius-4 {
+			background: transparent;
+			color: #333;
+			border: solid 5px #333;
+			border-radius: 50%;
+		}
+
+		#radius-5 {
+			border-radius: 5% 10px 20px 5px;
+		}
+
+		#radius-6 {
+			border-radius: 40px 20% / 40px 20px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<main>
+
+		<article>
+
+			<header>
+				<h1>CSS - border-radius</h1>
+			</header>
+			<p>The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single
+				radius to make circular corners, or two radii to make elliptical corners.</p>
+				<cite class="B">border-top-left-radius | border-top-right-radius | border-bottom-right-radius |
+				border-bottom-left-radius</cite>
+
+			<!-- EXEMPLES -->
+			<section>
+				<h2>Examples</h2>
+
+				<div id="c1" class="container">
+					<div class="box" id="radius-1">#radius-1</div>
+					<div class="box" id="radius-2">#radius-2</div>
+					<div class="box" id="radius-3">#radius-3</div>
+					<div class="box" id="radius-4">#radius-4</div>
+					<div class="box" id="radius-5">#radius-5</div>
+					<div class="box" id="radius-6">#radius-6</div>
+				</div>
+
+				<pre><code class="language-css">
+					#radius-1 {
+						border-radius: 20px;
+					}
+
+					#radius-2 {
+						border-radius: 20% 0;
+					}
+
+					#radius-3 {
+						border-radius: 50%;
+					}
+
+					#radius-4 {
+						background: transparent;
+						color: #333;
+						border: solid 5px #333;
+						border-radius: 50%;
+					}
+
+					#radius-5 {
+						border-radius: 5% 10px 20px 5px;
+					}
+
+					#radius-6 {
+						border-radius: 40px 20% / 40px 20px;
+					}
+					</code></pre>
+			</section>
+
+			<section>
+				<h2>Compatibility with old browsers</h2>
+
+				<pre><code class="language-css">
+					#radius-1 {
+						-webkit-border-radius: 20px;
+						-moz-border-radius: 20px;
+						border-radius: 20px;
+					}
+					</code></pre>
+			</section>
+
+		</article>
+
+	</main>
+
+
+	<footer>
+		<p><a href="https://developer.mozilla.org/docs/Web/CSS/border-radius" target="_blank">MDN - border-radius</a></p>
+		<p><a href="https://cssgenerator.org/border-radius-css-generator.html" target="_blank">MDN - Border Radius CSS
+				Generator</a></p>
+	</footer>
+
+	<script src="https://poco.squarelabel.com/assets/common/prism.js"></script>
+</body>
+
+</html>

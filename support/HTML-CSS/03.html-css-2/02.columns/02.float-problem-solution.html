@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Le problème du float</title>
+
+  <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+  <style>
+
+    /* GLOBAL - facultatif */
+    * {
+      margin: 0;
+      padding: 0;
+      font: normal 18px/1.4 sans-serif;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+
+
+    /* LAYOUT */
+    header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    main {
+      width: 80%;
+      margin: 0 auto;
+      background-color: #dcffff;
+    }
+
+    article {
+      float: left;
+      width: 60%;
+      background-color: #aa0;
+    }
+
+    aside {
+      float: right;
+      width: 30%;
+      min-height: 300px;
+      background-color: #ee3;
+    }
+
+    footer {
+      *clear: both; /* marche partiellement... */
+      text-align: center;
+      background-color: #fc0;
+      margin-top: 2em;
+    }
+
+    /* THE SOLUTION - Take out the comments below to see it... */
+    /*
+    main:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    */
+
+  </style>
+
+</head>
+
+<body>
+
+
+  <header>
+    <h1>The float problem</h1>
+  </header>
+
+  <main>
+
+    <article>
+      <h2>The article</h2>
+      <p>
+        Donec vestibulum sem eget nibh tristique dapibus. Cras non erat vel dolor euismod mattis. Etiam placerat feugiat lorem sit amet iaculis. Vestibulum pellentesque ornare quam, at posuere leo egestas ac. Praesent posuere rutrum ante, ac eleifend ligula tristique sed. Etiam id dolor finibus arcu tempus luctus. Mauris interdum porta leo in eleifend. Proin ac justo mi. Mauris eu justo eros. Aliquam eget sagittis lorem. Pellentesque id ex pharetra, mollis dui egestas, varius nisi. Suspendisse potenti. Suspendisse et laoreet dolor. Suspendisse elementum ex turpis, in laoreet tortor venenatis non.
+
+        In hac habitasse platea dictumst. Pellentesque commodo, libero quis aliquet pulvinar, massa purus dictum dolor, eget vulputate nunc nunc vitae justo. Phasellus convallis et erat vel feugiat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus eget pellentesque sapien, et volutpat quam. Sed dictum, dui at tristique tempor, nisl felis tempor tellus, quis commodo mi sem vel ipsum. Mauris laoreet felis viverra augue mollis, id ullamcorper metus ullamcorper. Fusce faucibus, risus nec molestie ultricies, quam est elementum erat, et eleifend orci sem vitae quam. Vivamus pulvinar dui ultrices leo consectetur, eu maximus dolor aliquam. Morbi vitae vehicula erat. Fusce eleifend auctor pharetra. Sed vulputate nisi ut nunc semper viverra. Cras fringilla mollis sapien congue condimentum. Sed placerat nunc enim, a consequat odio pellentesque ut.
+      </p>
+    </article>
+
+    <aside>
+      <h2>The aside</h2>
+      <p>Some item</p>
+      <p>Some other item</p>
+    </aside>
+
+    <!-- 
+      CLEAR THE FLOAT HERE !
+      Clear the float AFTER the last "float-ed" element
+
+      The best is => main:after {...} who will insert a
+       "pseudo element" IN the "main" tag after all the content
+    -->
+
+
+  </main>
+
+
+  <footer>
+    <h2>The footer</h2>
+    <p>voir <a href="https://css-tricks.com/all-about-floats/" target="_blank">All about floats</a></p>
+    <p>voir <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float" target="_blank">MDN - float</a></p>
+  </footer>
+
+</body>
+</html>

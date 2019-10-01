@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="hex-10" width="250" height="288.7">
+  <path fill="#ec671d" d="M249.8 216.7l-124.6 71.8L.8 216.7V72.8L125.3 1l124.6 71.9z"/>
+  <path fill="#010202" d="M1 216V72.6L125 1.3l124 71.5V216l-124 71.6L1 216m-1 .6l125 72.2 125-72.2V72.2L125 0 0 72.2z"/>
+  <path fill="none" stroke="#010202" stroke-miterlimit="10" stroke-width="5" d="M187.6 36.7l-62.4 107.9H1M125.2 144.6L61.6 37.8"/>
+</svg>

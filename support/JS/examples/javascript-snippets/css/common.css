@@ -1,0 +1,76 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Mettre Box Sizing "border-box" par défaut */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+a:hover {
+  color: #5d79ea;
+}
+
+img {
+  display: block;
+}
+
+
+/* FORMATAGE GLOBAL
+---------------------------------------*/
+html {
+  font-size: 18px;
+}
+body {
+  font: 300 1em/1.5 "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1;
+}
+h2 {
+  font-size: 1.5em;
+}
+h1, h2 {
+  margin-bottom: .5em;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* EN COMMUN */
+.max-800 {
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+
+
+/* LAYOUT
+---------------------------------------*/
+footer {
+  padding: 3em;
+  border-top: solid 1px #eee;
+  text-align: center;
+}

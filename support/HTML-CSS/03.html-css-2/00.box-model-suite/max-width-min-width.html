@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS - max and min width/height</title>
+		
+		<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+		<style>
+			html {
+				box-sizing: border-box;
+				font-size: 16px;
+			}
+			body {
+				font-family: sans-serif;
+				line-height: 1.5;
+				text-align: center;
+			}
+
+			/* Common */
+			section {
+				margin-bottom: 5em;
+			}
+			div {
+				min-height: 200px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				margin: 1em auto 0;
+				background-color: #fc0;
+			}
+			h2 {
+				margin: 0;
+			}
+
+			/* max-width */
+			.max-width {
+				width: 90%;
+				max-width: 800px;
+			}
+
+			/* min-width */
+			.min-width {
+				width: 50%;
+				min-width: 600px;
+			}
+
+			/* min-height */
+			.min-height {
+				width: 90%;
+				min-height: 400px;
+			}
+
+			.forced-height {
+				display: block;
+				width: 60%;
+				height: 200px;
+				overflow: auto;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1>CSS - max and min width/height</h1>
+
+		<article>
+
+			<section>
+				<h2>max-width</h2>
+				<div class="max-width">width: 90%<strong>, max-width: 800px</strong></div>
+			</section>
+
+
+			<section>
+				<h2>min-width</h2>
+				<div class="min-width">width: 50%<strong>, min-width: 600px</strong></div>
+			</section>
+
+
+			<section>
+				<h2>min-height</h2>
+				<div class="min-height">width: 90%<strong>, min-height: 400px</strong></div>
+			</section>
+
+			<section>
+				<h2>"Forcing" height and overflow...</h2>
+				<div class="forced-height">
+					<p class="MT-2"><strong>height: 200px; overflow: auto;</strong></p>
+					<p class="MT-1">Sint ut natus at praesentium. Voluptatem ipsa excepturi pariatur dolores provident earum est architecto. Aut ducimus reiciendis vitae laborum. Veritatis voluptates quidem culpa incidunt ab est.</p>
+ 
+					<p>Voluptate placeat autem a expedita ea est aut pariatur nobis. Sint ut possimus delectus repellendus fugit dicta. Sit sint cumque. Officia voluptates eum ut. Et nemo qui laudantium alias ducimus atque qui aut error.</p>
+ 
+					<p>Nihil aut occaecati voluptatem quasi sint est ipsum. Itaque sint incidunt. Voluptatem quis saepe beatae sit harum. Quo numquam quod modi commodi at sint ut. Officiis cupiditate nobis consectetur qui dolorum rerum.</p>
+
+					<p>Omnis dolorem fugit animi et sunt. Sint sed est aut ipsam mollitia et qui tempore. Asperiores sapiente ut aut laboriosam voluptatem exercitationem modi et qui.</p>
+				</div>
+			</section>
+
+		</article>
+
+
+		<footer>
+			<p><a href="https://developer.mozilla.org/docs/Web/CSS/max-width" target="_blank">MDN - max-width</a></p>
+			<p><a href="hhttps://developer.mozilla.org/docs/Web/CSS/min-width" target="_blank">MDN - min-width</a></p>
+		</footer>
+
+	</body>
+</html>

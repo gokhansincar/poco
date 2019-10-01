@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS - Change the display type</title>
+
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+	<style>
+	
+		/*COMMON*/
+
+		section p{ background: #fc0; padding: .5em; }
+
+		/* bloc => inline */
+		#s1 p {
+			display: inline;
+			margin-top: 2em; /*will not work on inline elements*/
+		}
+
+		/* bloc => inline-block */
+		#s2 p {
+			display: inline-block;
+			margin-top: 2em;
+		}
+
+		/* inline => block */
+		#s3 a {
+			display: block;
+
+			padding: 2em;
+			font-size: 2em;
+			text-decoration: none;
+			text-align: center;
+			color: black;
+			background: #fc0;
+			transition: background-color, .4s ease;
+		}
+		#s3 a:hover {
+			background: #0cf;
+		}
+
+		/* inline => flex */
+		#s4 div {
+			display: flex;
+  		justify-content: space-between;
+		}
+
+		#s4 div span {
+			padding: 1em;
+			background: #fc0;
+		}
+	</style>
+</head>
+<body>
+
+	<article>
+
+		<header>
+			<h1>CSS - Change the display type</h1>
+			<p class="MT-1">We can convert all html elements default display into other types with "display" property</p>
+		</header>
+
+		<section id="s1">
+			<h2>Change "block" into "inline"</h2>
+			
+			<p>An inline paragraph !</p>
+			<p>Another inline paragraph !</p>
+		</section>
+
+		<section id="s2">
+			<h2>Change "block" into "inline-block"</h2>
+			
+			<p>An inline-block paragraph !</p>
+			<p>Another inline-block paragraph !</p>
+		</section>
+
+		<section id="s3">
+			<h2>Change "inline" into "block"</h2>
+			
+			<a href="#">A block link. Convenient when you want a big button !</a>
+		</section>
+
+		<section id="s4">
+			<h2>Change everything into "flex" !</h2>
+			
+			<div id="flex-baby">
+				<span>A span</span> <span> + </span> <span>another span</span> <span> flex baby !</span>
+			</div>
+		</section>
+
+	</article>
+
+
+</body>
+</html>

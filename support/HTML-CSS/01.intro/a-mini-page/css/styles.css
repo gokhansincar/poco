@@ -1,0 +1,130 @@
+/* GLOBAL RESET
+ * Ici on met tout à zéro (reset)
+ * Bien sûr, si vous n'avez pas un reset externe
+------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* COMMON
+ * Valeurs communes et formatage de base
+------------------------------------------------*/
+body {
+  font: 300 16px/1.5 "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+  font-family: Merriweather, serif;
+  line-height: 1;
+  margin-bottom: .2em;
+}
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.5em;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+/* LAYOUT
+ * Dimenssions et positionnement des choses
+------------------------------------------------*/
+/* HEADER 
+........................*/
+header {
+	background-image: url(../img/header.jpg); /* regardez bien le lien vers l'image */
+	background-repeat: no-repeat;
+	background-position: center bottom; /* x, y */
+	background-size: cover; /* pour voir l'image en entier */
+
+	/* shortcut equivalent: 
+	background: url(../img/header.jpg) no-repeat center bottom / cover;
+	*/
+}
+header h1 {
+	text-align: center;
+	padding: 1.5em 0;
+}
+
+
+/* NAV
+........................*/
+nav {
+	background-color: rgba(255, 255, 255, .4); /* a = alpha, transparence de 0 à 1 */
+	text-align: center;
+}
+
+nav ul li {
+	display: inline-block; /* bouge les menus sur l'horizontale; défaut = block*/
+}
+
+nav ul li a {
+	display: block; /* pour que le lien soit cliquable en dehors du texte; default = inline */
+	padding: 1em 2em;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: 400;
+	color: #000;
+}
+nav ul li a:hover, .active {
+	border-bottom: solid 5px #333; /* survol et menu actif */
+}
+
+
+/* MAIN
+........................*/
+main {
+	display: flex; /* magic ! Fait automatiquement des colonnes avec ses enfants */
+	width: 80%;
+	padding: 3%;
+	margin: 0 auto;
+}
+
+/* Article */
+main article {
+	flex: 3;  /* magic ! Proportion 3/4 (75%) */
+	padding: 2%;
+	margin-right: 4%;
+}
+
+/* Section */
+main section {
+	margin: 2em 0;
+}
+
+/* Aside */
+main aside {
+	flex: 1;  /* magic ! Proportion 1/4 (25%) */
+	padding: 2%;
+	background-color: #f5f5f5;
+}
+main aside a {
+	line-height: 2;
+}
+main aside a:hover {
+	text-decoration: underline; /* ligne du bas en survol */
+}
+
+
+/* FOOTER 
+........................*/
+footer {
+	text-align: center;
+	padding: 4em 0;
+	border-top: solid 1px #e5e5e5;
+}

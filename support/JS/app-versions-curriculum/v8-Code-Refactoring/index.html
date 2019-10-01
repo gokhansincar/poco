@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Todo APP - v8</title>
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+
+	<body>
+
+		<main class="manual-input">
+
+			<h1>Todo List</h1>
+			<h2>Please open the console to see your list...</h2>
+
+			<!-- TOGGLE ALL TODOs -->
+			<div class="row">
+				<button onclick="handlers.toggleAll()" class="M0">Toggle All</button>
+			</div>
+
+			<!-- TOGGLE TODO -->
+			<div class="row">
+				<input class="index" id="toggleCompletedPositionInput" type="number" min="0" placeholder="Index..."></input>
+				<button onclick="handlers.toggleCompleted()" class="M0">Toggle Item</button>
+			</div>
+
+			<!-- ADD TODO -->
+			<div class="row">
+				<input class="text long" id="addTodoTextInput" type="text" placeholder="Text...">
+				<button onclick="handlers.addTodo()">Add Todo</button>
+			</div>
+	
+			<!-- CHANGE TODO -->
+			<div class="row">
+				<input class="index" id="changeTodoPositionInput" type="number" min="0" placeholder="Index..."></input>
+				<input class="text" id="changeTodoTextInput" type="text" placeholder="Text..."></input>
+				<button onclick="handlers.changeTodo()">Change Todo</button>
+			</div>
+	
+			<!-- DELETE TODO -->
+			<div class="row">
+				<input class="index" id="deleteTodoPositionInput" type="number" min="0" placeholder="Index..."></input>
+				<button onclick="handlers.deleteTodo()" class="M0">Delete Todo</button>
+			</div>
+
+		</main>
+
+		<script src="scripts.js"></script>
+	</body>
+
+</html>

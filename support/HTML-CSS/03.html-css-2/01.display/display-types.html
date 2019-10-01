@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS - The display property</title>
+
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+	<style>
+		/* COMMON */
+		h1, h2 {  margin: 0; }
+		h1 { font-size: 2em; }
+		hr { margin:2em 0; }
+		ul { list-style-type:disc; list-style-position: inside; margin: 0 0 0 2em; }
+		cite { display: inline-block; }
+
+		/* BLOCK */
+		.block {
+			background: #fc0;
+		}
+
+		/* INLINE */
+		.inline {
+			background: #fcc;
+		}
+
+		/* INLINE-BLOCK */
+		.inline-block {
+			background: #eaa;
+			padding: 5px 10px;
+		}
+
+		/* NONE */
+		.none {
+			display: none;
+		}
+
+		/* FLEX*/
+		.flex {
+	  	display: flex;
+	  	flex-flow: row wrap;
+	  	justify-content: space-between;
+
+	    background: #f5f5f5;
+	    margin-top: 20px;
+		}
+		.flex li {
+			list-style: none;
+
+			width: 30%;
+			min-height: 4em;
+			line-height: 3.7em;
+			
+			background: tomato;
+			color: white;
+
+			font-weight: bold;
+			font-size: 3em;
+			text-align: center;
+		}
+
+		/* Classes */
+		.example { margin: 1rem 0 .5rem 0; }
+		.margin-left { margin-left: 1em; }
+		.margin-top { margin-top: 1em; }
+		.margin-bottom { margin: .2em 0 1em; font-weight: 400; color: #1d70c4 }
+
+	</style>
+
+</head>
+<body>
+
+	<article>
+
+		<header>
+			<h1>CSS - The display property</h1>
+			<p>The display property defines the type of box used for rendering an element.</p>
+		</header>
+
+
+		<section>
+			<h2>display: block</h2>
+			<p class="margin-bottom">A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).</p>
+			<p>BY DEFAULT...</p>
+			<ul>
+				<li>I have a width of "100%"</li>
+				<li>I have a height of "auto" (text line height)</li>
+				<li>I'm invisible without content</li>
+				<li>
+					common tags: <cite>article, aside, div, figure, footer, h1(etc), header, hr, main, nav, p, ul, section, table</cite> (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements" target="_blank">see all</a>)
+				</li>
+			</ul>
+
+			<div class="block example">I am a text in a block box</div>
+		</section>
+
+
+		<section>
+			<h2>display: inline</h2>
+			<p class="margin-bottom">An inline element does not start on a new line and only takes up as much width as necessary.</p>
+			<p>BY DEFAULT...</p>
+			<ul>
+				<li>I have a width "auto" (width of the text)</li>
+				<li>I have a height "auto" (text height)</li>
+				<li>I am invisible without content</li>
+				<li>
+					common tags: <cite>a, b, cite, code, em, img, span, strong</cite> (<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements#Elements" target="_blank">see all</a>)
+				</li>
+			</ul>
+
+			<p class="example">
+				I am a text in a paragraph. <span class="inline">Me too, but in a span tag.</span>
+				Often used to highlight a <strong>word</strong>, <a href="#">a link</a>, or to display an image like this... <img src="https://wattsupwiththat.files.wordpress.com/2015/11/bill_gates.jpg?w=50&h=50&crop=1" alt="a small bill gates picture">
+			</p>
+		</section>
+
+
+		<section>
+			<h2>display: inline-block</h2>
+			<p class="margin-bottom">
+				A box element that "flows" into the surrounding content as if it were an inline element.
+				A hybrid between a block and inline element ...
+			</p>
+
+			<p class="example">
+				<span class="inline-block">Online too but I can have a padding</span> <span class="inline-block margin-left">and a "margin", rather cool.</span>
+			</p>
+		</section>
+
+
+		<section>
+			<h2>display: flex</h2>
+			<p class="margin-bottom">The flex CSS property sets how a flex item will grow or shrink to fit the space available in its flex container.</p>
+
+			<ul class="flex example">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</section>
+
+
+		<section>
+			<h2>display: none</h2>
+			<p class="margin-bottom">The element is present in the code but invisible.</p>
+
+			<p class="none">I'm here!!! Someone can hear me ?</p>
+		</section>
+
+	</article>
+
+	
+	<footer>
+		<p><a href="https://developer.mozilla.org/docs/Web/CSS/display" target="_blank">MDN - display</a></p>
+		<p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS Tricks - A Complete Guide to Flexbox</a></p>
+	</footer>
+</body>
+</html>

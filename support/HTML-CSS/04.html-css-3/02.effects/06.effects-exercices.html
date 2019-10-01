@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>CSS - Effects training</title>
+
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+	<style>
+		/* LAYOUT - COMMON
+		------------------------------------*/
+    .container {
+      background: #EAEAEA;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+    }
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    #box-shadow .box {
+      min-width: 350px;
+      min-height: 120px;
+      background-color: #ced7ef;
+    }
+    #border-radius .box {
+      min-width: 285px;
+      min-height: 215px;
+      background-color: #5B6DCD;
+      color: #fff;
+    }
+
+    #text-shadow .box {
+      min-width: 285px;
+      min-height: 215px;
+      padding: 1.2rem;
+      font-size: 6em;
+      font-weight: 700;
+      background-color: #fff;
+    }
+    #text-shadow .box:first-child {
+      background-color: #6BFBFB;
+      color: #fff;
+    }
+    #text-shadow .box:last-child {
+      background-color: #9B2D1E;
+      color: #fff;
+    }
+
+    img {
+      display: block;
+      width: 33.33333%;
+      max-width: 380px;
+      height: auto;;
+    }
+    #border-radius img {
+      max-width: 284px;
+    }
+
+    /* ↓↓↓ YOUR STYLES HERE ↓↓↓
+    ------------------------------------*/
+	</style>
+
+</head>
+
+<body>
+
+	<main>
+
+		<article>
+
+			<header>
+        <h1>CSS - Effects training</h1>
+        <h2>Try to reproduce the effects you see in the images</h2>
+			</header>
+
+			<!-- EXEMPLES -->
+			<section id="box-shadow">
+				<h2>Box Shadow</h2>
+
+        <div class="container AC">
+          <img src="img/box-shadow-1.png" alt="box-shadow-1">
+          <img src="img/box-shadow-2.png" alt="box-shadow-2">
+          <img src="img/box-shadow-3.png" alt="box-shadow-3">
+        </div>
+
+				<div class="container MT-2 AC">
+					<div class="box" id="shadow-1">box-shadow-1</div>
+					<div class="box" id="shadow-2">box-shadow-2</div>
+					<div class="box" id="shadow-3">box-shadow-3</div>
+				</div>
+
+			</section>
+
+
+			<section id="border-radius">
+				<h2>Border Radius</h2>
+
+        <div class="container AC">
+          <img src="img/border-radius-1.png" alt="border-radius-1">
+          <img src="img/border-radius-2.png" alt="border-radius-2">
+          <img src="img/border-radius-3.png" alt="border-radius-3">
+        </div>
+
+				<div class="container MT-2 AC">
+					<div class="box" id="radius-1">border-radius-1</div>
+					<div class="box" id="radius-2">border-radius-2</div>
+					<div class="box" id="radius-3">border-radius-3</div>
+				</div>
+      </section>
+      
+
+      <section id="text-shadow">
+        <h2>Text Shadow</h2>
+
+        <div class="container AC">
+          <img src="img/text-shadow-1.png" alt="text-shadow-1">
+          <img src="img/text-shadow-2.png" alt="text-shadow-2">
+          <img src="img/text-shadow-3.png" alt="text-shadow-3">
+        </div>
+
+        <div class="container MT-2 AC">
+          <div class="box" id="text-1">IPSUM</div>
+          <div class="box" id="text-2">IPSUM</div>
+          <div class="box" id="text-3">IPSUM</div>
+        </div>
+      </section>
+
+		</article>
+
+	</main>
+
+</body>
+
+</html>

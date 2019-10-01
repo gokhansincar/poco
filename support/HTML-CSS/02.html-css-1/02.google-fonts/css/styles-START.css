@@ -1,0 +1,86 @@
+/* FORMATAGE GLOBAL
+---------------------------------------*/
+::selection {
+  background: #46485c; /* WebKit/Blink Browsers */
+  color: #f5f5f5;
+}
+::-moz-selection {
+  background: #46485c; /* Gecko Browsers */
+  color: #f5f5f5;
+}
+
+html {
+  font-size: 24px;
+}
+
+body {
+  font: 400 1em/1.5 "ICI VOTRE FAMILLE DE POLICES";
+  margin: 2em 5%;
+}
+
+h1 {
+  font-family: "VOTRE POLICE POUR H1", serif;
+  font-size: 3em;
+}
+h1::selection {
+  background: #a8d1ff;
+  color: #1f4077;
+}
+h1::-moz-selection {
+  background: #a8d1ff;
+  color: #1f4077;
+}
+
+h2 {
+  font-family: "VOTRE POLICE POUR H2", serif;
+  font-size: 1.3em;
+  margin-top: 1em;
+  color: #0d75cb;
+}
+
+p {
+  margin-bottom: 2em;
+}
+
+
+/* FONT CLASSES
+---------------------------------------*/
+/*Familly*/
+.police-serif {
+  font-family: "VOTRE POLICE SERIF", serif;
+}
+.police-sans-serif {
+  font-family: "VOTRE POLICE SANS-SERIF", sans-serif;
+}
+
+/*Weight*/
+.light {
+  font-weight: 300;
+}
+.normal {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
+}
+
+/*Style*/
+.italic {
+  font-style: italic;
+}
+
+/* Interlettrage */
+.font-space-small {
+  letter-spacing: 0.01em;
+}
+.font-space-big {
+  letter-spacing: 0.1em;
+}
+
+/* Espacement mots */
+.word-space-small {
+  word-spacing: 0.1em;
+}
+.word-space-big {
+  word-spacing: 1em;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Units of measurement in CSS</title>
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/prism.css">
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+</head>
+
+<body>
+
+	<h1>Units of measurement in CSS</h1>
+
+	<h2 class="MT-2">Relative units</h2>
+
+	<!-- em -->
+	<h3 class="FS-2 B">em</h3>
+	<p>
+		Represents the inherited <em>font size</em> of the nearest parent element.<br>
+		The <em>line-height, font-size, margin-bottom, and margin-top</em> CSS properties are often expressed in <strong>em</strong>.<br>
+		We read it "M's" as it cames from traditional typography letter "M".
+	</p>
+	<pre><code class="language-css">
+		html {
+			font-size: 20px;
+		}
+
+		html p {
+			width: 20em;		/* => 400px; */
+			font-size: 1em;		/* => 20px */
+			line-height: 1.5em;	/* => 30px */
+
+			margin-top: 1em;	/* => 20px; */
+			padding: 2em;		/* => 40px around the text; */
+		}
+	</code></pre>
+		<p>The code above will give us: </p>
+		<p style="width: 20em; font-size: 1em; line-height: 1.5; margin-top: 1em; padding: 2em; background-color: #fc0;">
+			Lorem Ipsum M
+		</p>
+
+
+
+	<!-- rem -->
+	<h3 class="MT-3"><span class="FS-2 B">rem</span> (root-em)</h3>
+	<p>represents the font-size of the root element (wich is the <strong>html</strong> element)</p>
+	<pre><code class="language-css">
+		html {
+			font-size: 20px;
+		}
+
+		div {
+			font-size: 12px;
+		}
+
+		div p {
+			font-size: <strong>1rem</strong>;	=> 20px
+		}
+	</code></pre>
+
+	<div style="font-size: 12px; background-color: #fc0;">
+		Some div text (12px	)
+		<p style="font-size: 1rem; line-height: 1; padding: 2rem;">
+			Lorem Ipsum <strong style="font-size: 1rem">M</strong>
+		</p>
+	</div>
+
+
+
+	<h2 class="MT-3">Proportional units</h2>
+
+	<!-- % -->
+	<h3>%</h3>
+	<p>Relative to the size of the parent element</p>
+	<pre><code class="language-css">
+		div {
+			width: 800px;
+		}
+		div p {
+			width: 50%;		=> 400px
+		}
+	</code></pre>
+
+	<div style="width: 800px; background: #fc0;">
+		<p style="width: 50%; background: #f5f5f5;">Texte dans un paragraphe</p>
+	</div>
+
+
+
+		<h2>Absolute units</h2>
+
+	<!-- % -->
+	<h3>px</h3>
+	<p>
+		For on-screen display, typically corresponds to one pixel of the display<br>
+		For high-resolution screens and printers, a CSS pixel corresponds to several pixels of the device, 
+		so the number of pixels per inch (ppi) stays around 96 (!)
+	</p>
+	<pre><code class="language-css">
+		div 1 {
+			width: 200px;
+			height: 50px;
+		}
+		div 2 {
+			width: 800px;
+			height: 50px;
+		}
+	</code></pre>
+
+	<div style="width: 200px; height: 50px; background: #f00;"></div>
+	<div style="width: 800px; height: 50px; background: #fc0;"></div>
+
+
+	<footer>
+		<h3>See more...</h3>
+		<p><a href="https://kyleschaeffer.com/css-font-size-em-vs-px-vs-pt-vs-percent" target="_blank">CSS Font-Size: em vs. px vs. pt vs. percent</a></p>
+		<p><a href="https://alistapart.com/article/howtosizetextincss" target="_blank">How to Size Text in CSS</a></p>
+		<p><a href="http://pxtoem.com/" target="_blank">pxtoem - PX to EM conversion made simple.</a></p>
+		<p><a href="https://mydevice.io/devices/" target="_blank">mydevice.io - Mobile devices CSS size</a></p>
+
+	</footer>
+
+	<script src="https://poco.squarelabel.com/assets/common/prism.js"></script>
+</body>
+
+</html>

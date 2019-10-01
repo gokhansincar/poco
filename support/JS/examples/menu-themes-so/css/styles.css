@@ -1,0 +1,368 @@
+/* RESET
+----------------------------------------------------*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Mettre Box Sizing "border-box" par défaut */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Les liens par défaut */
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+a:hover {
+  color: #5d79ea;
+}
+
+/* Conversion display images pour éliminer les espaces autour */
+img {
+  display: block;
+}
+
+
+/* FOR DEVICES < 575px
+----------------------------------------------------*/
+/* GLOBAL
+------------------------------------------------*/
+html {
+  font-size: 18px; /* utile si on a besoin d'utiliser cette taille comme référence avec 1rem - root em */
+}
+body {
+  font: 300 1em/1.5 "Roboto", sans-serif; /* 1em = 18px */
+}
+
+
+
+/* HEADER
+------------------------------------------------*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 80px;
+  padding: 0 3%;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
+/* LOGO (balise figure)
+------------------------------------------------*/
+#logo {
+  width: 50px;
+}
+#logo img {
+  width: 100%;
+}
+
+
+/* Positionement Logo/Nav en fonction du theme
+------------------------------------------------*/
+#theme-nav-right {
+  /* par défaut, rien à faire */
+}
+#theme-nav-left {
+  flex-direction: row-reverse; /* renverse les éléments ! */
+}
+
+
+/* MOBILE NAV
+------------------------------------------------*/
+/* Open/Close - Common
+----------------------------*/
+#hamburger, nav #close {
+  display: block;
+}
+
+
+/* Hamburger Menu
+----------------------------*/
+#hamburger {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+
+  /* parce qu'on utilise du text... */
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.4;
+}
+
+
+/* CLOSE NAV
+----------------------------*/
+nav #close {
+  width: 100%;
+  padding: .5em .5em .5em 0;
+  text-align: right;
+  font-size: 2.2em;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  color: #fff;
+}
+nav #close:hover {
+  background: #8ec9ef;
+  color: #fff;
+}
+
+
+/* NAV - styles de base
+----------------------------*/
+nav {
+  width: 100%;
+  max-width: 420px;
+  height: 100vh; /* vh = viewport height, 100% du viewport */
+  position: fixed; /* important; libère la nav du flow de la page */
+  top: 0;
+  margin: 0;
+  padding-bottom: 4em;
+  background: #5bb7f1;
+  box-shadow: 0 0 10px 2px #aaa;
+}
+
+/* La liste des menus */
+nav ul {
+  border-top: solid 1px #8ec9ef;
+}
+nav ul li {
+  display: inline-block;
+  width: 100%;
+}
+nav ul li a {
+  display: block;
+  width: 100%;
+  padding: .2em .2em .2em 1em;
+  border-bottom: solid 1px #8ec9ef;
+  font-size: 1.8em;
+  text-align: left;
+  color: #f5f5f5;
+}
+nav ul li a:hover {
+  background: #8ec9ef;
+  color: #fff;
+}
+
+
+/* ANIM NAV - COMMON
+----------------------------*/
+nav.open {
+  animation-duration: .6s;
+  animation-timing-function: cubic-bezier(.01,.68,.32,.99);
+}
+nav.close {
+  animation-duration: .3s;
+  animation-timing-function: cubic-bezier(.85,.01,1,.44);
+}
+
+
+/* ANIM NAV - FROM RIGHT
+----------------------------*/
+#theme-nav-right nav {
+  right: -450px;
+}
+#theme-nav-right nav.open {
+  right: 0;
+  animation-name: slideInRight;
+}
+#theme-nav-right nav.close {
+  animation-name: slideOutRight;
+}
+@keyframes slideInRight {
+  from {
+    right: -450px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes slideOutRight {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: -450px;
+    opacity: 0;
+  }
+}
+
+
+/* ANIM NAV - FROM LEFT
+----------------------------*/
+#theme-nav-left nav {
+  left: -450px;
+}
+#theme-nav-left nav.open {
+  left: 0;
+  animation-name: slideInLeft;
+}
+#theme-nav-left nav.close {
+  animation-name: slideOutLeft;
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -450px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes slideOutLeft {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: -450px;
+    opacity: 0;
+  }
+}
+
+
+/* ANIM NAV - FROM TOP
+----------------------------*/
+#theme-nav-top nav {
+  width: 100%;
+  max-width: 100%;
+  height: auto; /* vh = viewport height, 100% du viewport */
+  position: fixed; /* libère la nav du flow de la page */
+  top: -100vh;
+  left: 0;
+  right: 0;
+}
+#theme-nav-top nav.open {
+  top: 0;
+  animation-name: slideInTop;
+}
+#theme-nav-top nav.close {
+  animation-name: slideOutTop;
+}
+
+@keyframes slideInTop {
+  from {
+    top: -100vh;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes slideOutTop {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -100vh;
+    opacity: 0;
+  }
+}
+
+
+
+
+/* FOR DEVICES >= 576px
+----------------------------------------------------*/
+@media (min-width: 576px) {
+  /* rien à faire pour le menu */
+}
+
+
+/* FOR DEVICES >= 768px
+----------------------------------------------------*/
+@media (min-width: 768px) {
+
+  header {
+    height: 120px;
+  }
+
+  #theme-nav-right nav, #theme-nav-left nav, #theme-nav-top nav {
+    position: static; /* remettre la nav dans le flow de la page */
+  }
+
+  nav {
+    width: 80%;
+    max-width: none;
+    height: auto;
+    position: static;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+  nav ul {
+    border: none;
+  }
+  #theme-nav-right nav ul, #theme-nav-top nav ul {
+    text-align: right;
+    margin-left: auto;
+  }
+  nav ul li {
+    display: inline-block;
+    padding: 0;
+    width: auto;
+  }
+  nav ul li a {
+    display: block;
+    padding: 0 1em;
+    font-size: 1em;
+    line-height: inherit;
+    margin: 0;
+    border: none;
+    color: #212121;
+  }
+  nav ul li a:hover {
+    background: none;
+    color: #54aae8;
+  }
+  nav ul li:last-child a {
+    padding-right: 0;
+  }
+
+  /* Hamburger & Close */
+  #hamburger, nav #close {
+    display: none;
+  }
+}
+
+
+/* FOR DEVICES >= 952px
+----------------------------------------------------*/
+@media (min-width: 952px) {
+  /* rien à faire pour le menu */
+}
+
+
+/* FOR DEVICES >= 768px and <= 1024px
+----------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav ul li a {
+    font-size: 1.2em;
+  }
+}
+
+
+/* FOR DEVICES >= 1024px
+----------------------------------------------------*/
+@media (min-width: 1024px) {
+  /* rien à faire pour le menu */
+}
+
+
+/* FOR DEVICES >= 1200px
+----------------------------------------------------*/
+@media (min-width: 1200px) {
+  /* rien à faire pour le menu */
+}

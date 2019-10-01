@@ -1,0 +1,176 @@
+/*
+Theme Name: SORIN
+Theme URI: https://www.squarelabel.com/themes/sorin
+Author: Sorin Paun
+Author URI: https://www.squarelabel.com/
+Description: SORIN is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. SORIN will make your WordPress look beautiful everywhere.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready, blog
+Text Domain: sorin
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* RESET
+************************************************************/
+/*#region*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+html{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}*, *:before, *:after{box-sizing:inherit;}a{text-decoration:none;outline:none;color:inherit;}input:focus{outline:none;}
+
+html {
+  box-sizing: border-box;
+}
+/*#endregion*/
+
+
+/* BASIC FORMATING
+************************************************************/
+/*ROOT FONT SIZE - rem*/
+html {
+  font-size: 16px;
+}
+
+
+/* LAYOUT
+************************************************************/
+/* BODY
+-------------------------------------*/
+body {
+  margin: 20px 5%;
+}
+
+
+/* HEADER
+-------------------------------------*/
+/*HEADER*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+  border-bottom: dotted 1px #ccc;
+  min-height: 73px;
+}
+
+/*LOGO FIGURE*/
+.logo-figure img {
+  display: block;
+  width: 3em;
+  height: auto;
+}
+
+/*NAVIGATION - MENU*/
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu li {
+  margin-left: 15%;
+  line-height: 1;
+}
+.menu .hidden {
+  opacity: .3;
+}
+.menu a {
+  color: #888;
+  position: relative;
+  transition: color .4s ease;
+}
+.menu a:hover,
+.menu .current-menu-item a {
+  color: #000;
+}
+.menu .current-menu-item a:after {
+  content: "";
+
+  position: absolute;
+  bottom: -0.3em;
+  left: 0;
+  
+  display: block;
+  width: 100%;
+  height: 0;
+
+  border-top: solid 3px #000;
+}
+
+.menu  a .is-home {
+  font-size: 2em;
+  line-height: .6rem;
+}
+
+
+/* CONTENT
+-------------------------------------*/
+.content {
+  width: 100%;
+  margin: 3em 0;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+/* FOOTER
+-------------------------------------*/
+.footer {
+  font-size: .8em;
+  text-align: center;
+  padding-top: 1em;
+  border-top: dotted 1px #ccc;
+}
+
+
+
+/* MEDIA QUERIES
+************************************************************/
+@media (min-width: 768px) {
+
+  body {
+    margin: 2em 40px;
+  }
+
+  .flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .flex article {
+    width: 47.5%;
+  }
+  
+  .cols {
+    column-gap: 3em;
+  }
+  .two-cols {
+    column-count: 2;
+  }
+  .three-cols {
+    column-count: 3;
+  }
+
+  /*NAVIGATION - MENU*/
+  .menu li {
+    margin-left: 2em;
+  }
+
+  /*CONTENT*/
+  .content {
+    max-width: 1024px;
+    margin: 3em auto;
+  }
+
+}
+
+
+@media (min-width: 1024px) {
+
+  .flex article {
+    width: 30%;
+  }
+
+}

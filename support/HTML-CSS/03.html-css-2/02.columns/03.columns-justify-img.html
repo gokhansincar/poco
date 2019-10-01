@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Colonnes - Justify et inline-block</title>
+<style>
+  /* GLOBAL - facultatif */
+  * {
+    margin: 0;
+    padding: 0;
+    font: normal 18px/1 sans-serif;
+    box-sizing: border-box;
+  }
+
+  /* MAIN CONTAINER */
+  #grid {
+  	width: 80%; /* juste un exemple */
+    margin: 0 auto; /* pour un alignement au centre de la page */
+    text-align:justify; /* !!! le secret est là ! */
+    font-size:0.1px; /* pour éliminer les espaces "parasites" */
+    background: #f5f5f5;
+  }
+
+  /* IMAGES -les colonnes */
+  #grid img {
+    /* display: inline-block; pas necessaire, l'image a un display inline */
+    width: 30%; /* juste un exemple de largeur */
+    height: auto; /* facultatif car auto c'est le défaut */
+    margin-bottom: 5%; /* juste un exemple... ici on cherche à avoir le même espace que sur l'axe X */
+  }
+
+  /* PSEUDO ELEMENT - inséré via CSS APRES les (3) div enfants - Indispensable ! */
+  #grid:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  /* MISC - facultatif */
+  header, footer {
+  	text-align: center;
+    margin: 3em 0;
+  }
+</style>
+</head>
+
+<body>
+
+  <header><h1>Méthode: "text-align: justify"</h1></header>
+
+  <figure id="grid" class="grid">
+  	<img src="img/square.jpg" alt="image 1">
+    <img src="img/square.jpg" alt="image 2">
+    <img src="img/square.jpg" alt="image 3">
+    <img src="img/square.jpg" alt="image 4">
+    <img src="img/square.jpg" alt="image 5">
+    <img src="img/square.jpg" alt="image 6">
+    <img src="img/square.jpg" alt="image 7">
+    <img src="img/square.jpg" alt="image 8">
+    <img src="img/square.jpg" alt="image 9">
+    <img src="img/square.jpg" alt="image 10">
+    <img src="img/square.jpg" alt="image 11">
+  </figure>
+
+  <footer>footer content...</footer>
+
+</body>
+</html>

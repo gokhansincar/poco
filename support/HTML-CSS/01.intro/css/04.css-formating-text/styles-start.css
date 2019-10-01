@@ -1,0 +1,118 @@
+/* Default font and styles
+   To be defined on html or body
+------------------------------------------*/
+html {
+  
+}
+
+body {
+
+  /*Font*/
+  /* Arial, Helvetica, Verdana */
+	
+  /* Times New Roman, Times, Georgia */
+  /* Courier New, Lucida Console */
+
+  /*Size + line height*/
+  
+  /* = 150% de 16 => 24px */
+
+  /*Text color*/
+  
+
+  /*Global Alignment*/
+  
+
+}
+
+
+/* Titles
+------------------------------------------*/
+h1, h2, h3 {
+
+  
+}
+
+h1 {
+  /* em = proportional unit
+     3em = 300% of 16px => 48px */
+  
+}
+h2 {
+  /*36px*/
+}
+h3 {
+  /*28px*/
+}
+
+/* Emphasis styles
+------------------------------------------*/
+em {
+  
+}
+
+strong {
+  
+}
+
+mark {
+  background-color: olive;
+  color: white;
+}
+
+blockquote {
+	
+}
+
+/* Paragraphs inside the blockquote */
+blockquote p {
+	
+}
+blockquote p:before, blockquote p:after {
+	
+}
+blockquote p:first-child:before {
+	
+}
+blockquote p:last-child:after {
+	
+}
+
+q {
+  
+}
+
+abbr {
+  
+}
+
+/* Lists
+------------------------------------------*/
+ul {
+  /*none, disc, circle, square, decimal, etc.*/
+  /*outside*/
+}
+ul li {
+	/*items color*/
+}
+
+/* Links
+------------------------------------------*/
+a {
+  /*inherit if you want to have the same color as the text*/
+  /*removes the underline*/
+}
+
+/* Hover color of "li" and "a"
+------------------------------------------*/
+ul li:hover,
+a:hover {
+
+	/*change the color with a transition*/
+}
+
+
+/* Misc formatting */
+hr {
+  
+}

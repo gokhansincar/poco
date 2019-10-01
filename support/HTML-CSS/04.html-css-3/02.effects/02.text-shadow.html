@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>CSS - text-shadow</title>
+
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/prism.css">
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+	<style>
+		/* LAYOUT - COMMON
+			------------------------------------*/
+		.container {
+			padding: 2em;
+			background-color: #eee;
+		}
+
+		.box {
+			font-size: 1.4em;
+			font-weight: 300;
+			color: black;
+			text-align: center;
+			margin-bottom: 2em;
+		}
+
+
+		/* TEXT-SHADOW
+			------------------------------------*/
+		#shadow-1 {
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+		}
+
+		#shadow-2 {
+			text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+		}
+
+		#shadow-3 {
+			text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<main>
+
+		<article>
+
+			<header>
+				<h1>CSS - text-shadow</h1>
+			</header>
+			<p>The text-shadow property adds a shadow to the box text with a list of comma-separated values:</p>
+			<cite class="B">offset-x | offset-y | blur-radius | color</cite>
+
+			<!-- EXEMPLES -->
+			<section>
+				<h2>Exemples</h2>
+
+				<div id="c1" class="container">
+					<p class="box" id="shadow-1">
+						C’est bien facile à dire « Buvez-moi, » mais Alice était trop fine pour obéir à l’aveuglette.
+					</p>
+					<p class="box" id="shadow-2">
+						C’est bien facile à dire « Buvez-moi, » mais Alice était trop fine pour obéir à l’aveuglette.
+					</p>
+					<p class="box" id="shadow-3">
+						C’est bien facile à dire « Buvez-moi, » mais Alice était trop fine pour obéir à l’aveuglette.
+					</p>
+				</div>
+
+				<pre class="MA"><code class="language-css">
+					#shadow-1 {
+						text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+					}
+
+					#shadow-2 {
+						text-shadow: 5px 5px 2px rgba(0,0,0,0.5);
+					}
+
+					#shadow-3 {
+						text-shadow: 0 0 8px rgba(0,0,0,0.8);
+					}
+					</code></pre>
+			</section>
+
+		</article>
+
+	</main>
+
+
+	<footer>
+		<p><a href="https://developer.mozilla.org/docs/Web/CSS/text-shadow" target="_blank">MDN - text-shadow</a></p>
+		<p><a href="https://cssgenerator.org/text-shadow-css-generator.html" target="_blank">MDN - Text Shadow CSS
+				Generator</a></p>
+	</footer>
+
+	<script src="https://poco.squarelabel.com/assets/common/prism.js"></script>
+</body>
+
+</html>

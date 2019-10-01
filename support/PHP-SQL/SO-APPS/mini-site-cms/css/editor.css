@@ -1,0 +1,189 @@
+/* SELECT MENU CLASSES *****************************************************/
+.bold {
+	font-weight: 600;
+}
+.italic {
+	font-family: 'Times New Roman', Times, serif;
+	font-style: italic;
+	font-size: 1.1em;
+}
+
+.serif-font {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.1em;
+}
+.sans-font {
+	font-family: 'Roboto', sans-serif;
+}
+
+.align-left {
+	text-align: left;
+}
+.align-center {
+	text-align: center;
+}
+.align-right {
+	text-align: right;
+}
+
+
+/*DISPLAY*/
+.DB {
+  display: block !important;
+}
+.DN {
+  display: none;
+}
+
+
+/* WIDTHS
+--------------------------------------------*/
+/*WIDTHS*/
+.W10p {
+  width: 10% !important;
+}
+.W20p {
+  width: 20% !important;
+}
+.W30p {
+  width: 30% !important;
+}
+.W70p {
+  width: 70% !important;
+}
+.W80p {
+  width: 80% !important;
+}
+.W90p {
+  width: 90% !important;
+}
+.W100p {
+  width: 100% !important;
+}
+
+
+/* COLORS
+--------------------------------------------*/
+.green{color:#82c434!important;}
+.grey{color:#b7b7b7;}
+.black{color:#000!important;}
+.black-80P{color:rgba(0,0,0,.8)!important;}
+.black-33P{color:rgba(0,0,0,.33)!important;}
+.black-20P{color:rgba(0,0,0,.2)!important;}
+
+
+/* TEXT ALIGNMENT
+--------------------------------------------*/
+.align-center{text-align:center;}
+.align-left{text-align:left;}
+.align-right{text-align:right;}
+.align-justify{text-align:justify;}
+
+/* MARGINS BASED ON ROOT FONT SIZE
+--------------------------------------------*/
+.MT100{margin-top:6.25rem!important;}
+.MT80{margin-top:5rem!important;}
+.MT70{margin-top:4.375rem!important;}
+.MT60{margin-top:3.75rem!important;}
+.MT50{margin-top:3.125rem!important;}
+.MT40{margin-top:2.5rem!important;}
+.MT30{margin-top:1.875rem!important;}
+
+.MB100{margin-bottom:6.25rem!important;}
+.MB80{margin-bottom:5rem!important;}
+.MB70{margin-bottom:4.375rem!important;}
+.MB60{margin-bottom:3.75rem!important;}
+.MB50{margin-bottom:3.125rem!important;}
+.MB40{margin-bottom:2.5rem!important;}
+.MB30{margin-bottom:1.875rem!important;}
+
+
+/* MISC
+--------------------------------------------*/
+.float-right{float:right; margin:0 0 10px 20px;}
+.float-left{float:left; margin:0 20px 10px 0;}
+
+.shadow{-moz-box-shadow:2px 2px 3px 3px #ddd; -webkit-box-shadow:2px 2px 3px 3px #ddd; box-shadow:0 0 4px 2px #bbb;}
+.rounded{-webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;}
+
+table{border-collapse:collapse; border:solid 1px #e1e1e1; width:100%; margin:0 auto;}
+table thead td{border-top:none; padding-top:0;}
+table td{padding:5px; border:solid 1px #EDEDED; vertical-align:middle;}
+/***************************************************************************/
+
+
+
+/* TEMPLATES ***************************************************************/
+/* FLEX
+-----------------------------------------*/
+.flex {
+	display:flex;
+	justify-content:space-between;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+.two-cols .col {
+	width:48%;
+}
+.three-cols .col {
+	width:33.333%;
+}
+.four-cols .col {
+	width:22%;
+}
+
+.flex-center {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+
+/* CSS COLUMNS
+-----------------------------------------*/
+.css-two-cols {
+	column-count:2;
+	column-gap:3em;
+}
+.css-three-cols {
+	column-count:3;
+	column-gap:2em;
+}
+/***************************************************************************/
+
+
+/* EDITOR ******************************************************************/
+#tinymce {
+	height:auto;
+	min-height:100px;
+	margin:10px;
+	overflow:hidden;
+}
+/***************************************************************************/
+
+
+/* Visual tags separation **************************************************/
+#tinymce h1,
+#tinymce h2,
+#tinymce h3,
+#tinymce div,
+#tinymce p,
+#tinymce figure {
+	position:relative;
+	border:dotted 1px #e5e5e5;
+}
+
+#tinymce div{border-color:#69F;}
+#tinymce h1, #tinymce h2, #tinymce h3{border-color:#C00;}
+#tinymce p{/*border-top:0;*/ margin-top:-1px;}
+#tinymce p:first-child{/*border-top:dotted 1px #e5e5e5;*/ margin-top:0;}
+#tinymce ul, #tinymce ol{border-color:#D8D265;}
+#tinymce ul li, #tinymce ol li{border-color:#E7E3A0;}
+#tinymce figure{border-color:#E7E3A0;}
+#tinymce article{border-color:lavender;}
+#tinymce hr{background:#ccc; border:none; height:1px;}
+#tinymce.editable *:not(i) {
+	border:0!important;
+}
+/***************************************************************************/

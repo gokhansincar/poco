@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pseudo Elements - Icons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+    <style>
+
+      /* COMMON
+      ------------------------------------------*/
+      a {
+        color: #333;
+        text-decoration: none;
+        transition: color .3s ease;
+      }
+      a:hover {
+        color: #0072b5;
+        text-decoration: underline;
+      }
+      ul.icons li {
+        margin-bottom: 1em;
+      }
+
+      /* PSEUDO ELEMENTS
+      ------------------------------------------*/
+      ul.icons li:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      ul.icons li:nth-child(1):before {
+        content: "\2709";
+      }
+      ul.icons li:nth-child(2):before {
+        content: "\270C";
+      }
+      ul.icons li:nth-child(3):before {
+        content: "\270D";
+      }
+      ul.icons li:nth-child(4):before {
+        content: "\2724";
+      }
+
+      .exemple {
+        margin: 0 0 2rem;
+      }
+
+
+      /*DECO TITLE*/
+      .deco-title {
+        text-align: center;
+      }
+      .deco-title:after {
+        content: "";
+        display: block;
+        width: 50%;
+        max-width: 100px;
+        height: 3px;
+        background: #212529;
+        margin: 2rem auto 4rem;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <main>
+
+      <h1 class="deco-title">Pseudo Elements - Icons</h1>
+
+      <div class="container MW-800 MA">
+        <ul class="icons">
+          <li><a href="#non">ENVELOPE</a></li>
+          <li><a href="#non">VICTORY HAND</a></li>
+          <li><a href="#non">WRITING HAND</a></li>
+          <li><a href="#non">HEAVY FOUR BALLOON-SPOKED ASTERISK</a></li>
+        </ul>
+      </div>
+
+    </main>
+
+    <!-- FOOTER - liens ressources -->
+    <footer class="footer MW-800 MA">
+      <ul>
+        <li><a href="https://developer.mozilla.org/docs/Web/CSS/Pseudo-elements" target="_blank">MDN - Pseudo-elements</a></li>
+        <li><a href="https://css-tricks.com/pseudo-element-roundup/" target="_blank">CSS Tricks - A Whole Bunch of Amazing Stuff Pseudo Elements Can Do</a></li>
+        <li><a href="https://www.w3schools.com/charsets/ref_utf_dingbats.asp" target="_blank">W3schools - UTF-8 Dingbats</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

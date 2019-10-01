@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS - background-image</title>
+
+		<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+		<style>
+
+			/* Exemple body */
+			body {
+				background-color: #f1f1f1;
+				background-image: url(img/tile1.png);
+				background-position: 75px 75px;
+			}
+
+			/* CONTAINERS */
+			div {
+				width: 80%;
+				height: 200px;
+				margin-bottom: 1em;
+				
+				font-size: 3em;
+				line-height: 200px;
+				text-align: center;
+				color: #000;
+				background-color: #e7e3ca;
+			}
+
+			/* BACKGROUNDS */
+			.bg1 {
+				background-image: url(img/tile2.jpg);
+				background-size: 100%; /* cover, contain */
+			}
+
+			.bg2 {
+				background-image: url(img/tile3.jpg);
+				background-repeat: no-repeat;
+			}
+
+			.bg3 {
+				background-image: url(img/header.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+			}
+
+			.bg4 a {
+				background-image: url(img/sprite.png);
+
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				margin-right: 20px;
+
+				text-decoration: none;
+				color: black;
+				line-height: 100px;
+				text-align: center;
+			}
+
+			#a1 {
+				/* nothing to do, default position is is top/left */
+			}
+
+			#a2 {
+				background-position: -100px 0;
+			}
+
+			#a3 {
+				background-position: 0 100px;
+			}
+
+			#a4 {
+				background-position: 100px 100px;
+			}
+
+			#a5 {
+				background-image: url(img/sprite-hover.png);
+			}
+			#a5:hover {
+				background-position: 0 100px;
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<main>
+
+			<article>
+
+				<header><h1>CSS - background-image</h1></header>
+
+				<section>
+
+					<div class="bg1">Mosaïque</div>
+
+					<div class="bg2">no-repeat</div>
+
+					<div class="bg3">Cover</div>
+
+					<h3>Sprites / Position</h3>
+					<div class="bg4">
+						<a id="a1" href="#">1</a>
+						<a id="a2" href="#">2</a>
+						<a id="a3" href="#">3</a>
+						<a id="a4" href="#">4</a>
+
+						<a id="a5" href="#">&nbsp;</a>
+					</div>
+
+				</section>
+
+			</article>
+
+		</main>
+
+
+		<footer>
+			<p><a href="https://patterninja.com/" target="_blank">patterninja.com</a></p>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image" target="_blank">MDN - background-image</a></p>
+		</footer>
+
+	</body>
+</html>

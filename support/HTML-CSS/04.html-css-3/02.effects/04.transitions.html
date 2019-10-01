@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>CSS - transition</title>
+
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/prism.css">
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+	<style>
+		/* LAYOUT - COMMON
+			------------------------------------*/
+		.container {
+			display: flex;
+			margin-top: 1em;
+			padding: 2em;
+			background-color: #eee;
+		}
+
+		.box {
+			display: block;
+			width: 100px;
+			height: 100px;
+			margin: 0 2em;
+			text-align: center;
+			font-size: 14px;
+			line-height: 100px;
+			color: #fff;
+			background-color: #333;
+		}
+
+
+		/* TRANSITION
+			------------------------------------*/
+		#transition-1 {
+			border-radius: 0;
+			transition: border-radius .2s linear;
+		}
+
+		#transition-1:hover {
+			border-radius: 50%;
+		}
+
+		#transition-2 {
+			background: #FADBD8;
+			color: #333;
+			transition: background .4s ease, color .4s ease-out;
+		}
+
+		#transition-2:hover {
+			background: #B03A2E;
+			color: #fff;
+		}
+
+		#transition-3 {
+			background: transparent;
+			color: #888;
+			border-top: solid 3px transparent;
+			border-bottom: solid 3px transparent;
+
+			transition: border .5s ease-in-out, color .5s ease;
+		}
+
+		#transition-3:hover {
+			border-top: solid 3px #333;
+			border-bottom: solid 3px #333;
+			color: #000;
+		}
+
+		#transition-4 {
+			transition: width .2s ease-out;
+		}
+
+		#transition-4:hover {
+			width: 140px;
+		}
+
+		#transition-5 {
+			transition: transform .4s ease;
+		}
+
+		#transition-5:hover {
+			transform: scale(1.2) rotate(45deg);
+		}
+
+		#transition-6 {
+			transition: all .5s ease;
+		}
+
+		#transition-6:hover {
+			background: #8E44AD;
+			box-shadow: 0 0 15px 3px rgba(0, 0, 0, .3);
+			transform: rotate(45deg);
+			border-radius: 20%;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<main>
+
+		<article>
+
+			<header>
+				<h1>CSS - transition</h1>
+			</header>
+			<p>The transition CSS property is a shorthand property for transition-property, transition-duration,
+				transition-timing-function, and transition-delay.</p>
+			<p>Transitions enable you to define the transition between two states of an element. Different states may be
+				defined using pseudo-classes like :hover or :active or dynamically set using JavaScript.</p>
+			<cite class="B">transition: [transition-property] [transition-duration] [transition-timing-function]
+				[transition-delay];</cite>
+
+			<!-- EXEMPLES -->
+			<section>
+				<h2>Exemples</h2>
+
+				<div id="c1" class="container">
+					<a href="#" class="box" id="transition-1">#transition-1</a>
+					<a href="#" class="box" id="transition-2">#transition-2</a>
+					<a href="#" class="box" id="transition-3">#transition-3</a>
+					<a href="#" class="box" id="transition-4">#transition-4</a>
+					<a href="#" class="box" id="transition-5">#transition-5</a>
+					<a href="#" class="box" id="transition-6">#transition-6</a>
+				</div>
+
+				<pre class="MW-800"><code class="language-css">
+					#transition-1 {
+						border-radius: 0;
+						transition: border-radius .2s linear;
+					}
+					#transition-1:hover {
+						border-radius: 50%;
+					}
+
+					#transition-2 {
+						background: #FADBD8;
+						color: #333;
+						transition: background .4s ease, color .4s ease-out;
+					}
+					#transition-2:hover {
+						background: #B03A2E;
+						color: #fff;
+					}
+
+					#transition-3 {
+						background: transparent;
+						color: #888;
+						border-top: solid 3px transparent;
+						border-bottom: solid 3px transparent;
+
+						transition: border .5s ease-in-out, color .5s ease;
+					}
+					#transition-3:hover {
+						border-top: solid 3px #333;
+						border-bottom: solid 3px #333;
+						color: #000;
+					}
+
+					#transition-4 {
+						transition: width .2s ease-out;
+					}
+					#transition-4:hover {
+						width: 140px;
+					}
+
+					#transition-5 {
+						transition: transform .4s ease;
+					}
+					#transition-5:hover {
+						transform: scale(1.2) rotate(45deg);
+					}
+
+					#transition-6 {
+						transition: all .5s ease; 
+					}
+					#transition-6:hover {
+						background: #8E44AD;
+						box-shadow: 0 0 15px 3px rgba(0,0,0,.3);
+						transform: rotate(45deg);
+						border-radius: 20%;
+					}
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>Compatibility with old browsers</h2>
+
+				<pre class="MW-800"><code class="language-css">
+					#transition-1 {
+						-webkit-transition: border-radius .2s linear;
+						-moz-transition: border-radius .2s linear;
+						transition: border-radius .2s linear;
+					}
+					</code></pre>
+			</section>
+
+		</article>
+
+	</main>
+
+
+	<footer>
+		<p><a href="https://developer.mozilla.org/docs/Web/CSS/transition" target="_blank">MDN - transition</a></p>
+		<p><a href="http://ianlunn.github.io/Hover/" target="_blank">Hover.css</a></p>
+	</footer>
+
+	<script src="https://poco.squarelabel.com/assets/common/prism.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+/* Default font and styles
+   To be defined on html or body
+------------------------------------------*/
+html {
+  font-size: 16px;
+}
+
+body {
+
+  /*Font*/
+  font-family: Roboto, sans-serif; /* Arial, Helvetica, Verdana */
+	font-weight: 300;
+  *font-family: serif; /* Times New Roman, Times, Georgia */
+  *font-family: monospace; /* Courier New, Lucida Console */
+
+  /*Size + line height*/
+  font-size: 1em;
+  line-height: 1.5; /* = 150% de 16 => 24px */
+
+  /*Text color*/
+  color: #333;
+
+  /*Global Alignment*/
+  text-align: center;
+
+}
+
+
+/* Titles
+------------------------------------------*/
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  line-height: 1; /* = 100%, donc la même taille définie ci-dessous... */
+  text-transform: uppercase;
+}
+
+h1 {
+  /* em = proportional unit
+     3em = 300% of 16px => 48px */
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.25em; /*36px*/
+}
+h3 {
+  font-size: 1.75em; /*28px*/
+}
+
+/* Emphasis styles
+------------------------------------------*/
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+mark {
+  background-color: olive;
+  color: white;
+}
+
+blockquote {
+	font-family: Merriweather;
+  font-style: italic;
+  color: #fff;
+  font-size: 1.2em;
+  background-color: grey;
+	padding: 1em;
+}
+
+/* Paragraphs inside the blockquote */
+blockquote p {
+	margin: 0;
+}
+blockquote p:before, blockquote p:after {
+	font-size: 1.3em;
+}
+blockquote p:first-child:before {
+	content: "\201C";
+	margin-right: .2em;
+}
+blockquote p:last-child:after {
+	content: "\201D";
+	margin-left: .2em;
+}
+
+q {
+  color: navy;
+  font-style: italic;
+}
+
+abbr {
+  font-family: monospace;
+  font-size: 1.3em;
+  text-decoration: overline;
+}
+
+/* Lists
+------------------------------------------*/
+ul {
+  list-style-type: decimal; /*none, disc, circle, square, decimal, etc.*/
+  list-style-position: inside; /*outside*/
+}
+ul li {
+	color: lightseagreen; /*pour les puces*/
+}
+
+/* Links
+------------------------------------------*/
+a {
+  color: inherit; /*inherit if you want to have the same color as the text*/
+  text-decoration: none; /*removes the underline*/
+}
+
+/* Hover color of "li" and "a"
+------------------------------------------*/
+ul li:hover,
+a:hover {
+	color: #000;
+	transition: color .4s ease-in-out; /*changer la couleur progressivement*/
+}
+
+
+/* Misc formatting */
+hr {
+  margin: 1em 0;
+}

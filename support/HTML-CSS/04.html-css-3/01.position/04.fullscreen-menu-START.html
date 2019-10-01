@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS - Position fixed exercise</title>
+		<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+    
+    <style>
+      /*COMMON*/
+      a {
+        text-decoration: none;
+      }
+      .flex {
+				display: flex;
+        justify-content: center;
+        align-items: center;
+			}
+
+      /*MAIN NAV*/
+      #main-nav {
+        
+      }
+			#main-nav.open {
+        
+      }
+
+      /*MENUS*/
+      #main-menu {
+        
+      }
+
+      #main-menu a {
+        display: block;
+        padding: .5em;
+        font-size: 2em;
+        text-transform: uppercase;
+      }
+
+      /*CLOSE*/
+      #close {
+        width: 44px;
+        height: 44px;
+        font-size: 3em;
+      }
+
+      /*HOVER & TRANSITIONS*/
+      #main-menu a, #close {
+        color: #bbb;
+        transition: color .4s ease;
+      }
+      #main-menu a:hover, #close:hover {
+        color: #f5f5f5;
+      }
+		</style>
+
+	</head>
+
+	<body>
+
+    <nav id="main-nav" class="open">
+
+      <a href="#" class="trigger" id="close">&times;</a>
+
+      <ul id="main-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+		<main>
+
+			<article>
+				<header><h1>CSS - Position fixed exercise</h1></header>
+				<p><span class="R">Exercise</span>: nav position fixed and fullscreen menu.</p>
+			</article>
+
+		</main>
+
+	</body>
+</html>

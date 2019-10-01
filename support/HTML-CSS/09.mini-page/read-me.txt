@@ -1,0 +1,38 @@
+Notes on the page "minipage"
+
+
+1. HTML Structure 
+   The HTML structure is already made!
+   Look closely at the HTML structure and attributes on the tags.
+
+
+2. Google Fonts + Font Icons
+   The link to Google Fonts are already done. Fonts used: "Open Sans" and "Merriweather":
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,400">
+
+   You also have a link to "font icons". The icons come from https://icomoon.io :
+   <link rel="stylesheet" href="css/fonticons/style.css">
+
+
+3. To enable / disable a CSS style sheet, remove/add the double underscore in front of the file name in the <head> of the document.
+	
+   EXEMPLES
+	
+   If you want to SEE the "mobile-first" version, the "href" attributes of <link> must be :
+   "css/styles-mobile-first.css" => active
+   "css/__styles-mobile-first-START.css"
+   "css/__styles-desktop-first.css"
+   "css/__styles-desktop-first-START.css"
+	
+   If you want to do the exercise "mobile first" :
+   "css/__styles-mobile-first.css"
+   "css/styles-mobile-first-START.css" => active
+   "css/__styles-desktop-first.css"
+   "css/__styles-desktop-first-START.css"
+	
+   etc...
+
+
+4. To do an exercise
+    You can do a CSS exercise by activating the correct style sheet ending in "-START" as shown above.
+    Follow the comments in the file to add styles. In case of doubt / blocking look at the code in the finished CSS file.

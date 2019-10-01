@@ -1,0 +1,43 @@
+/* FORMATAGE BASE */
+html {
+  font-size: 18px;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  margin: 40px;
+}
+img {
+  display: block;
+}
+
+h1 {
+  font-size: 1.6em;
+  margin-bottom: 40px;
+}
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+
+
+/* LAYOUT */
+main {
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+#galerie-img a {
+  display: block;
+}
+#galerie-img img {
+  display: block;
+  width: 100%;
+}

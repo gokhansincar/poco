@@ -1,0 +1,321 @@
+/* GLOBAL RESET
+------------------------------------------------*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Box Sizing pour tout le monde */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Formatage liens */
+a {
+	text-decoration: none; /*enlève le soulignement des liens*/
+	color: inherit; /*prend la couleur du parent*/
+	transition: color .3s ease;
+}
+a:hover {
+	color:#3279F7; /*couleur liens en survol*/
+}
+
+/*ROOT FONT SIZE*/
+html {
+	font-size: 16px; /*par défaut dans les navigateurs: 16px*/
+}
+
+
+
+/* COMMON
+ * Formatage de base et valeurs en commun
+------------------------------------------------*/
+/* BALISES
+.......................................*/
+/*BODY*/
+
+
+/*Titles*/
+
+
+/*Paragraphes*/
+
+
+
+/* CLASSES
+.......................................*/
+/*Flex (default values)*/
+
+
+
+/* LAYOUT
+ * Dimenssions et positionnement des choses
+ * Par défaut on vise <= 320px (Mobile First !)
+------------------------------------------------*/
+/* HEADER
+.......................................*/
+/*Header tag - background + padding*/
+
+
+
+/* LOGO
+........................*/
+/*Logo - largeur*/
+
+
+/*Logo img*/
+
+
+
+/* NAV + MENUS
+........................*/
+/*NAV tag*/
+
+
+/*Hamburger link*/
+
+
+/*UL tag*/
+
+
+
+/* MAIN
+.......................................*/
+/*MAIN tag*/
+
+
+
+/* Article, gallery, aside - margin-top 2em */
+
+
+
+/* GALLERY
+........................*/
+/* Gallery figure - margins */
+
+
+/* Gallery img - display + border-radius + filter + box-shadow + transition */
+
+
+/*Gallery img hover - filter*/
+
+
+/*Gallery figcaption - formatage texte + margin top*/
+
+
+
+/* ASIDE
+........................*/
+/*Aside tag*/
+
+
+/* Aside title */
+
+
+/*Aside title :after - faire une bordure*/
+
+
+/* Aside links */
+
+
+
+/* FOOTER
+.......................................*/
+/*FOOTER tag*/
+
+
+/*FOOTER paragraphes*/
+
+
+
+/* MEDIA QUERIES SCREEN (Mobile First !)
+ * Mobile first utilise min-width
+ * Les points de rupture sont valables seulement
+ * pour cette mise en page
+------------------------------------------------*/
+/* Point de rupture 1  */
+@media only screen and (min-width: 371px) {
+  
+	/*Header tag - min-height + image en arrière-plan*/
+	
+	
+	/*Main - padding*/
+	
+	
+	/*Gallery - largeur*/
+	
+	
+}
+
+
+/* Point de rupture 2 */
+@media only screen and (min-width: 481px) {
+	
+	/*Body - texte à gauche*/
+	
+	
+	/*Sections - margin*/
+	
+	
+	/*Gallery - largeur figure + margin*/
+	
+
+	/* Aside li items - position relative*/
+	
+	
+	/* Aside links - formatage liens */
+	
+	
+	/* Aside links :before - ajouter un icône */
+	
+	
+}
+
+
+/* Point de rupture 3 */
+@media only screen and (min-width: 668px) {
+	
+	/*Gallery - largeur figure*/
+	
+	
+	/*Text columns (2 colonnes)*/
+	
+	
+}
+
+
+/* Point de rupture 4  */
+@media only screen and (min-width: 801px) {
+	
+	/*ROOT FONT SIZE*/
+	
+	
+	/* CLASSES & COMMON
+	.......................................*/
+	/*Sections - margin-top*/
+	
+	
+	/*Classes L1 et L2 - width + max-width*/
+	
+	
+	/*Menu et Main - display flex*/
+	
+	
+	/*Article et Aside - margin top 0*/
+	
+
+
+	/* HEADER
+	.......................................*/
+	/*Header tag - position relative + min-height + padding*/
+	
+	
+	/*Logo - position absolute + width*/
+	
+
+	/* NAV
+	........................*/
+	/*NAV tag - position absolute + width + background*/
+	
+	
+	/*Hamburger link - masquer*/
+	
+	
+	/*UL tag - padding*/
+	
+	
+	/*Home icon - font-size*/
+	
+	
+	/*Menu links - formatage liens pour desktop*/
+	
+	
+	/*Hover and active links - color + border*/
+	
+	
+	/* MAIN
+	.......................................*/
+	/*MAIN tag - padding et margin*/
+	
+	
+	/* Article - largeur */
+	
+	
+	/* Aside - largeur */
+	
+
+}
+
+
+
+/* MEDIA QUERIES PRINT
+------------------------------------------------*/
+@media only print {
+	
+	/*Taille texte*/
+	body {
+		background: white;
+   	font-size: 12pt;
+	}
+	
+	/*Masquer, ne pas imprimer*/
+	.main-nav, .main-footer, aside {
+		display: none;
+	}
+	
+	/*Header*/
+	.main-header {
+		min-height: 0;
+	}
+	.logo {
+		left: auto;
+		right: 0;
+	}
+	
+	/*Largeurs, tout le monde à 100%*/
+	.L1,
+	.L2,
+	.main-content article,
+	.main-content aside {
+		width: 100%;
+		margin: 0;
+	}
+	
+	/*Éléments flex => display block*/
+	.main-content.flex {
+		display: block;
+	}
+	
+	/*Pour éviter d'avoir les images coupées...*/
+	.gallery-items {
+    page-break-before: avoid; /* auto | always | avoid | left | right */
+    page-break-after: avoid; /* auto | always | avoid | left | right */
+    page-break-inside: avoid; /* auto | avoid */
+	}
+	
+	/*Forcer la section avec du texte sur la page suivante*/
+	.some-text { 
+    page-break-before: always;
+  }
+
+	.main-content aside {
+		margin: 30px 0;
+	}
+	
+	.main-footer {
+		padding: 1em;
+	}
+	
+}
+
+@media only print and (orientation: landscape) {
+	
+	/*Pour éviter d'avoir les images coupées...*/
+	.gallery-items {
+		page-break-before: auto; /* auto | always | avoid | left | right */
+		page-break-after: auto; /* auto | always | avoid | left | right */
+		page-break-inside: avoid; /* auto | avoid */
+	}
+	
+}
+

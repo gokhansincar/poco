@@ -1,0 +1,15 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . index.php [L]
+</IfModule>
+
+# PHP ERROR REPORTING MANAGEMENT
+# For error integers See https://maximivanov.github.io/php-error-reporting-calculator/
+php_flag display_startup_errors on
+php_flag display_errors on
+php_value error_reporting 31735

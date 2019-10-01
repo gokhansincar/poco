@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pseudo Elements - Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+    <!-- DEMO STYLES -->
+    <style>
+      /* COMMON
+      ----------------------------------------------*/
+      main,
+      header,
+      footer {
+        width: 100%;
+        max-width: 1140px;
+        padding: 2rem;
+        margin: 0 auto;
+      }
+      .exemple {
+        margin: 0 0 4rem;
+      }
+      .exemple.bg {
+        background: #f5f5f5;
+        padding: 2rem;
+      }
+      
+
+      /* DECO TITRE "CENTER"
+      ----------------------------------------------*/
+      .titre-1 {
+        text-align: center;
+      }
+      .titre-1:after {
+        content: "";
+        display: block;
+        width: 50%;
+        max-width: 100px;  /*limite la longuer des lignes*/
+        height: 3px;
+        background: #aaa;
+        margin: 2rem auto 0;
+      }
+
+      /* DECO TITRE GAUCHE/DROITE - FLEX METHOD
+      ----------------------------------------------*/
+      .titre-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .titre-2 span {
+        flex: 1 0 auto; /* flex-grow | flex-shrink | flex-basis */
+        margin: 0 1rem;
+      }
+      .titre-2:before ,
+      .titre-2:after {
+        content: "";
+        width: 50%;
+        *max-width: 100px; /* if needed */
+        display: inline-block;
+        height: 1px;
+        background: #aaa;
+      }
+
+
+      /* DECO TITRE GAUCHE/DROITE - CLASSIC METHOD
+      ----------------------------------------------*/
+      .titre-3 {
+        overflow: hidden;
+        text-align: center;
+        line-height: 1.5;
+      }
+      .titre-3:before,
+      .titre-3:after {
+        content: "";
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        *max-width: 100px; /* if needed */
+        height: 1px;
+        background-color: #aaa;
+      }
+      .titre-3:before {
+        right: 1em;
+        margin-left: -50%;
+      }
+      .titre-3:after {
+        left: 1em;
+        margin-right: -50%;
+      }
+
+
+      /* DECO TITRE DROITE - FLEX METHOD
+      ----------------------------------------------*/
+      .titre-4 {
+        display: flex;
+        align-items: center;
+      }
+      .titre-4 span {
+        flex: 0 0 auto;
+        margin-right: 1rem;
+      }
+      .titre-4:after {
+        content: "";
+        flex: 1 1 auto;
+        width: 100%;
+        *max-width: 100px; /* if needed */
+        height: 1px;
+        background: #aaa;
+      }
+
+      /* DECO TITRE GAUCHE - FLEX METHOD
+      ----------------------------------------------*/
+      .titre-5 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+      }
+      .titre-5 span {
+        flex: 0 0 auto;
+        margin-left: 1rem;
+      }
+      .titre-5:before {
+        content: "";
+        flex: 1 1 auto;
+        width: 100%;
+        *max-width: 100px; /* if needed */
+        height: 1px;
+        background: #aaa;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <main>
+
+      <header>
+        <h1 class="AC">Decoration examples, titles with "pseudo-elements"</h1>
+      </header>
+
+      <section class="exemple bg">
+        <h2 class="titre-1">Center line of max 100px</h2>
+      </section>
+
+      <section class="exemple bg">
+        <h2 class="titre-2"><span>Deco left / right with flex and other animals</span></h2>
+      </section>
+
+      <section class="exemple bg">
+        <h2 class="titre-3"><span>Left / right classic decoration</span></h2>
+      </section>
+
+      <section class="exemple bg">
+        <h2 class="titre-4"><span>Deco on the right and other animals</span></h2>
+      </section>
+
+      <section class="exemple bg">
+        <h2 class="titre-5"><span>Decoration on the left and other animals</span></h2>
+      </section>
+
+    </main>
+
+    <!-- FOOTER - liens ressources -->
+    <footer class="footer">
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">MDN - Pseudo-elements</a></li>
+        <li><a href="https://css-tricks.com/pseudo-element-roundup/" target="_blank">CSS Tricks - A Whole Bunch of Amazing Stuff Pseudo Elements Can Do</a></li>
+        <li><a href="http://jessica-eldredge.com/2014/01/26/headings-with-lines/" target="_blank">Create Headings with Lines in CSS</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

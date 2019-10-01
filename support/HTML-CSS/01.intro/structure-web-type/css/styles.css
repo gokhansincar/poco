@@ -1,0 +1,29 @@
+/* FORMATAGE GLOBAL
+---------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 400 18px/1.5 "Roboto", sans-serif; /* Juste pour cet exemple !!! */
+}
+
+/* FORMATAGE GLOBAL TITRES (Juste pour cet exemple !!!) */
+h1 {
+  font-size: 3em;
+}
+h2 {}
+h3 {}
+
+/* FORMATAGE GLOBAL LIENS */
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+a.active, a:hover {
+  color: #467bb9;
+}

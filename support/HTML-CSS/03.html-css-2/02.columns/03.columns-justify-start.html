@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Columns: the "text-align: justify" method</title>
+
+  <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+  <style>
+    /* MAIN CONTAINER */
+    #grid {
+      /* text-align: justify, the secret is here... */
+      /* font sizee to 0 to eliminate "parasitic" spaces */
+      
+      width: 80%; /* just a width  exemple */
+      margin: 0 auto; /* horizontaly align the content */
+      background: #f5f5f5;
+    }
+
+    /* children divs - the columns */
+    #grid div {
+      /* font size is mandatory because the parent has a 0 size font !*/
+      /* display inline-block, the secret is here ! */
+      
+      width: 30%; /* just an width example */
+      padding: 50px 0; /* optional, just to "see" the div */
+      text-align: center; /* left, etc. */
+      background: #e5e5e5;
+    }
+
+    /* PSEUDO ELEMENT - inserted via CSS AFTER the (div) children - Indispensable ! */
+    #grid:after {
+      
+    }
+
+
+    /* MISC - optional */
+    header,
+    footer {
+      text-align: center;
+      margin: 3em 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CSS Columns: the "text-align: justify" method</h1>
+  </header>
+
+  <div id="grid" class="grid">
+    <div id="c1">Column 1 content</div>
+    <div id="c2">Column 2 content</div>
+    <div id="c3">Column 3 content</div>
+  </div>
+
+
+  <footer>
+    <p><a href="https://archive.barrelny.com/blog/text-align-justify-and-rwd/" target="_blank">Text-align: Justify and RWD</a></p>
+    <p><a href="http://justifygrid.com/" target="_blank">Justify Grid</a></p>
+  </footer>
+
+</body>
+
+</html>

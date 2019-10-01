@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="hex-9" width="250" height="288.7">
+  <path fill="#ec671d" d="M249.8 216.7l-124.6 71.9-124.5-72V73L125.3 1l124.6 71.9z"/>
+  <path fill="#010202" d="M1 216V72.7L125 1.2l124 71.6v143.1l-124 71.6L1 216m-1 .6l125 72.2 125-72.2V72.2L125 0 0 72.2z"/>
+  <path fill="none" stroke="#010202" stroke-linejoin="round" stroke-width="5" d="M.6 144.5H249M125 0l-.8 144.5"/>
+</svg>

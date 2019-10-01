@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS - Position</title>
+		<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/prism.css">
+		<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+		<style>
+
+			/* LAYOUT - COMMON
+			------------------------------------*/
+			.container {
+				position: relative;
+				display: flex;
+				margin-top: 1em;
+				padding: 2em;
+				background-color: #eee;
+			}
+
+			.container-info {
+				position: absolute;
+				top: 10px;
+				right: 20px;
+				text-align: right;
+			}
+
+			.box {
+				width: 100px;
+				height: 100px;
+				margin-right: 20px;
+				text-align: center;
+				line-height: 100px;
+				background-color: #fc0;
+			}
+
+			.box.active {
+				background-color: #dc2221;
+				color: #fff;
+			}
+
+
+			/* POSITIONS
+			------------------------------------*/
+			/* relative */
+			#c2-two {
+				position: relative;
+				top: 30px;
+				left: 30px;
+			}
+
+			/* absolute */
+			#c3 {
+				position: relative;
+			}
+			#c3-two {
+				position: absolute;
+				top: -20px;
+				left: -20px;
+			}
+
+			/* fixed */
+			#c4-two {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+			}
+			/* juste pour le texte info à l'interieur du #c4-two */
+			#c4-two span {
+				display: block;
+				width: 100%;
+
+				position: absolute;
+				bottom: 10px;
+
+				font-size: 12px;
+				line-height: 1.5;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<main>
+
+			<article>
+
+				<header><h1>CSS - Position</h1></header>
+				<p>The position CSS property sets how an element is positioned in a document.</p>
+				<p>The top, right, bottom, and left properties determine the final location of positioned elements.</p>
+
+
+				<!-- STATIC -->
+				<section>
+					<h2>position: static;</h2>
+					<p>The element is positioned according to the normal flow of the document.</p>
+					<p>The top, right, bottom, left, and z-index properties have no effect. This is the default value.</p>
+
+					<div id="c1" class="container">
+						<cite class="container-info">#c1</cite>
+						<div class="box" id="c1-one">One</div>
+						<div class="box" id="c1-two">Two</div>
+						<div class="box" id="c1-three">Three</div>
+						<div class="box" id="c1-four">Four</div>
+					</div>
+				</section>
+
+
+				<!-- RELATIVE -->
+				<section>
+					<h2>position: relative;</h2>
+					<p>The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left.</p>
+					<p>The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static.</p>
+
+					<pre><code class="language-css">
+					#c2-two {
+						position: relative;
+						top: 30px;
+						left: 30px;
+					}
+					</code></pre>
+
+					<div id="c2" class="container">
+						<cite class="container-info">#c2</cite>
+						<div class="box" id="c2-one">One</div>
+						<div class="box active" id="c2-two">Two</div>
+						<div class="box" id="c2-three">Three</div>
+						<div class="box" id="c2-four">Four</div>
+					</div>
+				</section>
+
+
+				<!-- ABSOLUTE -->
+				<section>
+					<h2>position: absolute;</h2>
+					<p>The element is removed from the normal document flow, and no space is created for the element in the page layout.
+						It is positioned relative to its closest positioned ancestor, if any;</p>
+					<p>In this example, the parent (#c3) is in "relative" position and (therefore) the children in absolute position are positioned relative to him.</p>
+
+					<pre><code class="language-css">
+					#c3 {
+						position: relative;
+					}
+
+					#c3-two {
+						position: absolute;
+						top: -20px;
+						left: -20px;
+					}
+					</code></pre>
+
+					<div id="c3" class="container">
+						<cite class="container-info">#c3</cite>
+						<div class="box" id="c3-one">One</div>
+						<div class="box active" id="c3-two">Two</div>
+						<div class="box" id="c3-three">Three</div>
+						<div class="box" id="c3-four">Four</div>
+					</div>
+				</section>
+
+
+				<!-- FIXE -->
+				<section>
+					<h2>position: fixed;</h2>
+					<p>Fixed positioning is similar to absolute positioning except that here the "parent" reference is the <strong>viewport</strong> (browser window).</p>
+					<p>This positioning is often used to create a floating element that stays in the same position, even when scrolling!</p>
+					<p>In the following example, the "two" box is set at 20 pixels from the top of the page (viewport) and 20 pixels from the right edge.</p>
+
+					<pre><code class="language-css">
+					#c4-two {
+						position: fixed;
+						top: 20px;
+						right: 20px;
+					}
+					</code></pre>
+
+					<div id="c4" class="container">
+						<cite class="container-info">#c4</cite>
+						<div class="box" id="c4-one">One</div>
+						<div class="box active" id="c4-two">Two <span>[ I'm fixed ! ]</span></div>
+						<div class="box" id="c4-three">Three</div>
+						<div class="box" id="c4-four">Four</div>
+					</div>
+				</section>
+
+			</article>
+
+		</main>
+
+
+		<footer>
+			<p><a href="https://developer.mozilla.org/docs/Web/CSS/position" target="_blank">MDN - position</a></p>
+			<p><a href="http://cssreference.io/positioning/" target="_blank">cssreference.io - Positioning in CSS</a></p>
+		</footer>
+
+		<script src="https://poco.squarelabel.com/assets/common/prism.js"></script>
+	</body>
+</html>

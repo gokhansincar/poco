@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+<head>
+    <meta charset="utf-8">
+    <title>Hack The Corpus</title>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  
+  <body>
+
+    <section id="status">
+      <h2>Status</h2>
+      <p>Level <span id="current-level" class="status-item">X</span> of <span id="total-levels" class="status-item">X</span></p>
+    </section>
+
+    <!-- HEX ICONS. The Game will be displayed here. -->
+    <section id="corpus" class="level-1"></section>
+    
+    <!-- BUTTONS -->
+    <section id="buttons" class="MT-2 AC">
+      <p class="btns-row">
+        <a href="#" id="prev-level" class="button hide">← Prev Level</a>
+        <a href="#" id="next-level" class="button hide">Next Level →</a>
+      </p>
+      <p class="btns-row MT-1 AC">
+        <a href="#" id="reset-level" class="button">Reset Level</a>
+        <a href="#" id="reset-all-levels" class="button">Reset All Levels</a>
+      </p>
+    </section>
+
+    <!-- OVERLAY -->
+    <div id="overlay" class="overlay">
+      <div>
+        <h1>Success !</h1>
+        <h2 class="hide">All levels are completed.</h2>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+
+</html>

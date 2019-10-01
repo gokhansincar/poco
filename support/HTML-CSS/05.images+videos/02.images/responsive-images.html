@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML - Responsive Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+    <style>
+      /* COMMON
+      ---------------------------------------*/
+      picture {
+        display: block;
+        max-width: 1024px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: width .4s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Responsive images</h1>
+
+    <section id="section-1">
+      <h2>Using picture tag (the "art directing" method)</h2>
+
+      <picture>
+        <source class="phone" media="(max-width: 480px)" srcset="img/unsplash-01-phone.jpg">
+        <source class="tablet" media="(max-width: 1024px)" srcset="img/unsplash-01-tablet.jpg">
+        <img class="desktop" src="img/unsplash-01.jpg" alt="Unsplash aerial image">
+      </picture>
+    </section>
+
+    <section id="section-2">
+      <h2>Using srcset and sizes attributes</h2>
+
+      <img srcset="responsivebreakpoints/unsplash-02-w480.jpg 480w,
+                    responsivebreakpoints/unsplash-02-w840.jpg 840w,
+                    responsivebreakpoints/unsplash-02-w1024.jpg 1024w"
+            sizes="(max-width: 480px) 480px,
+                    (max-width: 800px) 840px,
+                    1024px"
+              src="responsivebreakpoints/unsplash-02-w1024.jpg" alt="Winter mountain in CH">
+
+      <blockquote class="MT-2">
+        <p>Once your browser has the higher resolution picture (loaded, in cache), there is no point for it to download lower quality one, even when you make your window smaller (the point of this is to save traffic).</p>
+        <p class="MT-1">So if you want to test this, just make your window smaller and THEN load the page (after clearing the cache / or use incognito mode). You will get the mobile or tablet version. Then by making the window bigger, you'll at some point see your browser switching to higher resolution picture.</p>
+        <cite><a href="https://stackoverflow.com/a/30087595">See this Stackoverflow question</a></cite>
+      </blockquote>
+    </section>
+
+    <footer>
+      <p><a href="https://unsplash.com/" target="_blank">Unsplash - Free Images</a></p>
+      <p><a href="https://www.responsivebreakpoints.com/" target="_blank">Responsive Image Breakpoints Generator</a></p>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images" target="_blank">Responsive images</a></p>
+    </footer>
+
+  </body>
+</html>

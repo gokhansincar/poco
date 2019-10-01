@@ -1,0 +1,27 @@
+{
+
+  "site_info": {
+    "global_title"  : "Heavy Metal Company",
+    "description"   : "How to use PHP to create a dynamic website",
+    "keywords"      : "php,dynamic site,cool,raoul",
+		"author"        : "Sorin Paun",
+		"last_update"   : "18.05.2019"
+  },
+
+  "pages": {
+
+    "home": {
+      "title": "Where hardest stuff is possible",
+      "menu" : "HOME"
+    },
+    "work": {
+      "title" : "A selection of our latest projects",
+      "menu" : "WORK"
+    },
+    "contact": {
+      "title": "Say hello",
+      "menu": "CONTACT"
+    }
+  }
+
+}

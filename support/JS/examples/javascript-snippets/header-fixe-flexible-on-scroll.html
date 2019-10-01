@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A fixed header but... flexible</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+
+    <!-- STYLES POUR CETTE PAGE -->
+    <style>
+      /* HEADER
+      ------------------------------------*/
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 150px; /*Hauteur par défaut*/
+
+        display: flex;
+        align-items: center; /*centre verticalement son contenu*/
+        justify-content: center; /*centre horizontalement son contenu*/
+
+        background-color: rgba(255, 255, 255, .9); /* le .9 est l'opacité de la couleur*/
+        border-bottom: solid 1px #eee;
+      }
+
+      /* Si une des propriétés change pour le header ou ses descendants, on fait une transition */
+      header, header * {
+        transition: all .5s ease;
+      }
+
+      header {
+        padding: 0 3%;
+      }
+
+      /* Le header quand le body a la classe "is-scrolled" (ajouté par JS) */
+      .is-scrolled header,
+      .mobile header {
+        height: 80px;
+      }
+
+      /*MAIN
+      ------------------------------------*/
+      /* Mobile ou quand le body a la classe "is-scrolled" */
+      .is-scrolled main,
+      .mobile main {
+        margin-top: 120px;
+      }
+
+      /* Desktop */
+      main {
+        margin-top: 200px; /* Obligé d'avoir un margin-top à cause du header fixe ! */
+      }
+    </style>
+  </head>
+
+  <!-- LA CLASSE DU BODY C'EST POUR IDENTIFIER CETTE PAGE AVEC JQUERY -->
+  <body class="page-header-anim">
+
+    <header>
+      <h1>Un header fixe mais... flexible</h1>
+    </header>
+
+    <main class="max-800">
+
+      <article>
+
+        <section>
+          <h2>Première Section</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis, nunc at sollicitudin consectetur, lorem ipsum mattis arcu, eget tempor sem ligula nec sem. Vivamus tincidunt odio risus, ac consectetur tellus sodales id. Mauris nec eros diam. Fusce ex magna, aliquet in accumsan a, pretium at ante. Sed feugiat nunc at massa convallis, sed tincidunt lorem tristique. Pellentesque in lacus sapien. Sed finibus congue dolor, quis sollicitudin arcu congue sed. Praesent quis orci  aliquam ante porttitor bibendum eget quis nisi. Vestibulum fringilla dignissim aliquam.
+            Aliquam ac enim varius, sollicitudin est eleifend, semper augue. Aliquam tempus auctor dolor eu tristique. Integer luctus consequat viverra. Phasellus luctus est vitae dui pharetra vulputate ut sit amet massa. Sed in sapien scelerisque, maximus dolor eget, lobortis nisi. Duis et nulla lorem. Integer mollis tincidunt lobortis. Suspendisse est turpis, euismod at mauris vitae, blandit pulvinar lacus. Quisque sapien arcu, ultricies eu mattis quis, condimentum vel ex. Quisque aliquam suscipit imperdiet. Donec erat velit, faucibus vitae libero ut, sagittis hendrerit erat. Phasellus et erat finibus, pharetra libero non, congue nunc. Nam ornare ipsum mi, id consectetur metus consectetur eu. Maecenas non bibendum nunc.
+          </p>
+          <p>
+            Mauris non tincidunt nisi, id posuere leo. In auctor est tempus ex venenatis, eu malesuada risus vehicula. Suspendisse vitae ante in ex pharetra tincidunt et vitae lacus. Maecenas tellus magna, lacinia suscipit nibh sed, bibendum laoreet leo. Suspendisse sed lacinia lorem. Sed scelerisque feugiat neque, eu sodales augue pretium quis. Mauris sit amet nunc ex. Ut rutrum libero orci, vel facilisis mauris aliquam sed. Mauris sagittis dignissim neque. Pellentesque at magna ante. Morbi dolor metus, fermentum ut tortor sit amet, finibus congue eros. Nunc ullamcorper risus in sem egestas ullamcorper. Maecenas nisl enim, tempor eget felis vitae, cursus porttitor massa. Sed malesuada ullamcorper est, nec bibendum ante convallis non.
+            Suspendisse ut nisi sagittis, elementum ante vitae, sodales ex. Mauris sapien ipsum, iaculis at dui sit amet, euismod dapibus elit. Praesent ut felis eros. Nulla malesuada nibh eu elit volutpat, finibus fermentum turpis pellentesque. Etiam at libero enim. Vestibulum malesuada, lacus at consequat tincidunt, justo elit facilisis eros, sit amet vestibulum enim massa vitae odio. Ut semper, eros fermentum luctus accumsan, ex est auctor enim, at hendrerit leo massa iaculis dui. Maecenas facilisis arcu placerat tempus condimentum. Morbi mollis vestibulum luctus. Aliquam placerat vulputate lectus. Phasellus iaculis leo sed bibendum lacinia. Etiam at dapibus purus, ac finibus tortor.
+          </p>
+        </section>
+
+        <section>
+          <h2>Deuxième Section</h2>
+          <p>
+            Donec faucibus vehicula arcu non luctus. Phasellus nec eros vel massa imperdiet auctor sit amet eget augue. Nam tincidunt dictum lacus eu congue. Vestibulum posuere eu turpis at accumsan. Vestibulum a neque id ligula posuere dictum nec sit amet justo. Integer fermentum fermentum nisi lobortis posuere. Duis condimentum neque turpis, tristique aliquet ligula faucibus eget. Mauris est risus, lobortis at nisi quis, convallis malesuada diam. Phasellus eu viverra dui. Duis dapibus aliquam odio, a dapibus sapien. Nulla facilisi. Nunc laoreet mauris felis, vitae gravida velit rutrum maximus. Suspendisse tincidunt iaculis neque.
+            Nulla sit amet sodales lectus, in condimentum ipsum. Morbi euismod eu diam nec lobortis. Duis turpis mi, viverra sit amet enim et, laoreet aliquet arcu. Sed et aliquet tellus, a ullamcorper nisl. Nullam placerat quam a erat condimentum mollis. Duis sed tellus eget massa auctor vehicula eget non justo. In mattis varius purus ac fringilla.        </p>
+          <p>
+            Duis pulvinar cursus ullamcorper. Nullam tempor augue eget consectetur molestie. Curabitur condimentum sed magna a consequat. Suspendisse quis condimentum leo. Proin vel dignissim elit, tempus ultrices purus. Sed id rhoncus ex. Pellentesque ullamcorper, lorem vitae luctus pulvinar, urna quam condimentum ligula, eget porta diam libero ac diam. Vestibulum egestas mauris et odio bibendum aliquet. Sed tempus suscipit pharetra. Suspendisse at scelerisque lacus, et tempus neque. Pellentesque nec dolor eu nisi commodo tincidunt. Praesent mauris sapien, tempus quis fermentum eu, bibendum non leo.
+            Mauris lorem lectus, iaculis et tortor eu, pellentesque porta nulla. Pellentesque sodales iaculis enim ac semper. Proin sed augue imperdiet, maximus tortor eu, lacinia metus. Vivamus sit amet ex justo. Duis urna nulla, commodo eget quam id, ornare molestie ipsum. Etiam consectetur metus dui, sit amet efficitur diam maximus nec. Fusce vehicula feugiat condimentum.
+        </p>
+        </section>
+
+        <section>
+          <h2>Troisième Section</h2>
+          <p>
+            Donec faucibus vehicula arcu non luctus. Phasellus nec eros vel massa imperdiet auctor sit amet eget augue. Nam tincidunt dictum lacus eu congue. Vestibulum posuere eu turpis at accumsan. Vestibulum a neque id ligula posuere dictum nec sit amet justo. Integer fermentum fermentum nisi lobortis posuere. Duis condimentum neque turpis, tristique aliquet ligula faucibus eget. Mauris est risus, lobortis at nisi quis, convallis malesuada diam. Phasellus eu viverra dui. Duis dapibus aliquam odio, a dapibus sapien. Nulla facilisi. Nunc laoreet mauris felis, vitae gravida velit rutrum maximus. Suspendisse tincidunt iaculis neque.
+            Nulla sit amet sodales lectus, in condimentum ipsum. Morbi euismod eu diam nec lobortis. Duis turpis mi, viverra sit amet enim et, laoreet aliquet arcu. Sed et aliquet tellus, a ullamcorper nisl. Nullam placerat quam a erat condimentum mollis. Duis sed tellus eget massa auctor vehicula eget non justo. In mattis varius purus ac fringilla.        </p>
+          <p>
+            Duis pulvinar cursus ullamcorper. Nullam tempor augue eget consectetur molestie. Curabitur condimentum sed magna a consequat. Suspendisse quis condimentum leo. Proin vel dignissim elit, tempus ultrices purus. Sed id rhoncus ex. Pellentesque ullamcorper, lorem vitae luctus pulvinar, urna quam condimentum ligula, eget porta diam libero ac diam. Vestibulum egestas mauris et odio bibendum aliquet. Sed tempus suscipit pharetra. Suspendisse at scelerisque lacus, et tempus neque. Pellentesque nec dolor eu nisi commodo tincidunt. Praesent mauris sapien, tempus quis fermentum eu, bibendum non leo.
+            Mauris lorem lectus, iaculis et tortor eu, pellentesque porta nulla. Pellentesque sodales iaculis enim ac semper. Proin sed augue imperdiet, maximus tortor eu, lacinia metus. Vivamus sit amet ex justo. Duis urna nulla, commodo eget quam id, ornare molestie ipsum. Etiam consectetur metus dui, sit amet efficitur diam maximus nec. Fusce vehicula feugiat condimentum.
+        </p>
+        </section>
+
+      </article>
+    </main>
+
+    <footer>
+      <h2>Bibliothéques de code utilisées dans cette page</h2>
+      <p><a href="http://jquery.com/" target="_blank">jQuery</a></p>
+      <p><a href="js/functions.js" target="_blank">functions.js - Fonctions JS utiles</a></p>
+      <p><a href="js/app.js" target="_blank">app.js - Vos scripts JS pour cette application/site</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

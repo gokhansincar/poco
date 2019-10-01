@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- START HEAD -->
+  <head>
+  
+  	<!-- META - charset (jeu de caractères) -->
+    <meta charset="utf-8">
+    
+    <!-- META - viewport (pour adapter la largeur du contenu à l'appareil) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- TITLE -->
+    <title>Une mise en page - Responsive</title>
+
+		<!-- CSS LINKS -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Merriweather:300,400">
+    <link rel="stylesheet" href="css/fonticons/style.css">
+    
+    <link rel="stylesheet" href="css/__styles-mobile-first.css">
+    <link rel="stylesheet" href="css/styles-mobile-first-START.css">
+    
+    <link rel="stylesheet" href="css/__styles-desktop-first.css">
+    <link rel="stylesheet" href="css/__styles-desktop-first-START.css">
+    
+  </head>
+  <!-- END HEAD -->
+
+
+	<!-- START BODY -->
+  <body>
+
+    <!-- Start Header -->
+    <header class="main-header flex">
+
+    <!-- The Logo -->
+      <figure id="logo" class="logo"><img src="img/heavy-metal-logo.svg" alt="Heavy Metal Logo"></figure>
+
+      <!-- A navigation... -->
+      <nav class="main-nav">
+        <a id="hamburger" class="hamburger" href="#menu">&#9776;</a>
+        <ul class="main-menu L2 flex">
+          <li><a href="#" class="icon-home"></a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#" class="active">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+     <!-- End Header -->
+
+
+
+     <!-- Start Main -->
+    <main class="main-content L1 flex">
+
+      <!-- Start Article -->
+      <article class="article">
+      
+        <!-- Article title + description -->
+        <h1>Our projects</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Donec a diam lectus. Set sit amet ipsum mauris.</p>
+
+        <!-- Section -->
+        <section class="gallery">
+          
+          <!-- Section title + description -->
+          <h2>Section Gallery</h2>
+          <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.</p>
+
+					<!-- Start Gallery container -->
+          <div class="gallery-items flex">
+          	<figure>
+            	<a href="#">
+                <img src="https://picsum.photos/400?image=1072" alt="Work A">
+                <figcaption>Work A</figcaption>
+              </a>
+            </figure>
+            <figure>
+            	<a href="#">
+                <img src="https://picsum.photos/400?image=1054" alt="Work B">
+                <figcaption>Work B</figcaption>
+              </a>
+            </figure>
+            <figure>
+            	<a href="#">
+                <img src="https://picsum.photos/400?image=946" alt="Work C">
+                <figcaption>Work C</figcaption>
+              </a>
+            </figure>
+            <figure>
+            	<a href="#">
+                <img src="https://picsum.photos/400?image=1058" alt="Work D">
+                <figcaption>Work D</figcaption>
+              </a>
+            </figure>
+            <figure>
+            	<a href="#">
+                <img src="https://picsum.photos/400?image=1059" alt="Work E">
+                <figcaption>Work E</figcaption>
+              </a>
+            </figure>
+            <figure>
+            	<a href="#">
+                <img src="https://picsum.photos/400?image=1047" alt="Work F">
+                <figcaption>Work F</figcaption>
+              </a>
+            </figure>
+          </div>
+          <!-- End Gallery container -->
+          
+        </section>
+         <!-- End Section -->
+
+				<!-- Start Section -->
+        <section class="some-text">
+        
+        	<!-- Section title + description -->
+          <h2>Section some text</h2>
+          <p>Vitae laoreet libero consectetur, curabitur ornare !</p>
+					
+          <!-- Start text container... -->
+          <div class="text-col-2">
+            <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. 
+            In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+  
+            <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. 
+            Maecenas convallis ullamcorper ultricied. 
+            Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+            
+            <p>Curabitur et hendrerit diam. Proin dignissim eget mi a efficitur. Suspendisse potenti. Sed suscipit justo purus. 
+            Etiam consectetur, est vel consectetur efficitur, turpis metus lobortis ipsum, porta tempor dui lorem sed sem. 
+            Aenean et neque sagittis, pretium ex eget, facilisis nibh. Fusce justo purus, accumsan vel arcu quis, maximus ullamcorper risus. 
+            Maecenas leo mi, lobortis vitae ante tempus, accumsan egestas mi. Maecenas vel ipsum nulla. Integer diam turpis, iaculis quis orci sed, finibus vulputate dui.</p>
+            
+            <p>Maecenas eleifend magna sed arcu ornare, vitae laoreet libero consectetur. Sed a diam ac lacus vestibulum faucibus. 
+            Phasellus et semper dui. Aenean vestibulum ut lorem eget semper.</p> 
+          </div>
+          <!-- End text container... -->
+          
+        </section>
+        <!-- End Section -->
+        
+      </article>
+      <!-- End Article -->
+
+
+      <!-- Start Aside -->
+      <aside>
+      
+      	<!-- Aside title -->
+        <h3 class="aside-title">Related stories</h3>
+
+				<!-- Aside list -->
+        <ul class="related-links">
+          <li><a href="#">Oh I do like to be beside the seaside</a></li>
+          <li><a href="#">And I do like to be beside the sea</a></li>
+          <li><a href="#">Although in the North of England</a></li>
+          <li><a href="#">It never stops raining</a></li>
+          <li><a href="#">Oh well...</a></li>
+        </ul>
+        
+      </aside>
+      <!-- End Aside -->
+
+
+    </main>
+    <!-- End Main -->
+
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <p>© 2019 by Nobody. All rights reversed.</p>
+      <p><a href="https://codepen.io/erikterwan/pen/EVzeRP" target="_blank">Pure CSS Hamburger fold-out menu</a></p>
+      <p><a href="https://www.sitepoint.com/pure-css-off-screen-navigation-menu/" target="_blank">Pure CSS Off-Screen Menu</a></p>
+    </footer>
+
+
+  </body>
+  <!-- END BODY -->
+  
+</html>

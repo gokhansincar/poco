@@ -1,0 +1,459 @@
+/* RESET - Enlever les styles par défaut des navigateurs
+=================================================================================== */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Mettre Box Sizing "border-box" par défaut */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+
+/* FORMATAGE BALISES PRINCIPALES
+===================================================================================*/
+/* TAILLE RÉFÉRENCE POUR POLICES
+ * On peut utiliser html ou :root
+----------------------------------------------*/
+
+
+
+/* FONT - Propriétés par défaut
+----------------------------------------------*/
+
+
+
+/* TITRES
+----------------------------------------------*/
+
+
+
+/* PARAGRAPHES
+----------------------------------------------*/
+
+
+
+/* LIENS
+----------------------------------------------*/
+
+
+
+/* BOLD
+----------------------------------------------*/
+
+
+
+/* IMAGES
+----------------------------------------------*/
+
+
+
+/* SELECTIONS, PLACEHOLDERS
+----------------------------------------------*/
+/*Document selection*/
+
+
+/*Form elements placeholders*/
+
+
+
+
+
+/* CLASSES EN COMMUN - "Helpers": Éléments qui partagent les mêmes styles
+===================================================================================*/
+/* DISPLAY
+----------------------------------------------*/
+/*Display none, inline-block, block*/
+
+/*Display FLEX (par défaut pour petits écrans)*/
+
+
+/*.hide-but-keep -> Masquer le text pour tous les devices sauf pour les "readers" sans affichage visuel */
+.hide-but-keep {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+
+/* TYPOGRAPHIE
+----------------------------------------------*/
+.FW-300	{font-weight: 300; font-size: 1.02em;}
+.FW-900	{font-weight: 900;}
+.UPP		{text-transform: uppercase;}
+.AC			{text-align: center;}
+
+
+/* BACKGROUNDS
+----------------------------------------------*/
+.BG-white {
+	background-color: white;
+}
+
+
+/* MARGINS
+----------------------------------------------*/
+.MT-0 {margin-top: 0;}
+.MT-1 {margin-top: 0.25em;}
+.MT-2 {margin-top: 0.50em;}
+.MT-3 {margin-top: 1em;}
+.MT-4 {margin-top: 1.25em;}
+.MT-5 {margin-top: 1.50em;}
+.MT-6 {margin-top: 2em;}
+.MT-7 {margin-top: 3em;}
+.MT-8 {margin-top: 4em;}
+/*etc.*/
+
+.MB-0 {margin-bottom: 0;}
+.MB-1 {margin-bottom: 0.25em;}
+.MB-2 {margin-bottom: 0.50em;}
+.MB-3 {margin-bottom: 1em;}
+.MB-4 {margin-bottom: 1.25em;}
+.MB-5 {margin-bottom: 1.50em;}
+.MB-6 {margin-bottom: 2em;}
+.MB-7 {margin-bottom: 3em;}
+.MB-8 {margin-bottom: 4em;}
+/*etc.*/
+
+.MX-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+/* LAYOUT --> COMMON ELEMENTS
+===================================================================================*/
+/* BODY
+----------------------------------------------*/
+
+
+
+/* MAIN
+----------------------------------------------*/
+
+
+
+/* HEADER
+----------------------------------------------*/
+
+
+
+/* HEADER --> LOGO (pour nous, titre principal)
+----------------------------------------------*/
+
+
+
+/* HEADER --> NAV TRIGGERS
+----------------------------------------------*/
+
+
+
+/* HEADER --> NAV
+----------------------------------------------*/
+/* NAV DEFAULT
+=============================*/
+
+
+
+/* NAV FROM TOP
+=============================*/
+
+
+
+/* NAV FROM RIGHT
+=============================*/
+
+
+
+/* NAV FROM BOTTOM
+=============================*/
+
+
+
+/* NAV FROM LEFT
+=============================*/
+
+
+
+/* NAV WHEN MENU IS OPEN
+=============================*/
+
+
+
+/* HEADER --> MAIN MENU
+----------------------------------------------*/
+/*MAIN MENU*/
+
+
+
+/*MAIN MENU LINKS*/
+
+
+
+/*MAIN MENU CURRENT LINK*/
+
+
+
+/* FOOTER
+--------------------------------------------*/
+
+
+
+/* CONTAINERS COMMON
+----------------------------------------------*/
+/*Basic container*/
+
+
+/*Row section*/
+
+
+/*Side Bar*/
+
+
+/*Container with columns*/
+
+
+
+/* CONTENT HEADER WITH ICON FIGURE
+----------------------------------------------*/
+
+
+
+/* BUTTONS
+----------------------------------------------*/
+
+
+
+/* ICONS
+----------------------------------------------*/
+
+
+
+
+
+/* LAYOUT --> INDEX/HOME
+===================================================================================*/
+/* BANNER
+--------------------------------------------*/
+
+
+
+/* CONTAINER STYLE 1
+--------------------------------------------*/
+
+
+
+/* CONTAINER STYLE 2 (common all pages)
+-------------------------------------------*/
+
+
+
+/* CONTAINER STYLE 3
+--------------------------------------------*/
+
+
+
+/* CALL TO ACTION
+--------------------------------------------*/
+
+
+
+
+
+/* LAYOUT --> CONTACT
+===================================================================================*/
+/* CONTAINER STYLE 4
+--------------------------------------------*/
+
+
+
+/* FORM ELEMENTS
+--------------------------------------------*/
+/*DEFAULT*/
+
+
+/*ON FOCUS*/
+
+
+/*MARGINS*/
+
+
+
+
+
+/* MEDIA QUERIES
+===================================================================================*/
+/* >= 736px
+----------------------------------------------*/
+@media (min-width: 736px) {
+
+	/* COMMON
+	----------------------------------*/
+	/*Main*/
+
+
+	/*Footer*/
+
+
+	/*Header Figure*/
+
+
+
+	/* HOME
+	---------------------------------*/
+	/*Banner*/
+
+
+
+	/* CONTACT
+	----------------------------------*/
+
+
+}
+
+
+/* >= 840px
+----------------------------------------------*/
+@media (min-width: 840px) {
+
+	/* COMMON
+	----------------------------------*/
+	/*ROOT FONT SIZE*/
+
+
+
+	/*TITLES*/
+
+
+
+	/*DISPLAY FLEX (par défaut pour écrans plus larges)*/
+
+
+
+	/*BODY HEADER*/
+
+
+
+	/*LOGO*/
+
+
+
+	/*NAV AND MENUS*/
+
+
+
+	/*CONTAINER*/
+
+
+
+	/* CONTENT
+	----------------------------------*/
+	/*Main Header*/
+
+
+
+	/*Banner*/
+
+
+
+	/*Container STYLE 1*/
+
+
+
+	/*Container STYLE 2*/
+
+
+
+	/*Container STYLE 3*/
+
+
+
+	/*CTA*/
+
+
+
+	/*Container with columns*/
+
+
+
+	/* CONTACT
+	----------------------------------*/
+
+
+}
+
+
+/* >= 960px
+----------------------------------------------*/
+@media (min-width: 960px) {
+
+	/*Main menu li*/
+
+
+}
+
+
+/* >= 1024px
+----------------------------------------------*/
+@media (min-width: 1024px) {
+
+	/* COMMON
+	----------------------------------*/
+	/*Main menu li*/
+
+
+	/*Main*/
+
+
+
+	/* HOME
+	----------------------------------*/
+	/*Container STYLE 1*/
+
+
+	/*Featured icons*/
+
+
+}
+
+
+/* >= 1280px
+----------------------------------------------*/
+@media (min-width: 1280px) {
+
+	/*Banner*/
+
+
+	/*Main*/
+
+
+
+}
+
+
+/* >= 1680px
+----------------------------------------------*/
+@media (min-width: 1680px) {
+
+	/* COMMON
+	----------------------------------*/
+	/*Main*/
+
+
+
+	/* HOME
+	----------------------------------*/
+	/*Container STYLE 1 - text*/
+
+
+	/*Container STYLE 1 - icons*/
+
+
+}

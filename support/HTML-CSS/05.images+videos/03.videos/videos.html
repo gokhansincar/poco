@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS - Video fluides</title>
+
+    <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+    <!-- STYLES JUSTE POUR CETTE PAGE ! -->
+    <style>
+      /* LAYOUT
+      ---------------------------------------*/
+      /* SECTIONS
+      -------------------*/
+      section {
+        padding: 40px; /* marges intérieures pour tenir à distance son contenu */
+        background-color: #eee; /* BG section */
+      }
+
+      /* POUR VIDEOS LOCALES */
+      video {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      video.size-80p {
+        width: 80%;
+        min-width: 600px;
+        margin: auto;
+      }
+
+      .max-800 {
+        width: 90%;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      /* POUR VIDEO YOUTUBE, VIMEO, etc. */
+      .video-container {
+      	position:relative;
+      	padding-bottom:56.25%;
+      	padding-top:30px;
+      	height:0;
+      	overflow:hidden;
+      }
+      .video-container iframe {
+      	position:absolute;
+      	top:0;
+      	left:0;
+      	width:100%;
+      	height:100%;
+      }
+
+      footer {
+        padding: 3em;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <section id="section-1" class="fullscreen-bg">
+      <video  loop muted autoplay poster="media/small-poster.png" class="fullscreen-bg__video">
+        <source src="media/small.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <section id="section-2">
+      <video src="media/small.mp4" controls poster="media/small-poster.png" class="size-80p">
+      Désolé votre navigateur ne peut pas jour des vidéos mais vous pouver la <a href="media/small.mp4">télécharger </a>
+      et la jouer avec votre media player favorit !
+      </video>
+    </section>
+
+    <section id="section-3">
+      <video controls loop autoplay poster="media/Cloudy_Road.jpg" class="size-80p">
+        <source src="media/Cloudy_Road.mp4" type="video/mp4">
+        <source src="media/Cloudy_Road.webm" type="video/webm">
+        <source src="media/Cloudy_Road.ogv" type="video/ogv">
+        Désolé votre navigateur ne peut pas jour des vidéos mais vous pouver la <a href="media/small.mp4">télécharger </a> et la jouer avec votre media player favorit !
+      </video>
+    </section>
+
+    <section id="section-4" class="max-800">
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ssWq33euXaA" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <p><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/video" target="_blank">MDN Video tag</a></p>
+      <p><a href="http://coverr.co/">Free cover videos</a></p>
+    </footer>
+  </body>
+</html>

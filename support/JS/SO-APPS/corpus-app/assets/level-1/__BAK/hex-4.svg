@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250.01px" height="288.69px" x="0px" y="0px">
+  <style>.stuff{fill:none;stroke:#010202;stroke-width:5;stroke-miterlimit:10}</style>
+	<a>
+		<polygon fill="#ec671d" points="0.5,216.23 0.5,72.46 125.01,0.58 249.52,72.46 249.52,216.23 125.01,288.11"/>
+		<path fill="#010202" d="M125.01 1.15l124.01 71.6v143.19l-124.01 71.6L1 215.94V72.75l124.01-71.6m0-1.15L0 72.17v144.35l125.01 72.17 125.01-72.17V72.17L125.01 0z"/>
+		<line x1="187.09" x2="124.93" y1="36.64" y2="144.61" class="stuff"/><polyline points="186.94,252.22 124.93,144.61 62.82,252.17" class="stuff"/>
+	</a>
+</svg>

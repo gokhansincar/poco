@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS - A Header with Logo and Nav</title>
+
+  <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+  <style>
+    
+    /* THE HEADER
+    -------------------------------------------------*/
+    #header {
+      display: flex; /*using the display flex method to display both header elements on the same line*/
+      justify-content: space-between; /*align logo and nav at far left/right*/
+      align-items: center; /*align logo and menus vertically*/
+
+      /*Optional*/
+      padding-bottom: 2em;
+      border-bottom: solid 1px #e5e5e5;
+    }
+
+
+    /* THE LOGO
+    -------------------------------------------------*/
+    #logo {
+      width: 20%;
+      max-width: 60px;
+      min-width: 40px;
+    }
+    #logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+
+    /* THE NAV
+    -------------------------------------------------*/
+		#nav {
+			width: 100%; /* Desired width of the navigation */
+			max-width: 400px; /* Desired max-width of the navigation */
+		}
+
+		/* The list */
+		#nav ul {
+			display: flex; /*the magic is here*/
+			justify-content: space-between; /*desired flex display type*/
+		}
+
+		/* The list items */
+		#nav ul li {
+			width: 33.333%; /*menu item width in %, divide 100 by the number of menus*/
+			text-align: center; /*align the text in the center of the menu item*/
+		}
+
+		/* List items links */
+		#nav ul li a {
+			font-size: 1rem; /* desired size of link text */
+			line-height: 1; /* so that the line height is the same height as the font-size */
+			text-decoration: none; /* remove the underline (if not done with a reset...) */
+			display: block; /* 100% width of the parent (li) */
+			padding: 1em 2em; /* internal paddings: 1em top/bottom; 2em left/right  */
+			color: #888; /* desired color of the text */
+			transition: background .5s ease, color .5s ease; /* transition on background and color */
+		}
+
+		/* Survol sur les liens */
+		#nav ul li a:hover {
+			color: #000; /* links color on hover */
+			background: #e5e5e5; /* background color on hover */
+		}
+	</style>
+
+</head>
+
+<body>
+
+  <header id="header">
+
+    <figure id="logo">
+      <a href="https://www.wwf.ch">
+        <img src="https://upload.wikimedia.org/wikipedia/de/0/06/WWF_Logo.svg" alt="WWF Logo">
+      </a>
+    </figure>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="#">Menu A</a></li>
+        <li><a href="#">Menu B</a></li>
+        <li><a href="#">Menu C</a></li>
+      </ul>
+    </nav>
+  
+  </header>
+
+  <h1 class="MT-3 AC">CSS - A (typical) header with Logo and Nav</h1>
+  <h2 class="AC">For Desktop only.</h2>
+
+</body>
+
+</html>

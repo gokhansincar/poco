@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Classic Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- CUSTOM FONT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <!-- DEMO STYLES -->
+    <link rel="stylesheet" href="css/forms.css">
+  </head>
+  <body>
+
+    <main>
+
+      <h1>Classic Form with minimal CSS format</h1>
+
+      <form id="form-1" method="get">
+
+        <fieldset>
+          <legend>Some form legend</legend>
+
+          <!-- SIMPLE INPUTS -->
+          <div class="formrow">
+            <label for="prenom">Input type text</label>
+            <input type="text" name="" value="" maxlength="30" id="prenom" placeholder="Votre prénom" required>
+          </div>
+          <div class="formrow">
+            <label for="nom">Input type text</label>
+            <input type="text" name="nom" value="" maxlength="30" placeholder="Votre nom" id="nom">
+          </div>
+
+          <!-- TYPE EMAIL -->
+          <div class="formrow">
+            <label for="email">Input type email</label>
+            <input type="email" name="email" value="" id="email" placeholder="Votre émail" required>
+          </div>
+
+          <!-- TYPE NUMBER - Le format est en fonction de la region definie dans le navigateur -->
+          <div class="formrow">
+            <label for="age">Input type number</label>
+            <input type="number" name="age" value="" id="age">
+          </div>
+
+          <!-- TYPE DATE - Le format est en fonction de la region definie dans le navigateur -->
+          <div class="formrow">
+            <label for="date">Input type date</label>
+            <input type="date" name="date" value="" id="date">
+          </div>
+
+          <!-- TEXTAREA -->
+          <div class="formrow">
+            <label for="message">Textarea</label>
+            <textarea name="message" value="" rows="5" id="message"></textarea>
+          </div>
+
+          <!-- CHECKBOX INPUTS -->
+          <div class="formrow d-flex">
+            <label for="titre">Input type checkbox</label>
+            <div class="checkbox-group">
+              <p>
+                <input type="checkbox" name="rouge" id="color_1" value="small">
+                <label for="color_1">Rouge</label>
+              </p>
+              <p>
+                <input type="checkbox" name="vert" id="color_2" value="medium">
+                <label for="color_2">Vert</label>
+              </p>
+              <p>
+                <input type="checkbox" name="jaune" id="color_3" value="large">
+                <label for="color_3">Jaune</label>
+              </p>
+            </div>
+          </div>
+
+          <!-- RADIO INPUTS -->
+          <div class="formrow d-flex">
+            <label for="titre">Input type radio</label>
+            <div class="radio-group">
+              <p>
+                <input type="radio" name="size" id="size_1" value="small">
+                <label for="size_1">Small</label>
+              </p>
+              <p>
+                <input type="radio" name="size" id="size_2" value="medium">
+                <label for="size_2">Medium</label>
+              </p>
+              <p>
+                <input type="radio" name="size" id="size_3" value="large">
+                <label for="size_3">Large</label>
+              </p>
+            </div>
+          </div>
+
+          <!-- SELECT -->
+          <div class="formrow">
+            <label for="canton">Select</label>
+            <select name="canton" id="canton">
+              <option value="">...</option>
+              <option value="GE">Genève</option>
+              <option value="FR">Fribourg</option>
+              <option value="VD">Vaud</option>
+            </select>
+          </div>
+
+          <!-- SUBMIT -->
+          <div class="formrow no-border">
+            <label></label>
+            <button type="submit">Validez</button>
+          </div>
+
+          <!-- HIDDEN !! -->
+          <input type="hidden" name="id" value="32">
+          <input type="hidden" name="action" value="update">
+
+        </fieldset>
+
+      </form>
+
+    </main>
+
+    <!-- FOOTER - liens ressources -->
+    <footer class="footer">
+      <ul>
+        <li><a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires" target="_blank">MDN - Guide sur les formulaires HTML</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

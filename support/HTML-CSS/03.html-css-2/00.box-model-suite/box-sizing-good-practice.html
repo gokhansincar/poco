@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS - box-sizing, best practice</title>
+		<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/prism.css">
+		<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+		<style>
+			html {
+				box-sizing: border-box;
+			}
+
+			.content-box, .content-box * {
+				box-sizing: content-box;
+			}
+
+			/* Exemple */
+			div {
+				width: 500px;
+				height: 200px;
+				border: solid 30px #ccc;
+				padding-bottom: 30px;
+
+				margin: 40px;
+				font-size: 1.5em;
+				background-color: #fc0;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1>box-sizing, best practice</h1>
+
+		<article class="MW-800 MA AC">
+
+			<section>
+
+				<h2>Code to put at the top of your styles (after reset or normalize)</h2>
+				<pre class="MA"><code class="language-css">
+				html {
+					box-sizing: border-box;
+				}
+
+				*, *:before, *:after {
+					box-sizing: inherit;
+				}
+				</code></pre>
+
+
+				<h2 class="MT-3">Code to put on a html element where the box-sizing is different</h2>
+				<pre class="MA"><code class="language-css">
+				element-html-cible, element-html-cible * {
+					box-sizing: content-box;
+				}
+				</code></pre>
+
+			</section>
+
+
+			<section>
+
+				<h2>Example of setting up</h2>
+
+				<div class="MA">I have a inherited box-sizing !</div>
+
+				<div class="content-box MA MT-3">I have a box-sizing type of "content-box" !</div>
+				
+			</section>
+
+		</article>
+
+
+		<footer>
+			<p><a href="https://developer.mozilla.org/docs/Web/CSS/box-sizing">MDN - CSS box-sizing</a></p>
+		</footer>
+
+		<script src="https://poco.squarelabel.com/assets/common/prism.js"></script>
+	</body>
+</html>

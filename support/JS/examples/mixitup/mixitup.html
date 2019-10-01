@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/styles.css"/>
+
+    <title>MixItUp Demo - Basic</title>
+  </head>
+  <body>
+
+    <article>
+
+      <header class="controls">
+        <div class="filters inline">
+          <a class="control" data-filter="all">All</a>
+          <a class="control" data-filter=".web">Web</a>
+          <a class="control" data-filter=".print">Print</a>
+          <a class="control" data-filter=".branding">Branding</a>
+          <a class="control" data-filter="none">Nothing</a>
+        </div>
+
+        <div class="sort inline">
+          <a class="control" data-sort="default:asc">Asc</a>
+          <a class="control" data-sort="default:desc">Desc</a>
+        </div>
+      </header>
+
+      <section class="container">
+        <!-- PROJETS -->
+        <div class="mix web">PROJECT 1 (web)</div>
+        <div class="mix web">PROJECT 2 (web)</div>
+        <div class="mix print">PROJECT 3 (print)</div>
+        <div class="mix branding">PROJECT 4 (branding)</div>
+        <div class="mix web">PROJECT 5 (web)</div>
+        <div class="mix print">PROJECT 6 (print)</div>
+        <div class="mix branding">PROJECT 7 (branding)</div>
+        <div class="mix print">PROJECT 8 (print)</div>
+
+        <!--
+        EMPTY - When there are not enough projects to fill a line
+         the gap will replace a project.
+        -->
+        <div class="gap"></div>
+        <div class="gap"></div>
+        <div class="gap"></div>
+        <div class="gap"></div>
+      </section>
+
+    </article>
+
+    <script src="js/mixitup.min.js"></script>
+    <script>
+      var container = document.querySelector('.container');
+      var mixer = mixitup(container);
+    </script>
+  </body>
+</html>

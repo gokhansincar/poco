@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>CSS - box-shadow</title>
+
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/prism.css">
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+	<style>
+		/* LAYOUT - COMMON
+			------------------------------------*/
+		.container {
+			display: flex;
+			margin-top: 1em;
+			padding: 2em;
+			background-color: #eee;
+		}
+
+		.box {
+			width: 100px;
+			height: 100px;
+			margin: 0 2em;
+			text-align: center;
+			font-size: 14px;
+			line-height: 100px;
+			background-color: #fff;
+		}
+
+
+		/* BOX-SHADOW
+			------------------------------------*/
+		#shadow-1 {
+			box-shadow: 0 0 20px 3px #ccc;
+		}
+
+		#shadow-2 {
+			box-shadow: 5px 5px 20px 3px rgba(150, 150, 150, .5);
+		}
+
+		#shadow-3 {
+			box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, .5) inset;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<main>
+
+		<article>
+
+			<header>
+				<h1>CSS - box-shadow</h1>
+			</header>
+			<p>The box-shadow property describes drop shadows applied to a box with a list of comma-separated values:</p>
+			<cite class="B">offset-x | offset-y | blur-radius | spread-radius | color</cite>
+
+			<!-- EXEMPLES -->
+			<section>
+				<h2>Examples</h2>
+
+				<div id="c1" class="container">
+					<div class="box" id="shadow-1">#shadow-1</div>
+					<div class="box" id="shadow-2">#shadow-2</div>
+					<div class="box" id="shadow-3">#shadow-3</div>
+				</div>
+
+				<pre class="MW-800"><code class="language-css">
+					#shadow-1 {
+						box-shadow: 0 0 20px 3px #ccc;
+					}
+
+					#shadow-2 {
+						box-shadow: 5px 5px 20px 3px rgba(150, 150, 150, .5);
+					}
+
+					#shadow-3 {
+						box-shadow: 1px 1px 10px 1px rgba(150, 150, 150, .5) inset;
+					}
+					</code></pre>
+			</section>
+
+			<section>
+				<h2>Compatibility with old browsers</h2>
+
+				<pre class="MW-800"><code class="language-css">
+					#shadow-1 {
+						-webkit-box-shadow: 0 0 20px 3px #ccc;
+						-moz-box-shadow: 0 0 20px 3px #ccc;
+						box-shadow: 0 0 20px 3px #ccc;
+					}
+					</code></pre>
+			</section>
+
+		</article>
+
+	</main>
+
+
+	<footer>
+		<p><a href="https://developer.mozilla.org/docs/Web/CSS/box-shadow" target="_blank">MDN - box-shadow</a></p>
+		<p><a href="https://cssgenerator.org/box-shadow-css-generator.html" target="_blank">CSS Generator, box-shadow
+				Generator</a></p>
+	</footer>
+
+	<script src="https://poco.squarelabel.com/assets/common/prism.js"></script>
+</body>
+
+</html>

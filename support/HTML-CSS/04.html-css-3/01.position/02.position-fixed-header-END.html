@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS - Fixed Header</title>
+
+		<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+		<style>
+
+			/* LAYOUT
+			------------------------------------*/
+			/* HEADER
+			............................*/
+			header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+
+				display: flex; /* flex baby ! */
+				align-items: center; /* centrer les enfants x,y */
+				justify-content: space-between; /* justifier les enfants */
+
+				background-color: rgba(240, 240, 240, .9);
+			}
+
+			/* Logo */
+			header figure {
+				flex: 1;
+				margin: 1em 2em;
+			}
+			header img {
+				height: 80px; /* largeur automatique */
+			}
+
+			/* Navigation */
+			header nav {
+				flex: 9;
+				margin-right: 2em;
+			}
+			header nav ul {
+				text-align: right;
+			}
+			header nav li {
+				display: inline-block;
+			}
+			header nav li a {
+				display: block;
+				font-size: 1.2em;
+				margin-left: 2em;
+			}
+
+
+			/* MAIN
+			............................*/
+			main {
+				width: 70%;
+				margin: 170px auto 0 auto;
+				/* 120px hauteur header + 50px pour avoir une marge en haut */
+			}
+
+			main section {
+				margin-top: 2.5em;
+			}
+
+
+ 			/* FOOTER
+			............................*/
+			footer {
+				padding: 2em 0;
+				margin-top: 2em;
+				text-align: center;
+				border-top: solid 1px #ccc;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<header>
+
+			<figure>
+				<img src="img/WWF_logo.svg">
+			</figure>
+
+			<nav>
+				<ul>
+					<li><a href="#">Accueil</a></li>
+					<li><a href="#">Articles</a></li>
+					<li><a href="#">Qui sommes-nous</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+
+		</header>
+
+		<main>
+
+			<article>
+
+				<h1>Praesent ligula tellus, tempor lacinia</h1>
+				<p>Nam sodales aliquam mi eget sagittis. Praesent ligula tellus, tempor lacinia tincidunt non, malesuada at nisi. Nam interdum dolor lectus, quis vestibulum mi tincidunt sit amet. Maecenas id sapien nisl.</p>
+
+
+				<!-- STATIC -->
+				<section>
+					<h2>Curabitur tincidunt</h2>
+					<p>Nullam egestas mauris sit amet ante ultricies sodales. Vivamus consequat ullamcorper nisi, blandit tempor nisi mattis id. Sed varius interdum commodo. Etiam ut nibh porttitor, cursus arcu at, pretium risus. Curabitur condimentum massa quam, et gravida nunc pellentesque id. Integer justo enim, commodo vitae augue porta, hendrerit malesuada libero. Nulla ultrices, leo et imperdiet pretium, elit nisl eleifend nulla, sed venenatis sem nulla nec ipsum. Nam ultricies a turpis finibus commodo.
+
+					Curabitur tincidunt, erat et aliquam congue, justo massa volutpat turpis, non vestibulum ex enim nec turpis. Nunc suscipit, enim ac accumsan efficitur, ligula lacus sagittis tortor, sit amet commodo magna eros ac enim. Suspendisse lobortis arcu pretium libero cursus, in faucibus magna ultricies. Suspendisse ut ligula nunc. Nunc tempor lacus ligula, in semper erat elementum ut. Nulla feugiat porta risus. Proin accumsan tincidunt sapien hendrerit tempor. Pellentesque eu suscipit lectus. Quisque vulputate, nunc eu aliquam feugiat, enim nunc vehicula augue, viverra cursus dolor massa vehicula ipsum. Praesent at velit at massa rhoncus aliquam vulputate a magna. Pellentesque hendrerit eros non tempor varius.</p>
+				</section>
+
+
+				<!-- RELATIVE -->
+				<section>
+					<h2>Suspendisse potenti</h2>
+					<p>Mauris accumsan pharetra nisi, et aliquam ex mollis semper. Maecenas sit amet nulla ullamcorper, ultrices urna ut, rutrum lectus. Nulla mollis varius enim, ut sagittis nunc egestas ac. Donec consequat risus eu lectus imperdiet, et fermentum nibh pellentesque. Nam lacinia sem sed enim pellentesque ullamcorper. In sem neque, tristique egestas mauris venenatis, porta ultrices ligula. Proin nec lectus et ante sodales suscipit a eget nisl. In tempor turpis id velit volutpat tempus. Fusce consequat, velit et convallis bibendum, augue erat hendrerit felis, id commodo turpis ipsum lobortis lacus. Fusce consectetur mollis faucibus.</p>
+
+					<p>In mattis finibus augue, in egestas est hendrerit ut. Nam id malesuada augue, ac scelerisque orci. Vivamus suscipit mauris ut ex aliquet pretium. Vestibulum ac ultrices ipsum. Donec nec mauris eget ex dapibus accumsan. Aliquam arcu magna, congue quis metus a, maximus lobortis justo. Integer cursus nunc nec neque consectetur, vitae ornare diam sodales. Sed fermentum dui id magna luctus, at sagittis diam lacinia. Nulla ullamcorper sem velit, eu convallis leo vehicula sodales. Cras at commodo nisi.</p>
+
+					<p>Nullam sodales luctus tortor sed facilisis. Integer in lectus nec ipsum lacinia pretium id vel tellus. Vivamus sit amet convallis ex, non tempus nisi. Suspendisse bibendum dui pretium, molestie mi quis, sagittis nibh. Donec iaculis, velit et maximus aliquet, ante nulla lacinia sapien, a viverra leo dolor sodales odio. Vivamus sollicitudin aliquet nibh, aliquam tincidunt mauris porttitor eu. Fusce eget semper diam. Nunc a ipsum accumsan, bibendum nibh quis, suscipit justo. Sed purus lorem, rhoncus vel lacus vitae, laoreet fermentum mauris.</p>
+				</section>
+
+
+				<!-- ABSOLUTE -->
+				<section>
+					<h2>Vivamus maximus !</h2>
+					<p>Ut venenatis faucibus lectus quis commodo. Praesent non pellentesque neque. Pellentesque tristique massa eu est auctor pulvinar. Vestibulum ex quam, pulvinar eu neque id, varius feugiat lorem. Maecenas tortor nisi, hendrerit ut ipsum in, tempus placerat risus. Nullam purus risus, accumsan id vestibulum in, laoreet at dolor. Proin feugiat velit eu mauris dignissim elementum. Etiam id massa et nisl ornare consequat.
+					</p>
+
+					<p>Curabitur luctus tortor sed odio vehicula porttitor nec eget leo. Vivamus maximus felis dui, quis euismod eros venenatis id. Nam ultricies sodales dictum. Phasellus ornare pharetra lacus, quis commodo felis vulputate dapibus. Ut in condimentum lacus, vulputate hendrerit sapien. Suspendisse potenti. Nulla non accumsan nisl.</p>
+
+					<p>Sed fermentum in justo et lacinia. Ut tincidunt dictum consectetur. Donec nec euismod nibh. Duis et lobortis leo. Integer felis turpis, auctor id dignissim id, ultrices vitae lorem. Aliquam dolor felis, scelerisque ut lacinia quis, consequat eu nibh. Donec arcu mauris, facilisis vitae vehicula non, cursus quis lectus.</p>
+				</section>
+
+
+				<!-- FIXE -->
+				<section>
+					<h2>Nullam nisi tortor</h2>
+					<p>Pellentesque vehicula tincidunt massa eget sollicitudin. Mauris id tristique odio, eu rutrum ligula. Aliquam erat volutpat. Sed in elit non odio lobortis semper. Cras egestas quis nibh vel consequat. Nulla facilisi. Etiam blandit, orci porttitor posuere varius, diam tortor ullamcorper est, et vehicula orci nunc vel mauris. Nam faucibus luctus sem consequat pulvinar. Sed sed tortor id justo aliquet suscipit id id ipsum. Pellentesque et purus imperdiet, placerat mi consequat, tincidunt diam. Ut luctus eleifend ipsum non dictum. Quisque at aliquet velit, ut laoreet urna. Nullam nisi tortor, mollis vitae nunc ut, rutrum convallis lacus. Sed molestie ex id neque volutpat, non rhoncus nisl accumsan. Sed ornare malesuada massa et finibus.</p>
+				</section>
+
+			</article>
+
+		</main>
+
+
+		<footer>
+			<p>©2019 - nobody</p>
+		</footer>
+
+	</body>
+</html>

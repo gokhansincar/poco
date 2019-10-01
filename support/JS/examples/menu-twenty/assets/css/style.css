@@ -1,0 +1,464 @@
+/* RESET - Enlever les styles par défaut des navigateurs
+=================================================================================== */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Mettre Box Sizing "border-box" par défaut */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+
+/* FORMATAGE BALISES PRINCIPALES
+===================================================================================*/
+/* TAILLE RÉFÉRENCE POUR POLICES
+ * On peut utiliser html ou :root
+----------------------------------------------*/
+html {
+  font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+
+/* FONT - Propriétés par défaut
+----------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: 0.025em;
+	line-height: 1.75em;
+	color: #7c8081;
+}
+
+
+/* TITRES
+----------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+	font-weight: 300;
+	line-height: 1.75em;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
+h1 {
+  font-weight: 900;
+	margin-bottom: 0;
+}
+h2 {
+  font-size: 1.3em;
+	letter-spacing: 0.1em;
+}
+h3 {
+	font-size: 1.1em;
+	font-weight: 400;
+}
+
+
+/* SELECTIONS, PLACEHOLDERS
+----------------------------------------------*/
+/*Document selection*/
+::selection {
+	background-color: #282e3e;
+	color:#fff;
+}
+
+/*Form elements placeholders*/
+::placeholder {
+	color:#ccc;
+}
+
+
+
+
+/* CLASSES EN COMMUN - "Helpers": Éléments qui partagent les mêmes styles
+===================================================================================*/
+/* DISPLAY
+----------------------------------------------*/
+.DN		{display: none;}
+.DB		{display: block;}
+.DIB	{display: inline-block;}
+
+/*Display FLEX (par défaut pour petits écrans)*/
+.DF {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/*Masquer le text pour tous les devices sauf pour les "readers" sans affichage visuel */
+.hide-but-keep {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+
+/* TYPOGRAPHIE
+----------------------------------------------*/
+.FW-300	{font-weight: 300; font-size: 1.02em;}
+.FW-900	{font-weight: 900;}
+.UPP		{text-transform: uppercase;}
+.AC			{text-align: center;}
+
+
+
+
+/* LAYOUT --> COMMON ELEMENTS
+===================================================================================*/
+/* BODY
+----------------------------------------------*/
+body {
+	background: #f3f6fa;
+}
+
+
+/* HEADER
+----------------------------------------------*/
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	flex-direction: row;
+	align-items: center;
+
+	width: 100%;
+	font-size: 0.8em;
+	padding: 2em 4%;
+
+	color: #333;
+	background: rgba(255,255,255,0);
+
+	transition: background .4s ease;
+}
+
+#header.menu-is-open {
+	position: fixed;
+	color: #fff;
+}
+
+
+/* HEADER --> LOGO (pour nous, titre principal)
+----------------------------------------------*/
+#logo {
+	position: relative;
+	z-index: 3;
+
+	font-size: 1.2em;
+}
+#logo a {
+	border: none;
+}
+
+
+/* HEADER --> NAV TRIGGERS
+----------------------------------------------*/
+#nav-triggers {
+	position: relative;
+	z-index: 3;
+
+	width: 44px;
+	height: 44px;
+	margin-right: -10px;
+
+	overflow: hidden;
+}
+
+.menu-trigger {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+
+	font-size: 2.4em;
+	line-height: 1;
+
+	border: none;
+	cursor: pointer;
+	background: transparent;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0); /*remove weird highlight on click*/
+	/*transition: left .3s ease-in-out;*/
+}
+
+
+#close-menu,
+.menu-is-open #open-menu {
+	left: -44px;
+}
+
+.menu-is-open #close-menu {
+	left: 0;
+}
+
+
+/* HEADER --> NAV
+----------------------------------------------*/
+/* NAV DEFAULT
+=============================*/
+#nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	opacity: 0;
+	pointer-events: none;
+
+	background: rgba(15,15,15,1);
+	transition: all .3s ease-in-out;
+}
+
+
+/* NAV FROM CENTER
+=============================*/
+#nav.anim-from-center {
+	/*transform: scale(0);*/
+}
+
+
+/* NAV FROM TOP
+=============================*/
+#nav.anim-from-top {
+	top: -100vh;
+}
+
+
+/* NAV FROM RIGHT
+=============================*/
+#nav.anim-from-right {
+	left: 100vw;
+}
+
+
+/* NAV FROM BOTTOM
+=============================*/
+#nav.anim-from-bottom {
+	top: 100vh;
+}
+
+
+/* NAV FROM LEFT
+=============================*/
+#nav.anim-from-left {
+	left: -100vw;
+}
+
+
+/* NAV WHEN MENU IS OPEN
+=============================*/
+.menu-is-open #nav {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
+	pointer-events: auto;
+	
+	/*transform: scale(1);*/
+}
+
+
+/* HEADER --> MAIN MENU
+----------------------------------------------*/
+/*MAIN MENU*/
+#main-menu {
+	text-align: center;
+	max-width: 320px;
+}
+
+
+/*MAIN MENU LINKS*/
+#main-menu a {
+	display: inline-block;
+
+	padding: .5em 1em;
+	margin: .5em 0;
+
+	font-size: 2em;
+	line-height: 1;
+	letter-spacing: 0.15em;
+	word-spacing: 0.2em;
+	color: inherit;
+
+	border: none;
+	text-decoration: none;
+
+	transition: margin-left 0.2s ease-in-out;
+}
+#main-menu a:hover,
+#main-menu a:focus {
+	background: rgba(188, 202, 206, 0.15);
+}
+#main-menu a.special {
+	min-width: 0;
+	margin-top: 2em;
+	color: #fff;
+	font-weight: 400;
+}
+
+
+/*MAIN MENU ACTIVE LINK*/
+.current {
+	font-weight: 900;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES
+===================================================================================*/
+/* >= 736px
+----------------------------------------------*/
+@media (min-width: 736px) {
+
+	/*silence radio*/
+
+}
+
+
+/* >= 840px
+----------------------------------------------*/
+@media (min-width: 840px) {
+
+	/*ROOT FONT SIZE*/
+	html {
+		font-size: 18px;
+	}
+
+
+	/*DISPLAY FLEX (par défaut pour écrans plus larges)*/
+	.DF {
+		flex-direction: row;
+	}
+
+
+	/*BODY HEADER*/
+	.is-scrolled #header {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+
+
+	/*LOGO*/
+	#logo {
+		font-size: 1em;
+	}
+
+
+	/*NAV AND MENUS*/
+	#nav-triggers {
+		display: none;
+	}
+
+	#nav {
+		pointer-events: auto;
+		position: static;
+		background: transparent;
+		display: block;
+		width: auto;
+		height: auto;
+		animation: none;
+		transition: none;
+		opacity: 1;
+	}
+
+	#main-menu {
+		justify-content: flex-end;
+		align-items: center;
+		text-align: right;
+		max-width: none;
+	}
+
+	#main-menu li {
+		margin-left: .3em;
+		transition: margin .3s ease;
+	}
+	#main-menu li:first-child {
+		margin: 0;
+	}
+
+	#main-menu a {
+		color: inherit;
+		display: inline-block;
+		font-size: inherit;
+		padding: 0.6em 0.75em;
+		/*min-width: 0;*/
+	}
+
+}
+
+
+/* >= 960px
+----------------------------------------------*/
+@media (min-width: 960px) {
+
+	#main-menu li {
+		margin-left: .5em;
+	}
+
+}
+
+
+/* >= 1024px
+----------------------------------------------*/
+@media (min-width: 1024px) {
+
+	/*MAIN MENU*/
+	#main-menu li {
+		margin-left: 2em;
+	}
+
+}
+
+
+/* >= 1280px
+----------------------------------------------*/
+@media (min-width: 1280px) {
+
+	/*silence radio*/
+
+}
+
+
+/* >= 1680px
+----------------------------------------------*/
+@media (min-width: 1680px) {
+
+	/*silence radio*/
+
+}

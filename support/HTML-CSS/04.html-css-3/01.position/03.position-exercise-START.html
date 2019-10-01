@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS - Position exercises</title>
+		<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+		<style>
+			/* COMMON
+			------------------------------------*/
+			section {
+				padding: 2em 0;
+				border-bottom: solid 1px #ccc;
+				margin-bottom: 4em;
+			}
+			section a {
+				text-decoration: none;
+			}
+			
+			.container {
+        /*complete the code here*/
+
+        min-height: 300px;
+        background: #f5f5f5;
+        box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+      }
+      
+      .box {
+        /*complete the code here*/
+
+        width: 100px;
+        height: 100px;
+			}
+			
+			.box, .trigger, .flex {
+				display: flex;
+        justify-content: center;
+        align-items: center;
+			}
+      
+
+      /* SECTION 1
+			------------------------------------*/
+      #one {
+        /*complete the code here*/
+        
+				background: #FC0;
+			}
+
+			#two {
+        /*complete the code here*/
+        
+        color: white;
+				background: #2E86C1;
+			}
+
+			#three {
+        /*complete the code here*/
+        
+				background: #D7BDE2;
+			}
+
+			#four {
+        /*complete the code here*/
+        
+        color: white;
+				background: #9B59B6;
+      }
+      
+      #five {
+				/*complete the code here*/
+
+        color: white;
+				background: #555;
+			}
+
+
+			/* SECTION 2
+			------------------------------------*/
+			/*NAV TRIGGERS CONTAINER*/
+			#nav-triggers {
+				width: 62px;
+				height: 62px;
+				
+				/*complete the code here*/
+
+				border: solid 1px #ccc;
+				background-color: #fff;
+			}
+
+			/*TRIGGER LINK*/
+			.trigger {
+				width: 100%;
+				height: 100%;
+
+				/*complete the code here*/
+
+				font-size: 2em;
+				line-height: 1;
+				color: #555;
+
+				transition: opacity .6s ease;
+			}
+
+			/*CLOSE ONLY*/
+			#close {
+        /*complete the code here*/
+        
+				font-size: 3em;
+				padding-bottom: .15em;
+			}
+
+			/*HOVER*/
+			#nav-triggers:hover {
+				
+			}
+			#nav-triggers:hover #open {
+				
+			}
+			#nav-triggers:hover #close {
+				
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<main>
+
+			<article>
+
+				<header><h1>CSS - Position exercises</h1></header>
+				<p><span class="R">Exercise 1</span>: position the first 4 boxes on each container corners. Position the 5th on the middle.</p>
+				<p><span class="R">Exercise 2</span>: create a typical mobile menu with two icons (open/close). By default show the open icon and hide the close icon. On hover switch the position of the icons.</p>
+
+				<!--SECTION 1-->
+				<section id="section-1">
+					<h2>Exercise 1</h2>
+					<div class="container">
+						<div class="box" id="one">One</div>
+						<div class="box" id="two">Two</div>
+						<div class="box" id="three">Three</div>
+            <div class="box" id="four">Four</div>
+            <div class="box" id="five">Five</div>
+          </div>
+          
+				</section>
+
+				<!--SECTION 2-->
+				<section id="section-2">
+					<h2>Exercise 2</h2>
+
+					<div class="container flex">
+						<div id="nav-triggers">
+							<a href="#" class="trigger" id="open">&#8801;</a>
+							<a href="#" class="trigger" id="close">&times;</a>
+						</div>
+					</div>
+
+				</section>
+
+			</article>
+
+		</main>
+
+	</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Syntax</title>
+  <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/prism.css">
+	<link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+</head>
+
+<body class="AC">
+
+
+	<h1>CSS SYNTAX</h1>
+
+
+	<section>
+		<h2>Target with tag name</h2>
+
+		<pre class="MW-800 MA"><code class="language-css">
+			/* Target a (single) tag 
+			-----------------------------------------------*/
+			html {
+				font-size: 18px; /* global font size */
+			}
+
+			body {
+				color: #1a1a1a;
+				font-size: 1em;
+
+				/* we can ignore the semicolon ";" for the last element */
+				background-color: #e5e5e5;
+			}
+
+			h1 {
+				font-size: 3em;
+				line-height: 2.5;
+				text-transform: uppercase;
+				text-align: center;
+			}
+
+			h2 {
+				font-size: 2em;
+			}
+
+
+			/* Target multiple tags at once 
+			-----------------------------------------------*/
+			h1, h2 {
+				margin: 0;
+				font-weight: normal;
+				color: #212121;
+			}
+
+
+			/* Target a tag inside of another tag 
+			-----------------------------------------------*/
+			pre code {
+				font-family: monospace;
+				font-size: 1.2em;
+			}
+
+			code p {
+				color: darkgrey;
+			}
+
+			nav ul {
+				font-weight: normal;
+			}
+
+			nav ul li {
+				color: #7a7a7a;
+			}
+
+
+			/* Target only the immediate child of a tag 
+			-----------------------------------------------*/
+			section > p {
+				font-weight: bold;
+			}
+
+			nav > ul > li {
+				color: #212121;
+			}
+
+
+			/* Target the third child
+			-----------------------------------------------*/
+			section p + p + p {
+				color: #212121;
+			}
+			</code></pre>
+		</section>
+
+
+		<section>
+			<h2>Target with "pseudo-classes"</h2>
+			
+			<pre class="MW-800 MA"><code class="language-css">
+				/* Target the first child */
+				section p:first-child {
+					color: red;
+				}
+
+				/* Target the last child */
+				section p:last-child {
+					color: orange;
+				}
+
+				/* Target the nth element */
+				section p:last-child {
+					color: orange;
+				}
+
+				/* Target on "hover" */
+				nav li:hover {
+					text-indent: 20px;
+				}
+				
+				/* Target the seventh p element inside a section */
+				section p:nth-child(7) {
+					color: red;
+				}
+
+				/* Target every fourth p element inside a section */
+				section p:nth-child(4n) {
+					color: lime;
+				}
+			</code></pre>
+		</section>
+
+
+		<section>
+			<h2>Target with attribute selector</h2>
+			
+			<pre class="MW-800 MA"><code class="language-css">
+				/* a elements with a title attribute */
+				a[title] {
+					color: purple;
+				}
+				
+				/* a elements with an href matching "https://example.org" */
+				a[href="https://example.org"] {
+					color: green;
+				}
+				
+				/* a elements with an href containing "example" */
+				a[href*="example"] {
+					font-size: 2em;
+				}
+				
+				/* a elements with an href ending ".org" */
+				a[href$=".org"] {
+					font-style: italic;
+				}
+			</code></pre>
+		</section>
+
+
+		<section>
+			<h2>Target with "universal" selectors</h2>
+			
+			<pre class="MW-800 MA"><code class="language-css">
+				/* Target all elements */
+				* {
+					margin: 0;
+				}
+				
+				/* Target all children of section p */
+				section p * {
+					font-weight: 300;
+				}
+			</code></pre>
+		</section>
+
+
+		<section>
+			<h2>Target only on elements with a ".class-name"</h2>
+			
+			<pre class="MW-800 MA"><code class="language-css">
+				/* All elements with class "I" */
+				.I {
+					font-style: italic;
+				}
+
+				/* Paragraphs with class "bold" */
+				p.bold {
+					font-weight: bold;
+				}
+
+				/* All span elements inside an element with class "navy" */
+				.navy span {
+					color: navy;
+				}
+
+				/* All elements with class "last-p" inside of a section element */
+				section .last-p {
+					background-color: #f5f5f5;
+				}
+			</code></pre>
+		</section>
+
+		<section>
+		<h2>Target only on elements with an "#id-name"</h2>
+		
+		<pre class="MW-800 MA"><code class="language-css">
+			#nav {
+				margin-top: 1em;
+			}
+
+			#menu-bottom {
+				background-color: #e5e5e5;
+			}
+
+			#menu-aside {
+				background-color: #f5f5f5;
+			}
+
+			div#bob {
+				border-top: solid 1px #ccc;
+			}
+
+			section #middle-p {
+				background-color: #fc0;
+			}
+			</code></pre>
+	</section>
+
+	<!-- Links... -->
+	<footer>
+		<div><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">MDN - CSS selectors</a></div>
+		<div><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">MDN - Pseudo-classes</a></div>
+	</footer>
+
+	<script src="https://poco.squarelabel.com/assets/common/prism.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Columns: the "flex" method</title>
+
+  <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+  <style>
+    /* MISC - Optional */
+    header,
+    footer {
+      text-align: center;
+      margin: 3em 0;
+    }
+
+    /* MAIN CONTAINER */
+    #grid {
+      width: 80%;
+      margin: 0 auto;
+      background: #f5f5f5;
+    }
+
+    /* Child divs - the columns */
+    #grid div {
+      text-align: center;
+      width: 30%;
+      padding: 50px 0;
+      float: left;
+      margin-right: 5%;
+      background: #e5e5e5;
+    }
+
+    #grid #c3 {
+      margin-right: 0;
+    }
+
+    /* PSEUDO-ELEMENT - to clear the floating - Indispensable! */
+    #grid:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>"CSS columns: "classic" method with float</h1>
+  </header>
+
+  <div id="grid" class="grid">
+    <div id="c1">Column 1 content</div>
+    <div id="c2">Column 2 content</div>
+    <div id="c3">Column 3 content</div>
+  </div>
+
+  <footer>footer content...</footer>
+
+</body>
+
+</html>

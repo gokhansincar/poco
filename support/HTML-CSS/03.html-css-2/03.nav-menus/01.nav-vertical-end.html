@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS - A Vertical Navigation</title>
+
+  <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+  <style>
+		/* The Nav */
+		nav {
+			width: 100%; /* Desired width of the navigation */
+			max-width: 200px; /* Desired max-width of the navigation */
+			background-color: #f5f5f5; /* background-color, just to see the size of the box... */
+		}
+
+		/* The list */
+		nav ul {
+			list-style: none; /* remove the bullets (if not done with a reset...) */
+			margin: 0; /* remove the default margins (if not done with a reset...) */
+			padding: 0; /* remove default paddings (if not done with a reset...) */
+		}
+
+		/* The list items */
+		nav ul li {
+			/* move along, nothing to see here */
+		}
+
+		/* List items links */
+		nav ul li a {
+			font-size: 1rem; /* desired size of link text */
+			line-height: 1; /* so that the line height is the same height as the font-size */
+			text-decoration: none; /* remove the underline (if not done with a reset...) */
+			display: block; /* 100% width of the parent (li) */
+			padding: 1em 2em; /* internal paddings: 1em top/bottom; 2em left/right  */
+			color: #888; /* desired color of the text */
+			transition: background .5s ease, color .5s ease; /* transition on background and color */
+		}
+
+		/* Survol sur les liens */
+		nav ul li a:hover {
+			color: #000; /* links color on hover */
+			background: #e5e5e5; /* background color on hover */
+		}
+	
+	</style>
+
+</head>
+
+<body>
+
+	<h1 class="MB-1">CSS - A Vertical Navigation</h1>
+
+	<nav>
+		<ul>
+			<li><a href="#">Menu A</a></li>
+			<li><a href="#">Menu B</a></li>
+			<li><a href="#">Menu C</a></li>
+		</ul>
+	</nav>
+
+</body>
+
+</html>

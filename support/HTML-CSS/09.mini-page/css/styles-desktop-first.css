@@ -1,0 +1,532 @@
+/* GLOBAL RESET
+------------------------------------------------*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Box Sizing pour tout le monde */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Formatage liens */
+a {
+	text-decoration: none; /*enlève le soulignement des liens*/
+	color: inherit; /*prend la couleur du parent*/
+	transition: color .3s ease;
+}
+a:hover {
+	color:#3279F7; /*couleur liens en survol*/
+}
+
+/*ROOT FONT SIZE*/
+html {
+	font-size: 15px; /*par défaut dans les navigateurs: 16px*/
+}
+
+
+
+/* COMMON
+ * Formatage de base et valeurs en commun 
+------------------------------------------------*/
+/* BALISES
+.......................................*/
+/*BODY*/
+body {
+  font: 300 1em/1.6 "Open Sans", sans-serif;
+	/*
+	La ligne ci-dessus veut dire:
+	font-family: "Open Sans", sans-serif; => "Open Sans" font from Google Fonts
+	font-size: 1em; => 15px
+	font-weight: 300; => "Open Sans" light
+	line-height: 1.6; => 24px
+	*/
+	color: #212121; /*couleur par défaut*/
+}
+
+/*Titles*/
+h1, h2, h3 {
+  font-weight: normal; /*400*/
+  font-family: Merriweather, serif;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.3em;
+}
+h3 {
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+/*Sections*/
+section {
+	margin-top: 3em;
+}
+
+/*Paragraphes*/
+p {
+	margin-bottom: 1em;
+}
+
+
+/* CLASSES
+.......................................*/
+/*Largeurs*/
+.L1 {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+.L2 {
+	width: 100%;
+	max-width: 768px;
+	margin: 0 auto;
+}
+
+/*Flex (default values)*/
+.flex {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap; /*flex-direction and flex-wrap in one ligne*/
+	align-items: flex-start; /*default is stretch*/
+}
+
+/*Text columns (2)*/
+.text-col-2 {
+	column-count: 2;
+	column-gap: 2em;
+	column-width: 50%;
+}
+
+
+
+/* LAYOUT
+ * Dimenssions et positionnement des choses
+ * Par défaut on vise >= 800px (Desktop First !)
+------------------------------------------------*/
+/* HEADER
+.......................................*/
+/*Header tag - position + min-height + image d'arrière-plan*/
+.main-header {
+	position: relative;
+	min-height: 200px;
+	
+	background-image: url(../img/header.jpg); /* regardez le lien vers l'image! Depuis ce fichier vers le dossier img */
+	background-repeat: no-repeat;
+	background-position: left center; /* x, y */
+	background-size: cover; /* pour voir l'image en entier */
+
+	/* shortcut equivalent:
+	background: url(../img/header.jpg) no-repeat center bottom / cover;
+	*/
+}
+
+
+/* LOGO
+........................*/
+/*Logo - position + largeur*/
+.logo {
+	position: absolute;
+	left: 20px;
+	top: 25px;
+	width: 60px;
+}
+
+/*Logo img*/
+.logo img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+/* NAV + MENUS
+........................*/
+/*NAV tag - position absolute + background + centrer texte*/
+.main-nav {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, .6); /* a = alpha, transparence de 0 à 1 */
+	text-align: center;
+}
+
+/*Hamburger link - masquer*/
+.hamburger {
+	display: none;
+}
+
+/*UL tag - padding*/
+.main-menu {
+	padding: 0 3%;
+}
+
+/*Home icon - font size*/
+.main-menu .icon-home {
+	font-size: 1.4em;
+}
+
+/*Menu links - formatage liens desktop*/
+.main-menu a {
+	display: block; /* pour que le lien soit cliquable en dehors du texte; default = inline */
+	padding: .8em 1em .5em;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	font-weight: 400;
+	color: #555;
+	border-bottom: solid 2px rgba(0,0,0,0); /* transparent border */
+	transition: border .4s ease-in-out;
+}
+
+/*Hover and active links*/
+.main-menu a:hover, .main-menu .active {
+	color: #000;
+	border-color: rgba(0,0,0,.8);
+}
+
+
+/* MAIN
+.......................................*/
+/*MAIN tag*/
+.main-content {
+	padding: 0 3%;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+
+/* Article */
+.main-content article {
+	width: 65%;
+}
+
+
+/* GALLERY
+........................*/
+/* Gallery container - margin-top */
+.gallery-items {
+	margin-top: 2em;
+}
+
+/* Gallery figure - largeur + margin-bottom */
+.gallery-items figure {
+	width: 30%; /*pour avoir 3 éléments par ligne avec un espacement de 5%; 30*3=90%; 100-90=10%; 10/2=5%*/
+	margin-bottom: 5%; /*le même espace que sur l'axe X*/
+}
+
+/* Gallery img - display + border-radius + filter + box-shadow + transition */
+.gallery-items figure img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	filter: grayscale(100%);
+	box-shadow: 0 0 5px rgba(0,0,0,.25);
+	transition: filter .4s ease-in-out;
+}
+
+/*Gallery img hover - filter*/
+.gallery-items figure img:hover {
+	filter: grayscale(0%);
+}
+
+/*Gallery figcaption - formatage texte + margin top*/
+.gallery-items figcaption {
+	font-size: .9em;
+	text-align: center;
+	margin-top:.5em;
+}
+
+
+/* ASIDE
+........................*/
+/* Aside tag */
+aside {
+	width: 25%;
+}
+
+/* Aside title */
+.aside-title {
+  margin-bottom: .5em;
+}
+
+/*Aside title :after - faire une bordure*/
+.aside-title:after {
+	content: "";
+	display: block;
+	height: 1px;
+	margin-top: .1em;
+	background-color: #ccc;
+}
+
+/* Aside li items - position relative*/
+.related-links li {
+	position: relative;
+}
+
+/* Aside links - formatage liens */
+aside a {
+	display: block;
+	padding-left: 15px;
+	line-height: 1.3;
+	margin-bottom: .8em;
+}
+
+/* Aside links :before - ajouter un icône */
+.related-links a:before {
+	font-family: fonticon;
+	font-size: .8em;
+	position: absolute;
+	left: -2px;
+	top: 3px;
+	content: "\e902";
+}
+
+
+/* FOOTER
+.......................................*/
+/*FOOTER tag*/
+.main-footer {
+	text-align: center;
+	padding: 2em 0;
+	border-top: solid 1px #e5e5e5;
+}
+
+/*FOOTER paragraphes*/
+.main-footer p {
+	margin: 0;
+}
+
+
+
+/* MEDIA QUERIES SCREEN
+------------------------------------------------*/
+/* Point de rupture 1  */
+@media only screen and (max-width: 800px) {
+	
+	/* RESET AND COMMON
+	--------------------------*/
+	/*HTML*/
+	html {
+		font-size: 16px;
+	}
+
+	/*Classes largeurs*/
+	.L1, .L2 {
+		max-width: 100%;
+		margin: 0;
+	}
+	
+	
+	/* HEADER
+	--------------------------*/
+	/*Header*/
+	.main-header {
+		min-height: 120px;
+		align-items:center;
+		padding:0 1em;
+	}
+	
+	/*Logo + Nav - position static*/
+	.logo, .main-nav {
+		position: static;
+	}
+	
+	/*Logo - largeur*/
+	.logo {
+		width: 50px;
+	}
+	
+	/*Nav - largeur*/
+	.main-nav {
+		width: auto;
+	}
+	
+	/*Masquer le menu desktop*/
+	.main-menu {
+		display: none;
+	}
+	
+	/*Afficher le hamburger + formatage*/
+	.hamburger {
+		display: block;
+		font-size: 1.8em;
+		line-height:1;
+		padding: .3em .4em .3em;
+	}
+	
+	
+	/* CONTENT
+	--------------------------*/
+	/*Main tag*/
+	.main-content.flex {
+		display: block;
+		margin-bottom: 2em;
+	}
+	
+	/*Article + aside à 100%*/
+	.main-content article,
+	.main-content aside {
+		width: 100%;
+		margin-top: 2em;
+	}
+	
+	/*Aside title*/
+	.aside-title {
+		margin-bottom: 1em;	
+	}
+	
+	/*Section text*/
+	.some-text {
+		margin-top: 1em;
+	}
+	
+}
+
+
+/* Point de rupture 2 */
+@media only screen and (max-width: 667px) {
+	
+	/*Gallery figure - largeur*/
+	.gallery-items figure {
+		width: 45%;
+	}
+	
+	/*Texte en colonnes - seulement une colonne*/
+	.text-col-2 {
+		column-count: 1;
+	}
+	
+}
+
+
+/* Point de rupture 3  */
+@media only screen and (max-width: 480px) {
+  
+	/*Centrer le texte par tout*/
+	body {
+		text-align: center;
+	}
+	
+	/*Gallery - enlever flex*/
+	.gallery-items.flex {
+		display: block;
+	}
+	
+	/*Gallery figure - largeur + margins*/
+	.gallery-items figure {
+		width: 70%;
+		margin: 0 auto 2em;
+	}
+
+	/*Related links :before - masquer*/
+	.related-links a:before {
+		display: none;
+	}
+	
+}
+
+
+/* Point de rupture 4  */
+@media only screen and (max-width: 370px) {
+ 	
+	/*Header - background + min-height 0 + padding 1em*/
+	.main-header {
+		background: #f5f5f5;
+		min-height: 0;
+		padding: 1em;
+	}
+	
+	/*Logo - largeur*/
+	.logo {
+		width: 50px;
+	}
+	
+	/*Main - padding plus grand sur axe X*/
+	.main-content {
+		padding: 0 6%;
+	}
+	
+	/*Gallery figure - largeur 100%*/
+	.gallery-items figure {
+		width: 100%;
+	}
+	 
+}
+
+
+
+/* MEDIA QUERIES PRINT
+------------------------------------------------*/
+@media only print {
+	
+	/*Taille texte*/
+	body {
+		background: white;
+   	font-size: 12pt;
+	}
+	
+	/*Masquer, ne pas imprimer*/
+	.main-nav, .main-footer, aside {
+		display: none;
+	}
+	
+	/*Header*/
+	.main-header {
+		min-height: 0;
+	}
+	.logo {
+		left: auto;
+		right: 0;
+	}
+	
+	/*Largeurs, tout le monde à 100%*/
+	.L1,
+	.L2,
+	.main-content article,
+	.main-content aside {
+		width: 100%;
+		margin: 0;
+	}
+	
+	/*Éléments flex => display block*/
+	.main-content.flex {
+		display: block;
+	}
+	
+	/*Pour éviter d'avoir les images coupées...*/
+	.gallery-items {
+    page-break-before: avoid; /* auto | always | avoid | left | right */
+    page-break-after: avoid; /* auto | always | avoid | left | right */
+    page-break-inside: avoid; /* auto | avoid */
+	}
+	
+	/*Forcer la section avec du texte sur la page suivante*/
+	.some-text { 
+    page-break-before: always;
+  }
+
+	.main-content aside {
+		margin: 30px 0;
+	}
+	
+	.main-footer {
+		padding: 1em;
+	}
+	
+}
+
+@media only print and (orientation: landscape) {
+	
+	/*Pour éviter d'avoir les images coupées...*/
+	.gallery-items {
+		page-break-before: auto; /* auto | always | avoid | left | right */
+		page-break-after: auto; /* auto | always | avoid | left | right */
+		page-break-inside: avoid; /* auto | avoid */
+	}
+	
+}

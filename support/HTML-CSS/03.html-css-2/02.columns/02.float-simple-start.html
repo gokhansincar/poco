@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Simple float</title>
+
+  <link rel="stylesheet" href="https://poco.squarelabel.com/assets/common/common.css">
+
+  <style>
+    header, footer {
+      text-align: center;
+      margin: 3em 0;
+    }
+    
+    h1 {
+      font-size: 2em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    figure figcaption {
+      font-style: italic;
+      text-align: center;
+      font-size: 0.8em;
+    }
+
+
+    /* LAYOUT */
+    main {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    figure img {
+      width: 200px;
+    }
+
+    /* CLASSES - put these classes on the <figure> elements*/
+    .float-left {
+      float: left;
+      margin-right: 1em;
+    }
+
+    .float-right {
+      float: right;
+      margin-left: 1em;
+    }
+
+    .clear:after {
+      *content: "";
+      *display: block;
+      *clear: both;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+
+    <article class="clear">
+
+      <header><h1>Simple float</h1></header>
+
+      <figure>
+        <img src="img/square.jpg" alt="image x">
+        <figcaption>Just an image</figcaption>
+      </figure>
+      <p>
+        Cras vel tellus consequat, blandit nisi eget, varius ligula. Nulla facilisis turpis ut efficitur euismod. Maecenas id consequat nunc. Quisque nec lobortis ex. Pellentesque at odio id turpis pulvinar lacinia sit amet ac urna. Integer elementum commodo purus, at aliquam velit volutpat sed. Sed congue condimentum nisl, vitae blandit dolor elementum in. Pellentesque rutrum lobortis lectus ac scelerisque. Cras non metus hendrerit, laoreet lacus a, aliquam turpis. Duis porttitor ante tempus ante congue dictum. Suspendisse lobortis urna metus, nec accumsan odio blandit id. Maecenas cursus ut purus non fringilla. Sed ac porttitor velit. Nulla facilisi. Nunc libero felis, lobortis in ligula nec, interdum euismod velit. Pellentesque rutrum lobortis lectus ac scelerisque. Cras non metus hendrerit, laoreet lacus a, aliquam turpis. Duis porttitor ante tempus ante congue dictum.
+      </p>
+
+      <p>
+        Integer a ex congue, placerat justo non, maximus turpis. Aenean a bibendum metus, ut fringilla libero. Donec ut interdum enim. Nullam nec nisi pellentesque, blandit magna facilisis, bibendum ipsum. Sed et ligula sit amet diam accumsan tempor. Sed congue mauris non odio pellentesque convallis. Curabitur eu lacus urna. Etiam at tempor odio, et placerat tortor. Donec porta, urna eget eleifend semper, ex arcu gravida turpis, nec imperdiet sem nisl in augue. Nunc et vulputate quam. Mauris porttitor condimentum sollicitudin.
+      </p>
+
+      <p>
+        <figure>
+          <img src="img/square.jpg" alt="image x">
+          <figcaption>Idem</figcaption>
+        </figure>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eros lorem, dignissim elementum augue vitae, maximus mattis purus. Etiam id posuere odio. Nunc eu quam non tortor laoreet fringilla.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eros lorem, dignissim elementum augue vitae, maximus mattis purus. Etiam id posuere odio. Nunc eu quam non tortor laoreet fringilla. Fusce auctor euismod lacinia. Nullam et faucibus nisl, et varius quam. Donec auctor enim turpis, vel aliquet augue porta ac. Fusce faucibus velit risus, eget tempor arcu cursus id. Donec convallis tincidunt erat, id molestie nulla venenatis in. Quisque vestibulum placerat mauris sed scelerisque. Aenean risus dui, congue in orci in, vehicula porta ipsum. Aliquam erat volutpat. Vivamus sit amet neque in nulla sodales dignissim. Donec vel congue eros, at lacinia lectus.
+
+        Fusce ultricies, massa eu volutpat malesuada, velit erat rutrum ipsum, non iaculis metus urna non lorem. Cras vel lobortis nisi. Praesent molestie elit id arcu volutpat faucibus. 
+        Mauris sapien odio, scelerisque a mauris sed, fermentum tincidunt mauris. Pellentesque malesuada erat massa. Sed faucibus arcu sed pellentesque cursus. Morbi ornare libero et fermentum lacinia. Sed a finibus tortor. Suspendisse magna diam, sollicitudin ornare rutrum sed, eleifend non tellus.
+      </p>
+
+    </article>
+
+  </main>
+
+  <footer>footer content...</footer>
+
+</body>
+</html>
