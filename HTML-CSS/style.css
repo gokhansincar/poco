@@ -1,0 +1,124 @@
+ /* 1. Reset Browser style
+-------------------------------------------------------------------------- */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+/* Make box-sizing "border-box" as default */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/*2.Main tags
+*******************************/
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+    /*
+    letter-spacing: 0.01em;
+    word-spacing: 0.1em;
+    */
+    background-color: #f5f5f5;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 500;
+
+}
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em; /*real margin in px*/
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 0.3em; /*real margin in px*/
+}
+
+/*LINKS*/
+a {
+    text-decoration: none;
+    color: #178ef5;
+    outline: none;
+    transition: color .5s ease, background .5s ease;
+}
+a:hover{
+    color:#0061B4;
+    background-color: darkred;
+    text-decoration: underline dotted;
+}
+
+/*PARAGRAPHS*/
+P{
+    margin-bottom: 1em;
+}
+
+strong{
+    font-weight: 500;
+}
+
+em {
+font-style: italic;
+}
+
+
+/*3.HELPER CLASSES (reausable styles)
+------------------------------------- */
+
+.MB1 {
+margin-bottom: 1rem;
+}
+
+.MB1p5 {
+    margin-bottom: 1.5rem;
+    }
+
+.MB2 {
+margin-bottom: 2rem;
+}
+
+
+/*PADDINGS*/
+.pB1 {
+    margin-bottom: 1rem;
+    }
+    
+.pB1p5 {
+        margin-bottom: 1.5rem;
+        }
+    
+.pB2 {
+    margin-bottom: 2rem;
+    }
+.MT2{
+        margin-top: 2rem;
+    }
+.MY2{
+    margin: 2rem 0;
+}
+
+/*BGs*/
+.bg-grey{
+    background-color: rgba(0, 0, 0,0.1);
+    padding: 1em;
+}
+
+
+
+/*4. LAYOUTS
+------------------------------------- */
+/*Custom Styles depending on your Project*/
+
+
+/*5.MEDIA QUERIES (Responsive stuff)
+------------------------------------- */

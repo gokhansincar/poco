@@ -1,0 +1,126 @@
+/* VARIANTE BOOTSTRAP
+ * Points de ruptures:
+ * 576px -> 768px -> 992px -> 1200px
+--------------------------------------------*/
+
+
+/* PAR DEFAUT < 576px
+--------------------------------------------*/
+@media (min-width: 576px) {
+
+  body {
+    background-color: #555;
+  }
+  h1{
+    font-size: 1.6em;
+    color: #212121;
+    background-color: #e5e5e5;
+  }
+  h1::after{
+    content: ":Start"
+  }
+  
+  }
+/* background du body: #222; */
+/* font-size du h1: 1.2em */
+/* couleur du h1: #212121; */
+/* background du h1: #fff; */
+
+
+
+/* POUR "PHONES"
+ * @media (min-width: 576px)
+--------------------------------------------*/
+@media (min-width: 576px) {
+
+body {
+  background-color: #555;
+}
+h1{
+  font-size: 1.6em;
+  color: #212121;
+  background-color: #e5e5e5;
+}
+h1::after{
+  content: ":Phones"
+}
+
+}
+/* background du body: #555; */
+/* font-size du h1: 1.6em */
+/* background du h1: #e5e5e5; */
+
+
+
+/* POUR "TABLETTES" orientation PORTRAIT
+ * @media (min-width: 768px)
+--------------------------------------------*/
+@media (min-width: 768px) {
+
+  body {
+    background-color: #888;
+  }
+  h1{
+    font-size: 1.8em;
+    color: #212121;
+    background-color: #e5e5e5;
+  }
+  h1::after{
+    content: ":Tablets"
+  }
+  
+  }
+/* background du body: #555; */
+/* font-size du h1: 1.6em */
+/* background du h1: #e5e5e5; */
+
+
+
+/* POUR "TABLETTES" orientation PAYSAGE
+ * et écrans petite résolution
+ * @media (min-width: 992px)
+--------------------------------------------*/
+@media (min-width: 992px) {
+
+  body {
+    background-color: #999;
+  }
+  h1{
+    font-size: 2em;
+    color: #212121;
+    background-color: #AAA;
+  }
+  h1::after{
+    content: ":Portrait Tablets"
+  }
+  
+  }
+/* background du body: #777; */
+/* font-size du h1: 2em */
+/* couleur du h1: #fff; */
+/* background du h1: #aaa; */
+
+
+
+/* POUR ORDINATEURS AFFICHAGE HD
+ * @media (min-width: 1200px)
+--------------------------------------------*/
+@media (min-width: 1200px) {
+
+  body {
+    background-color: #888;
+  }
+  h1{
+    font-size: 3em;
+    color: #212121;
+    background-color: #BBB;
+  }
+  h1::after{
+    content: ":Computers"
+  }
+  
+  }
+/* background du body: #e5e5e5; */
+/* font-size du h1: 3em */
+/* couleur du h1: #e5e5e5; */
+/* background du h1: #333; */
