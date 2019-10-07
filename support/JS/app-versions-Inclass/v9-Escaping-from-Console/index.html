@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My todoApp - v9</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <main class="manual-input">
+
+    <h1>Todo list App</h1>
+    <h2>Using Vanilla JavaScript to create stuff</h2>
+
+    <ul id="todo-list"></ul>
+
+    <p class="row">
+      <!-- <button onclick="todoList.displayTodos()">Display Todos</button> --> <!-- Not needed anymore -->
+      <button onclick="todoList.toggleAll()">Toggle All Todos</button>
+    </p>
+
+    <p class="row">
+      <input type="text" id="addTodoInput" class="text" placeholder="Text...">
+      <button onclick="handlers.addTodo()">Add Todo</button>
+    </p>
+
+    <p class="row">
+      <input type="number" min="0" class="index" id="changeTodoIndexInput" placeholder="Index...">
+      <input type="text" id="changeTodoInput" placeholder="Text...">
+      <button onclick="handlers.changeTodo()">Change Todo</button>
+    </p>
+
+    <p class="row">
+      <input type="number" min="0" class="index" id="deleteTodoIndexInput" placeholder="Index...">
+      <button onclick="handlers.deleteTodo()">Delete Todo</button>
+    </p>
+
+    <p class="row">
+      <input type="number" min="0" class="index" id="toggleTodoIndexInput" placeholder="Index...">
+      <button onclick="handlers.toggleCompleted()">Toggle Todo</button>
+    </p>
+
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

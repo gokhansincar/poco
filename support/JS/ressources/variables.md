@@ -4,13 +4,13 @@
 ## SYNTAX
 ```js
 //Global scope variable
-var myName = 'Arya';
+var myName = 'Sorin';
 
-//Local variable (read it like in math: "let myName be 'Arya'")
-let myName = 'Arya';
+//Local (block) scope variable (read it like in math: "let myName be 'Sorin'")
+let myName = 'Sorin';
 
-//Read only variable (cannot change value)
-const myName = 'Arya';
+//Read only, local (block) scope variable (cannot reassign values)
+const myName = 'Sorin';
 ```
 Let's take a look at the different components of this line of code.
 1. **`var`** - Short for variable, is a JavaScript keyword that creates, or declares, a new variable. It can be a *global* or *local* variable depending on where is declared.
@@ -21,9 +21,9 @@ Let's take a look at the different components of this line of code.
 
 2. **`myName`** is the *variable’s name*. Capitalizing in this way is a standard convention in JavaScript called camel casing.
 
-3. **`=`** is the *assignment operator*. It assigns the value ('Arya') to the variable (myName).
+3. **`=`** is the *assignment operator*. It assigns the value ('Sorin') to the variable (myName).
 
-4. **`Arya`** is the *value assigned* (=) to the variable myName. You can also say that the myName variable is initialized with a value of 'Arya'.
+4. **`Sorin`** is the *value assigned* (=) to the variable myName. You can also say that the myName variable is initialized with a value of 'Sorin'.
 
 <br>
 

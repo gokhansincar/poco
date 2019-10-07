@@ -1,93 +1,93 @@
 /* HTML selectors
 	 Apliquer les styles directement sur les balises HTML
 -------------------------------------------------------------------------*/
-			/* Target a tag */
-			html {
-				font-size: 18px; /* global font size */
-			}
+/* Target a tag */
+html {
+	font-size: 18px; /* global font size */
+}
 
-			body {
-				color: #1a1a1a;
-				font-size: 1em;
+body {
+	color: #1a1a1a;
+	font-size: 1em;
 
-				/* we can ignore the semicolon ";" for the last element */
-				background-color: #e5e5e5;
-			}
+	/* we can ignore the semicolon ";" for the last element */
+	background-color: #e5e5e5;
+}
 
-			h1 {
-				font-size: 3em;
-				line-height: 2.5;
-				text-transform: uppercase;
-				text-align: center;
-			}
+h1 {
+	font-size: 3em;
+	line-height: 2.5;
+	text-transform: uppercase;
+	text-align: center;
+}
 
-			h2 {
-				font-size: 2em;
-			}
+h2 {
+	font-size: 2em;
+}
 
-			/* Target many tags */
-			h1, h2 {
-				margin: 0;
-				font-weight: normal;
-				color: #212121;
-			}
-
-
-			/* Target a tag inside of another tag */
-			pre code {
-				font-family: monospace;
-				font-size: 1.2em;
-			}
-
-			code p {
-				color: darkgrey;
-			}
-
-			nav ul {
-				font-weight: normal;
-			}
-
-			nav ul li {
-				color: #7a7a7a;
-			}
+/* Target many tags */
+h1, h2 {
+	margin: 0;
+	font-weight: normal;
+	color: #212121;
+}
 
 
-			/* Target only the immediate child of a tag */
-			section > p {
-				font-weight: bold;
-			}
+/* Target a tag inside of another tag */
+pre code {
+	font-family: monospace;
+	font-size: 1.2em;
+}
 
-			nav > ul > li {
-				color: #212121;
-			}
+code p {
+	color: darkgrey;
+}
 
+nav ul {
+	font-weight: normal;
+}
 
-			/* Parent - child relationship, change only the last child */
-			section p:last-child {
-				color: orange;
-			}
-
-
-			/* Parent - child relationship, ignore the first two children */
-			section p + p + p {
-				color: #212121;
-			}
+nav ul li {
+	color: #7a7a7a;
+}
 
 
-			/* Change styles on "hover" */
-			nav li:hover {
-				text-indent: 20px;
-			}
+/* Target only the immediate child of a tag */
+section > p {
+	font-weight: bold;
+}
 
-			nav li ul li:hover  {
-				text-indent: 5px;
-			}
+nav > ul > li {
+	color: #212121;
+}
+
+
+/* Parent - child relationship, change only the last child */
+section p:last-child {
+	color: orange;
+}
+
+
+/* Parent - child relationship, ignore the first two children */
+section p + p + p {
+	color: #212121;
+}
+
+
+/* Change styles on "hover" */
+nav li:hover {
+	text-indent: 20px;
+}
+
+nav li ul li:hover  {
+	text-indent: 5px;
+}
 
 
 
 
 /* HTML attribute "class"
-	 Apliquer les styles seulement sur les éléments avec ".nom"
+	 Target only elements with class ".name-of-the-class"
 -------------------------------------------------------------------------*/
 .nowrap {
 	white-space: nowrap;
@@ -107,7 +107,7 @@ code .last-p {
 
 
 /* HTML attribute "id"
-	 Apliquer les styles seulement sur les éléments avec "#nom"
+	 Target only elements with class "#name-of-the-id"
 -------------------------------------------------------------------------*/
 #nav {
 	/*something...*/

@@ -10,7 +10,7 @@ A website must have his own repository<br>
 ![Create new repo](../_assets/gitpages-01.create-new-repo.png)
 
 ## 2. Follow the steps in this video :
-  **[CONVERT A GITHUB REPO INTO A WEBSITE →](https://poco.squarelabel.com/assets/github-convert-repo-into-website.mp4)**
+  **[CONVERT A GITHUB REPO INTO A WEBSITE →](https://poco.squarelabel.com/tutos/media/github/01.github-convert-repo-into-website.mp4)**
 
 <br>
 

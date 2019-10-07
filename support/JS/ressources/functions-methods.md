@@ -1,4 +1,4 @@
-# JAVASCRIPT - FUNCTIONS AND METHODS
+# JAVASCRIPT - FUNCTIONS (or METHODS if part of a Class)
 
 <br>
 
@@ -12,17 +12,17 @@
 
 ## Custom (or User) Functions
 ``` js
-//Declare a custom function who calculates a person age
+//Declare a custom function who calculates a person age :
 function personAge(name, birthYear) {
 
-  var currentDate = new Date();
-  var calculateAge = currentDate.getFullYear() - birthYear;
+  let currentDate = new Date();
+  let calculateAge = currentDate.getFullYear() - birthYear;
   
   return 'Hi ' + name + ', your age is ' + calculateAge;
 
 }
 
-//Call the function with parameters
+//Call the function with parameters :
 console.log( personAge('Sorin', 1966) ); // → "Hi Sorin, your age is 53"
 console.log( personAge() ); // → "Hi undefined, your age is NaN"
 
@@ -34,14 +34,19 @@ console.log( personAge() ); // → "Hi undefined, your age is NaN"
 
 ## Anonymous functions and Closures
 ``` js
-//Associate with a var
-var myVarFunction = function(num1, num2) {
+//Associate with a variable :
+let myVarFunction = function(num1, num2) {
   return num1 * num2;
 }
 myVarFunction(3,6); //18
 
 
-//Associate with a event listener
+//ES6 arrow function variante :
+let myShorterVarFunction = (num1, num2) => num1 * num2;
+myShorterVarFunction(2,5); //10
+
+
+//Associate with a event listener :
 document.getElementById("bob").addEventListener('click', function(e) {
   console.log(e.target); //displays the DOM element
 });

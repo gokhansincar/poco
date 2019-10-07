@@ -1,18 +1,17 @@
 /* GLOBAL RESET
- * Ici on met tout à zéro (reset)
- * Bien sûr, si vous n'avez pas un reset externe
+ * Reset Browser default styles
 ------------------------------------------------*/
 
 
 
 /* COMMON
- * Valeurs communes et formatage de base
+ * Common values and basic tag formating
 ------------------------------------------------*/
 
 
 
 /* LAYOUT
- * Dimenssions et positionnement des choses
+ * Target specific elements in your layout
 ------------------------------------------------*/
 /* HEADER 
 ........................*/

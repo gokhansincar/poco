@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My todoApp - v8</title>
+</head>
+
+<body>
+
+  <p>
+    <button onclick="todoList.displayTodos()">Display Todos</button>
+    <button onclick="todoList.toggleAll()">Toggle All Todos</button>
+  </p>
+
+  <p>
+    <input type="text" id="addTodoInput" placeholder="Text...">
+    <button onclick="handlers.addTodo()">Add Todo</button>
+  </p>
+
+  <p>
+    <input type="number" min="0" id="changeTodoIndexInput" placeholder="Index...">
+    <input type="text" id="changeTodoInput" placeholder="Text...">
+    <button onclick="handlers.changeTodo()">Change Todo</button>
+  </p>
+
+  <p>
+    <input type="number" min="0" id="deleteTodoIndexInput" placeholder="Index...">
+    <button onclick="handlers.deleteTodo()">Delete Todo</button>
+  </p>
+
+  <p>
+    <input type="number" min="0" id="toggleTodoIndexInput" placeholder="Index...">
+    <button onclick="handlers.toggleCompleted()">Toggle Todo</button>
+  </p>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,8 +1,8 @@
-/* RESET - Enlever les styles par défaut des navigateurs
+/* RESET
 =================================================================================== */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 
-/* Mettre Box Sizing "border-box" par défaut */
+/* Box Sizing "border-box" by default */
 html {
   box-sizing: border-box;
 }
@@ -13,10 +13,10 @@ html {
 
 
 
-/* FORMATAGE BALISES PRINCIPALES
+/* MAIN TAGS FORMATING
 ===================================================================================*/
-/* TAILLE RÉFÉRENCE POUR POLICES
- * On peut utiliser html ou :root
+/* FONT SIZE REFERENCE
+ * html or :root
 ----------------------------------------------*/
 html {
   font-size: 16px;
@@ -24,7 +24,7 @@ html {
 }
 
 
-/* FONT - Propriétés par défaut
+/* FONT - Default properties
 ----------------------------------------------*/
 body,
 button,
@@ -40,7 +40,7 @@ textarea {
 }
 
 
-/* TITRES
+/* TITLES
 ----------------------------------------------*/
 h1,
 h2,
@@ -84,7 +84,7 @@ h3 {
 
 
 
-/* CLASSES EN COMMUN - "Helpers": Éléments qui partagent les mêmes styles
+/* COMMON CLASSES - "Helpers":
 ===================================================================================*/
 /* DISPLAY
 ----------------------------------------------*/
@@ -92,7 +92,7 @@ h3 {
 .DB		{display: block;}
 .DIB	{display: inline-block;}
 
-/*Display FLEX (par défaut pour petits écrans)*/
+/*Display FLEX*/
 .DF {
 	display: flex;
 	flex-direction: column;
@@ -100,7 +100,7 @@ h3 {
 	justify-content: space-between;
 }
 
-/*Masquer le text pour tous les devices sauf pour les "readers" sans affichage visuel */
+/*Hide text for all devices except for "readers" without visual display */
 .hide-but-keep {
   position: absolute;
   overflow: hidden;
@@ -110,7 +110,7 @@ h3 {
 }
 
 
-/* TYPOGRAPHIE
+/* TYPOGRAPHY
 ----------------------------------------------*/
 .FW-300	{font-weight: 300; font-size: 1.02em;}
 .FW-900	{font-weight: 900;}
@@ -156,7 +156,7 @@ body {
 }
 
 
-/* HEADER --> LOGO (pour nous, titre principal)
+/* HEADER --> LOGO
 ----------------------------------------------*/
 #logo {
 	position: relative;
@@ -238,7 +238,7 @@ body {
 	pointer-events: none;
 
 	background: rgba(15,15,15,1);
-	transition: all .3s ease-in-out;
+	
 }
 
 
@@ -286,6 +286,7 @@ body {
 	left: 0;
 	opacity: 1;
 	pointer-events: auto;
+	transition: all .3s ease-in-out;
 	
 	/*transform: scale(1);*/
 }
@@ -346,7 +347,7 @@ body {
 ----------------------------------------------*/
 @media (min-width: 736px) {
 
-	/*silence radio*/
+	/*silence is gold*/
 
 }
 

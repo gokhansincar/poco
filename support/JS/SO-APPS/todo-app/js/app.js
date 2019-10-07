@@ -6,7 +6,7 @@ function $(elemStr, eventName, eventFunc) {
 
 	if (eventName !== undefined && eventFunc !== undefined) {
 
-		var domElements = document.querySelectorAll(elemStr);
+		const domElements = document.querySelectorAll(elemStr);
 
 		for (let i = 0; i < domElements.length; i++) {
 			domElements[i].addEventListener(eventName, eventFunc);
@@ -37,7 +37,7 @@ $('.myclass', 'click', function() {
 /* TODO LIST OBJECT
 ======================================================*/
 //#region TODO LIST
-var todoList = {
+let todoList = {
 
 
 	/* TODO ARRAY (of objects)
@@ -110,7 +110,7 @@ var todoList = {
 	/* TOGGLE (ITEM) COMPLETED STATUS
 	----------------------------------------------*/
 	toggleCompleted: function (position) {
-		var todo = this.todos[position]; //console.log(position);
+		let todo = this.todos[position]; //console.log(position);
 		todo.completed = !todo.completed;
 	},
 
@@ -119,8 +119,8 @@ var todoList = {
 	----------------------------------------------*/
 	toggleAll: function () {
 
-		var totalTodos = this.todos.length;
-		var completedTodos = 0;
+		const totalTodos = this.todos.length;
+		let completedTodos = 0;
 
 		//Get the number of completed todos
 		this.todos.forEach(function(todo) {
@@ -155,7 +155,7 @@ var todoList = {
 /* VIEW TODOs
 ======================================================*/
 //#region VIEW
-var view = {
+let view = {
 
 
 	/* INIT - Do stuff (ONCE) when loading 
@@ -355,7 +355,7 @@ var view = {
 
 
 			//REMOVE ALL EDIT INPUTS (if any)
-			var editElement = document.querySelector('input.edit'); //console.log(editElement);
+			const editElement = document.querySelector('input.edit'); //console.log(editElement);
 
 			if(editElement !== null) {
 				editElement.parentNode.classList.remove("editing");
@@ -368,15 +368,15 @@ var view = {
 			// IF CLICKED ELEMENT IS A LABEL
 			if(clickedElem.className === "item-label") {
 
-				var closestLi = clickedElem.closest('li'); //variante: clickedElem.parentNode
-				var labelText = clickedElem.textContent; //console.log(labelText);
-				var dataId = parseInt(closestLi.dataset.id); //console.log(dataId);
+				const closestLi = clickedElem.closest('li'); //variante: clickedElem.parentNode
+				const labelText = clickedElem.textContent; //console.log(labelText);
+				const dataId = parseInt(closestLi.dataset.id); //console.log(dataId);
 
 				closestLi.classList.add('editing');
 
 
 				//Create an Input to edit label...
-				var inputEdit = document.createElement('input');
+				const inputEdit = document.createElement('input');
 				inputEdit.className = 'edit'; //setAttribute() variante
 
 				closestLi.appendChild(inputEdit);
@@ -387,7 +387,7 @@ var view = {
 				//ON Input Keypress ENTER
 				inputEdit.addEventListener('keypress', function (e) {
 
-					var key = e.which || e.keyCode;
+					const key = e.which || e.keyCode;
 
 					if(key === 13) { // 13 is enter
 
@@ -412,7 +412,7 @@ var view = {
 		//KEYPRESS EVENT
 		newTodo.addEventListener('keypress', function (e) {
 
-			var key = e.which || e.keyCode;
+			const key = e.which || e.keyCode;
 
 			if (key === 13) { // 13 is enter
 
@@ -456,7 +456,7 @@ var view = {
 /* HANDLERS
 ======================================================*/
 //#region HANDLERS
-var handlers = {
+let handlers = {
 
 
 	/* ADD TODO
@@ -508,14 +508,15 @@ var handlers = {
 /* HANDLERS VARIANTE (manual input)
 ======================================================*/
 //#region HANDLERS VARIANTE
-var handlersVariante = {
+let handlersVariante = {
 
 
 	/* ADD TODO
 	----------------------------------------------*/
 	addTodo: function () {
 
-		var addTodoTextInput = document.getElementById('addTodoTextInput');
+		const addTodoTextInput = document.getElementById('addTodoTextInput');
+
 		todoList.addTodo(addTodoTextInput.value);
 		addTodoTextInput.value = '';
 
@@ -528,8 +529,9 @@ var handlersVariante = {
 	----------------------------------------------*/
 	changeTodo: function () {
 
-		var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
-		var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+		const changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+		const changeTodoTextInput = document.getElementById('changeTodoTextInput');
+
 		todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
 		changeTodoPositionInput.value = "";
 		changeTodoTextInput.value = '';
@@ -543,7 +545,8 @@ var handlersVariante = {
 	----------------------------------------------*/
 	deleteTodo: function (position) {
 
-		var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+		const deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+
 		todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
 		deleteTodoPositionInput.value = '';
 
@@ -556,7 +559,8 @@ var handlersVariante = {
 	----------------------------------------------*/
 	toggleCompleted: function () {
 
-		var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+		const toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+		
 		todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
 		toggleCompletedPositionInput = '';
 
@@ -583,7 +587,7 @@ var handlersVariante = {
 /* TODOs UTILITIES
 ======================================================*/
 //#region UTILITIES
-var utilities = {
+let utilities = {
 
 
 	/* CURRENT FILTER
@@ -612,7 +616,7 @@ var utilities = {
 
 
 			//COUNT UNCOMPLETED ITEMS
-			var uncompleted = 0;
+			let uncompleted = 0;
 
 			for (let i = 0; i < todoList.todos.length; i++) {
 				let todo = todoList.todos[i];
@@ -695,11 +699,13 @@ var utilities = {
 	/* PUT SELECTED CLASS ON A FILTER
 	----------------------------------------------*/
 	selectedOnFilter: function(targetElem) {
+
 		//Remove "selected" class on the active filter
 		document.querySelector('a.selected').classList.remove('selected');
 
 		//Put "selected" class on the target element (to be defined when calling the function)
 		targetElem.classList.add('selected');
+
 	}
 
 
@@ -711,7 +717,7 @@ var utilities = {
 /* TODOs LOCAL STORAGE
 ======================================================*/
 //#region STORAGE
-var storage = {
+let storage = {
 
 
 	//USE STORAGE - If you want to use storage when loading the window
@@ -733,6 +739,7 @@ var storage = {
 		}
 
 		return [];
+
 	},
 
 
