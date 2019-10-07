@@ -1,0 +1,65 @@
+/* FORMATAGE GLOBAL
+---------------------------------------*/
+html {
+  font-size: 18px;
+}
+
+body {
+  font: normal 1em/1.5 Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin: 3em 5%;
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+section {
+  margin: 5em 0;
+}
+
+footer {
+  padding: 2em 5%;
+  margin-top: 3em;
+  border-top: solid 1px #ccc;
+}
+
+
+/* FIGURE AND SVG
+---------------------------------------*/
+figure {
+  width: 100px;
+  margin: 0 auto; /* centrer sur X */
+}
+figure img, figure svg {
+  display: block;
+  width: 100%;
+}
+
+/* Dans une balise img */
+figure #svg-inside-img {
+  *background: #e5e5e5; /* ça marche car le background est mis sur <img> */
+  *color: #fc0; /* ça ne marche pas, on ne peut pas changer la couleur d'une image */
+  *fill: #dc2221; /* ça ne marche pas, on ne peut pas acceder à cette propriété */
+}
+
+/* En arrière-plan */
+figure.svg-bg {
+  height: 100px; /*obligé car la balise n'a pas de contenu*/
+  background-image: url(../img/heavy-metal-logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Directement dans le code. "#hand" c'est l'id du SVG */
+figure svg#hand {
+  fill: rgba(144,33,221,.5);
+  transition: fill .5s ease;
+}
+figure svg#hand:hover {
+  fill: #dc2221;
+}
