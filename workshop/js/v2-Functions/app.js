@@ -1,4 +1,4 @@
-//MY TODO LIST
+//MY TODO LIST  -  GLOBAL SCOPE
 let todoList = [
   "Learn HTML5",
   "Learn CSS",
@@ -9,6 +9,7 @@ let todoList = [
 //DISPLAY TODOS
 function displayTodos(){
   console.log(todoList);
+  let bob= 3; // LOCAL SCOPE -not available outside the function
 }
 
 displayTodos();
