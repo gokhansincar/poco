@@ -2,10 +2,22 @@
 let todos = {
   //MY TODO LIST - PROPERTY
   list : [
-    "Learn HTML5",
-    "Learn CSS",
-    "Learn JS",
-    "Learn PHP"
+   {
+    text : "Learn HTML5",
+    completed: false
+  },
+  {
+    text : "CSS",
+    completed: false
+  },
+  {
+    text : "JS",
+    completed: false
+  },
+  {
+    text : "PHP",
+    completed: false
+  },
 
   ],
 

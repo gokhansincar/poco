@@ -2,10 +2,22 @@
 let todos = {
   //MY TODO LIST - PROPERTY
   list : [
-    "Learn HTML5",
-    "Learn CSS",
-    "Learn JS",
-    "Learn PHP"
+   {
+    text : "Learn HTML5",
+    completed: false
+  },
+  {
+    text : "CSS",
+    completed: false
+  },
+  {
+    text : "JS",
+    completed: false
+  },
+  {
+    text : "PHP",
+    completed: false
+  },
 
   ],
 
@@ -22,24 +34,21 @@ let todos = {
 
 
 //CHANGE TODO
-changeTodo : function(index, text) {
-  this.list[index] = text;
-  this.displayTodos();
+// changeTodo : function(index, text) {
+//   this.list[index] = text;
+//   this.displayTodos();
 },
 
 
 
 //DELETE TODOS
-deleteTodo: function(index) {
-  this.list.splice(index, 1);
+// deleteTodo: function(index) {
+  this.list.splice(index,);
   this.displayTodos();
-},
 
-temp: function() {
-  console.log ("some string from a method!");
-  },
+
   
-}; // END OBJECT todos
+// END OBJECT todos
 
 function doThis() {
   return ("A text inside a global scope function");
