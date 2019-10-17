@@ -1,64 +1,78 @@
-//START OBJECT
+//START OBJECT todos
 let todos = {
+
   //MY TODO LIST - PROPERTY
   list : [
-   {
-    text : "Learn HTML5",
-    completed: false
-  },
-  {
-    text : "CSS",
-    completed: false
-  },
-  {
-    text : "JS",
-    completed: false
-  },
-  {
-    text : "PHP",
-    completed: false
-  },
+
+    {
+      text: "Learn HTML5",
+      completed: true
+    },
+    {
+      text: "Learn CSS",
+      completed: true
+    },
+    {
+      text: "Learn JS",
+      completed: false
+    },
+    {
+      text: "Learn PHP",
+      completed: false
+    }
 
   ],
 
- //DISPLAY TODOS - METHOD
+  //DISPLAY TODOS - METHOD
   displayTodos: function() {
-    console.log(this.list);
+
+    this.list.forEach(function (item)  {
+    let completedStr = (item.completed) ? "(X)" : "( )";
+    console.log(completedStr, item.text);
+
+     });
+
+    
   },
 
   //ADD TODO
-  addTodo : function(todoText) {
-  this.list.push(todoText);
-  this.displayTodos();
-},
+  addTodo: function(todoText) {
 
+    let newTodo = {
+      text: todoText,
+      completed: false
+    }
 
-//CHANGE TODO
-// changeTodo : function(index, text) {
-//   this.list[index] = text;
-//   this.displayTodos();
-},
+    this.list.push(newTodo);
+    this.displayTodos();
+  },
 
+  //CHANGE TODO
+  changeTodo: function(index, newText) {
+    this.list[index].text = newText;
+    this.displayTodos();
+  },
 
+  //DELETE TODO
+  deleteTodo: function(index) {
+    this.list.splice(index, 1);
+    this.displayTodos();
+  },
 
-//DELETE TODOS
-// deleteTodo: function(index) {
-  this.list.splice(index,);
-  this.displayTodos();
-
-
+  //TOGGLE COMPLETED
+  toggleTodo: function(index) {
   
-// END OBJECT todos
+    let currentStatus = this.list[index].completed; //true or false
+    this.list[index].completed = ! currentStatus;
+    this.displayTodos();
 
-function doThis() {
-  return ("A text inside a global scope function");
-}
+  }
 
-//Everything after the RETURN is ignored;
 
-todos.temp();
+}; // END OBJECT todos
 
-console.log(todos.list);
-todos.addTodo("Learn Something else");
-todos.changeTodo("1", "Something more");
-todos.deleteTodo(0);
+
+todos.displayTodos();
+
+// console.log( todos.list );
+

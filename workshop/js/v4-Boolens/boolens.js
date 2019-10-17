@@ -4,12 +4,9 @@
 let raining = false;
 let sunny = true;
 
-if(raining) {
-//run only 
-}
-else if(sunny) {
+console.log(raining);
 
-}
-else {
+//Using the "bang" operator "!". It spelled "NOT"
+raining = ! raining;
 
-}
+console.log("value after the bang operator:", raining);

@@ -28,14 +28,19 @@ let todos = {
 
   //ADD TODO
   addTodo : function(todoText) {
-  this.list.push(todoText);
+    let newTodo = {
+      text: todoText,
+      completed: false
+
+    }
+  this.list.push(newTodo);
   this.displayTodos();
 },
 
 
 //CHANGE TODO
-changeTodo : function(index, text) {
-  this.list[index] = text;
+changeTodo : function(index, newText) {
+  this.list[index].text = newText;
   this.displayTodos();
 },
 
@@ -47,8 +52,17 @@ deleteTodo: function(index) {
   this.displayTodos();
 },
 
+//TOGGLE COMPLETED
+toggleTodo: function(index) {
+
+  let currentStatus = this.list[index].completed; // true or false
+  this.list[index].completed = ! currentStatus;
+  this.displayTodos();
+},
+
+
 temp: function() {
-  console.log ("some string from a method!");
+  // console.log ("some string from a method!");
   },
   
 }; // END OBJECT todos
@@ -61,7 +75,14 @@ function doThis() {
 
 todos.temp();
 
-console.log(todos.list);
+todos.toggleTodo(2);
+todos.toggleTodo(2);
 todos.addTodo("Learn Something else");
-todos.changeTodo("1", "Something more");
-todos.deleteTodo(0);
+todos.addTodo("Learn Something else more");
+
+console.log( todos.list[4] );
+todos.list[4].text = "bla bla";
+console.log( todos.list[4] );
+
+
+// todos.deleteTodo(0);
