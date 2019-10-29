@@ -243,19 +243,33 @@ let view = {
 
 		} //End Loop
 
-  }, //End displayTodos() method
+  } //End displayTodos() method
   
 
-  /* CREATE EVENT LISTENERS
+  
+
+
+};
+
+
+
+/**
+ * LISTENERS OBJECT
+ * Methods to LISTEN DOM events
+ * ----------------------------------------------------------
+ */
+let listeners = {
+
+  /* EVENT LISTENERS FOR UL
 	-----------------------------------*/
-  setUpEventListeners: function() {
+  ulEvents: function() {
 
     const todoUL = document.querySelector('ul');
     
     todoUL.addEventListener('click', function(event) {
 
       const elemClicked = event.target;
-      //console.log(elemClicked.tagName);
+      console.log(elemClicked.tagName);
 
       if(elemClicked.tagName == 'BUTTON') {
         const id = parseInt(event.target.id);
@@ -267,11 +281,10 @@ let view = {
 
   }
 
+}
 
-};
 
-
-view.setUpEventListeners();
+listeners.ulEvents();
 view.displayTodos();
 
 

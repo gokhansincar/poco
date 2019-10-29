@@ -82,16 +82,16 @@ console.log(showItem);
 
 
 //CHANGE todo
-function changeTodo(index, text) {
-  todos[index] = text;
-  displayTodos();
-}
+// function changeTodo(index, text) {
+//   todos[index] = text;
+//   displayTodos();
+// }
 
 //DELETE To DO
-function deleteTodo(index) {
-  todos.splice(index, 1);
-  displayTodos();
-}
+// function deleteTodo(index) {
+//   todos.splice(index, 1);
+//   displayTodos();
+// }
 
 //CALLING STUFF
 // displayTodos(todos);
