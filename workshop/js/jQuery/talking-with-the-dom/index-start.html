@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Remember CSS ?</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main-start.css">
 </head>
 
 <body>
 
   <header id="top-header" class="top-header row">
-
-      <figure id="logo" class="logo font700">
+      
+      <figure id="logo" class="font700">
         <a href="index.html">A-LOGO</a>
       </figure>
 
-      <div id="nav-triggers" class="nav-triggers">
-        <a id="open-menu" class="open-menu trigger"><img src="img/burger-icon.svg" alt="burger icon"></a>
-        <a id="close-menu" class="close-menu trigger"><img src="img/close-icon.svg" alt="close icon"></a>
-      </div>
+      <figure id="nav-triggers">
+        <a href="#" id="open-menu" class="trigger"><img src="img/burger-icon.svg" alt="Burger Menu Icon"></a>
+        <a href="#" id="close-menu" class="trigger"><img src="img/close-icon.svg" alt="Close Menu Icon"></a>
+      </figure>
 
-      <nav id="main-nav" class="main-nav">
-        <ul id="menu" class="menu row">
+      <nav id="main-nav">
+        <ul class="menu row font400">
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">Work</a></li>
           <li><a href="#">About</a></li>
@@ -34,50 +34,51 @@
 
   <main>
 
-    <header class="AC">
+    <header class="main-header AC">
       <div class="deco-title">
-        <h1 id="main-title" class="main-title">Remember CSS ?</h1>
-        <h2 class="font300 M0">And after... the star attraction: <strong>jQuery</strong></h2>
+        <h1>Remember CSS ?</h1>
+        <h2 class="M0 font300">And after... the star attraction: <strong>jQuery</strong></h2>
       </div>
     </header>
 
-    <section id="section-1" class="section">
+    <section id="section-1">
       <h2>This is section 1</h2>
-      <div class="row container half">
-        <div class="col col-2">
+      <div class="row">
+        <div class="col-2">
           <p><a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit. Vestibulum ac luctus metus. Maecenas dapibus turpis massa, a venenatis arcu elementum nec.</p>
           <p>Aliquam erat volutpat. Aliquam a lacus pretium, fermentum justo vitae, maximus nisi. Proin consequat massa eget est semper, quis suscipit ligula vulputate.</p>
         </div>
-        <div class="col col-2">
+
+        <div class="col-2">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac luctus metus. Maecenas dapibus turpis massa, a venenatis arcu elementum nec.</p>
           <p>Aliquam erat volutpat. <a href="#">Aliquam a lacus pretium</a>, fermentum justo vitae, maximus nisi. Proin consequat massa eget est semper, quis suscipit ligula vulputate.</p>
         </div>
       </div>
     </section>
 
-    <section id="section-2" class="section images">
+    <section id="section-2">
       <h2>This is section 2</h2>
       <figure class="row">
-        <a href="#" class="col-3 scale"><img src="img/unsplash-01.jpg" alt="Rusty"></a>
-        <a href="#" class="col-3 scale"><img src="img/unsplash-02.jpg" alt="Mini houses"></a>
-        <a href="#" class="col-3 scale"><img src="img/unsplash-03.jpg" alt="Terra colors"></a>
+        <a class="col-3 scale" href="#"><img src="img/unsplash-01.jpg" alt="Rusty"></a>
+        <a class="col-3 scale" href="#"><img src="img/unsplash-02.jpg" alt="Mini houses"></a>
+        <a class="col-3 scale" href="#"><img src="img/unsplash-03.jpg" alt="Terra colors"></a>
       </figure>
     </section>
 
-    <section id="section-3" class="section">
+    <section id="section-3">
       <h2>This is section 3</h2>
       <p>Phasellus consequat ligula ac ipsum semper eleifend. Donec pellentesque tortor sit amet aliquet interdum. Morbi commodo nisl nunc, ultrices blandit metus eleifend eu. Etiam ut diam diam. Duis euismod at augue ut hendrerit. Donec luctus, diam cursus ullamcorper mollis, nisl lectus facilisis odio, quis dapibus massa enim id ipsum.</p>
       <p>Nam sodales tortor eget placerat laoreet. Cras nisi eros, sollicitudin nec nisi quis, iaculis congue mi. Etiam turpis metus, interdum sit amet dui vitae, iaculis ultrices mi. Sed sem nisl, dictum at ante malesuada, cursus vehicula eros. Praesent posuere, mauris id vestibulum blandit, est tortor condimentum eros.</p>
     </section>
 
-    <section id="section-4" class="section">
-      <form action="" id="form1" class="form">
+    <section id="section-4">
+      <form action="">
         <h2>This is section 4 and this is a form</h2>
-        <p class="row">
+        <p>
           <label for="user">Username:</label>
           <input type="text" name="user" id="user" required>
         </p>
-        <p class="row">
+        <p>
           <label for="pass">Password:</label>
           <input type="password" name="pass" id="pass" required>
         </p>
@@ -95,44 +96,9 @@
   </footer>
 
   
-  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
-  <!-- <script src="main.js"></script> -->
-
-  <script>
-    //VANILLA JS VARIANTE
-    const body = document.querySelector("body");
-    const openMenu = document.querySelector("#open-menu");
-    const closeMenu = document.querySelector("#close-menu");
-
-    openMenu.addEventListener('click', function(event) {
-      body.classList.add('menu-is-open');
-    });
-
-    closeMenu.addEventListener('click', function(event) {
-      body.classList.remove('menu-is-open');
-    });
-
-    window.addEventListener('scroll', function(event) {
-      scrollPos = window.scrollY; //console.log(scrollPos);
-
-      if(scrollPos > 81) {
-        body.classList.add('header-is-fixed');
-      }
-      else {
-        body.classList.remove('header-is-fixed');
-      }
-    });
-
-    //jQuery VARIANTE (if library activated above)
-    /*
-    $('#open-menu').on('click', function() {
-      $('body').addClass('menu-is-open');
-    });
-    $('#close-menu').on('click', function() {
-      $('body').removeClass('menu-is-open');
-    });
-    */
-  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="app.js"></script>
+ 
 
 </body>
 </html>

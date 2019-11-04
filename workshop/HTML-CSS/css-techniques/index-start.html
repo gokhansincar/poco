@@ -11,16 +11,22 @@
 <body>
 
   <header id="top-header" class="top-header row">
-
+      
       <figure id="logo" class="font700">
         <a href="index.html">A-LOGO</a>
       </figure>
-      <nav>
+
+      <figure id="nav-triggers">
+        <a href="javascript:void(0)" id="open-menu" class="trigger"><img src="img/burger-icon.svg" alt="Burger Menu Icon"></a>
+        <a href="javascript:void(0)" id="close-menu" class="trigger"><img src="img/close-icon.svg" alt="Close Menu Icon"></a>
+      </figure>
+
+      <nav id="main-nav">
         <ul class="menu row font400">
           <li class="active"><a href="#">Home</a></li>
-          <li class="active"><a href="#">Work</a></li>
-          <li class="active"><a href="#">About</a></li>
-          <li class="active"><a href="#">Contact</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     
@@ -37,25 +43,25 @@
 
     <section>
       <h2>This is section 1</h2>
-      <div class="row ">
-        <div class="lg-col-2">
+      <div class="row">
+        <div class="col-2">
           <p><a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit. Vestibulum ac luctus metus. Maecenas dapibus turpis massa, a venenatis arcu elementum nec.</p>
           <p>Aliquam erat volutpat. Aliquam a lacus pretium, fermentum justo vitae, maximus nisi. Proin consequat massa eget est semper, quis suscipit ligula vulputate.</p>
         </div>
-        <div class="lg-col-2">
+
+        <div class="col-2">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac luctus metus. Maecenas dapibus turpis massa, a venenatis arcu elementum nec.</p>
           <p>Aliquam erat volutpat. <a href="#">Aliquam a lacus pretium</a>, fermentum justo vitae, maximus nisi. Proin consequat massa eget est semper, quis suscipit ligula vulputate.</p>
         </div>
       </div>
-
     </section>
 
     <section id="section-2">
       <h2>This is section 2</h2>
       <figure class="row">
-        <a class="lg-col-3 scale" href="#"><img src="img/unsplash-01.jpg" alt="Rusty"></a>
-        <a class="lg-col-3 scale" href="#"><img src="img/unsplash-02.jpg" alt="Mini houses"></a>
-        <a class="lg-col-3 scale" href="#"><img src="img/unsplash-03.jpg" alt="Terra colors"></a>
+        <a class="col-3 scale" href="#"><img src="img/unsplash-01.jpg" alt="Rusty"></a>
+        <a class="col-3 scale" href="#"><img src="img/unsplash-02.jpg" alt="Mini houses"></a>
+        <a class="col-3 scale" href="#"><img src="img/unsplash-03.jpg" alt="Terra colors"></a>
       </figure>
     </section>
 
@@ -89,8 +95,23 @@
     <p>some &copy;2019 by nobody</p>
   </footer>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-  <script src="main.js"></script> -->
+  <!--
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="main.js"></script>
+  -->
+
+  <script>
+    const body = document.querySelector("body");
+    const openMenu = document.querySelector("#open-menu");
+    const closeMenu = document.querySelector("#close-menu");
+
+    openMenu.addEventListener('click', function() {
+      body.classList.add('menu-is-open');
+    });
+    closeMenu.addEventListener('click', function() {
+      body.classList.remove('menu-is-open');
+    });
+  </script>
 
 </body>
 </html>
