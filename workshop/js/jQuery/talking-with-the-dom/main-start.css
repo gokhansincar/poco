@@ -1,4 +1,4 @@
- /*	Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+/*	Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
 -------------------------------------------------------------------------- */
 /*#region RESET*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
@@ -20,7 +20,7 @@ html {
 ===================================================================================*/
 /*#region MAIN TAGS*/
 /* REFERENCE SIZE FOR FONTS
- * We can use html{} ou :root{}
+ * We can use html{} ou :root{}
 ----------------------------------------------*/
 html {
   font-size: 17px;
@@ -228,9 +228,6 @@ section {
 	padding: 2em 4%;
 	background-color: #f5f5f5;
 	margin-bottom: 3em;
-
-	/* height: 200px;
-	overflow: auto; */
 }
 
 /* MENU
@@ -250,110 +247,112 @@ section {
 	color: #000;
 }
 
+
 /* NAV TRIGGERS FOR MOBILES
---------------------------------*/
+-----------------------------------*/
 #nav-triggers {
-	display : none;
+	display: none;
 }
-
-
 /*#endregion*/
+
 
 /* MEDIA QUERIES
 ===================================================================================*/
-/*#region MEDIA QUERIES */
+/*#region MEDIA QUERIES*/
 @media (max-width: 800px) {
 
-	/* HELPER Classes*/
+	/* Helper classes */
 	.row:not(.top-header) {
+		/* flex-direction: column; */
 		display: block;
 	}
 
-	/*LOGO */
+	/*LOGO*/
 	.menu-is-open #logo {
 		position: relative;
 		z-index: 1;
 		color: #fff;
 	}
 
-	/*Hide the Nav*/
-#main-nav {
-	display: none;
-}
-/*Show the Nav Triggers*/
-#nav-triggers {
-	display: block;
-	width: 44px;
-	height: 44px;
-	position: relative;
-	z-index: 1;
+	/*Hide the nav*/
+	#main-nav {
+		display: none;
+	}
 
-	overflow: hidden;
+	/*Show the nav triggers*/
+	#nav-triggers {
+		display: block;
+		width: 44px;
+		height: 44px;
+		position: relative;
+		z-index: 1;
 
-}
-.trigger {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 100%;
-position: absolute;
-top: 0;
-left: 0;
+		overflow: hidden;
 
-background-color: orange;
-}
-.trigger img {
-	width: 60%;
-}
-/*WHEN menu is closed*/
-#close-menu {
-	left: -100%;
-}
+		background-color: #fc0;
+	}
+	.trigger {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
 
-/* When menu is opened*/
-.menu-is-open #open-menu {
-	left: -100%;
-}
-.menu-is-open #close-menu {
-	left: 0;
-}
-/* MOBILE NAV */
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.trigger img {
+		width: 60%;
+	}
 
-.menu-is-open {
-	overflow: hidden;
-}
-.menu-is-open #main-nav {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	/*When menu is closed*/
+	#close-menu {
+		left: -100%;
+	}
 
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, .9);
-	width: 100vw;
-	height: 100vh;
+	/*When menu is opened*/
+	.menu-is-open #open-menu {
+		left: -100%;
+	}
+	.menu-is-open #close-menu {
+		left: 0;
+	}
 
-}
+	/* MOBILE NAV */
+	.menu-is-open {
+		overflow: hidden;
+	}
+	.menu-is-open #main-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-.menu {
-	text-align: center;
-	font-size: 8vw;
-}
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
 
-.menu li {
-	color: #999;
-	margin: 0 0 2em 0;
-}
-.menu li:last-child {
-	margin: 0;
-}
+		background-color: rgba(0,0,0,.95);
+	}
 
-.menu li.active {
-	color: #fff;
-	border: none;
-}
+	.menu {
+		/* background-color: bisque; */
+		text-align: center;
+		font-size: 8vw;
+	}
+	.menu li {
+		color: #999;
+		margin: 0 0 2em 0;
+	}
+	.menu li:last-child {
+		margin: 0;
+	}
+	.menu li.active {
+		color: #fff;
+		border: 0;
+	}
 
 }
 
@@ -364,5 +363,4 @@ background-color: orange;
 @media (max-width: 480px) {
 	
 }
-
-/*#endregion  */
+/*#endregion*/
