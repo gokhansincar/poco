@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Form Bootstrap - Champs formulaire divers</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- VOS STYLES PERSO ICI... -->
+
+  </head>
+
+
+  <body>
+
+    <!-- HEADER -->
+    <header class="header pt-5 pb-5">
+      <h1 class="text-center mb-0">Form Bootstrap - Champs formulaire divers</h1>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content container">
+
+      <!-- EXEMPLE - Grid - row" and "col" -->
+      <section class="section col-md-8 col-lg-6 mx-auto">
+
+        <form action="" class="form needs-validation" novalidate>
+
+          <p class="mb-2 text-info">Exemples Input</p>
+
+          <!-- GROUP PRENOM + NOM -->
+          <div class="form-group form-row">
+            <div class="col">
+              <label for="first_name" class="sr-only">Prénom</label>
+              <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Votre prénom" required>
+              <div class="invalid-tooltip">Votre nom...</div>
+            </div>
+            <div class="col">
+              <label for="last_name" class="sr-only">Nom</label>
+              <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Votre nom" required>
+              <div class="invalid-tooltip">Votre prénom...</div>
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group">
+            <label for="email" class="sr-only">Email address</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+              </div>
+              <input type="email" class="form-control"  id="email" placeholder="Votre émail" required>
+              <div class="invalid-tooltip" data-placement="right">Merci de rentrer un émail valide !</div>
+            </div>
+          </div>
+
+          <!-- MDP -->
+          <div class="form-group">
+            <label for="pass" class="sr-only">Mot de passe</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">&#9995;</div>
+              </div>
+              <input type="password" class="form-control"  id="pass" placeholder="Votre mot de passe" required>
+              <div class="invalid-tooltip">Le mot de passe est obligatoire !</div>
+            </div>
+          </div>
+
+          <!-- TELEPHONE -->
+          <div class="form-group">
+            <label for="telNo" class="sr-only">Téléphone</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">&#9742;</div>
+              </div>
+              <input type="tel" class="form-control"  id="telNo" placeholder="Téléphone">
+            </div>
+          </div>
+
+          <!-- SELECT -->
+          <div class="form-group mt-5">
+            <label for="select" class="text-info">Example select</label>
+            <select class="form-control" id="select">
+              <option>Quel chiffre ?</option>
+              <option>Un</option>
+              <option>Deux</option>
+              <option>Troi</option>
+              <option>Quatre</option>
+              <option>Cinq</option>
+            </select>
+          </div>
+
+          <!-- TEXTAREA -->
+          <div class="form-group mt-5">
+            <label for="message" class="text-info">Example textarea</label>
+            <textarea class="form-control" id="message" rows="5"></textarea>
+          </div>
+
+          <!-- CHECKBOX -->
+          <div class="form-group mt-5">
+            <p class="mb-2 text-info">Exemple cases à cocher</p>
+            <div class="custom-control custom-checkbox __custom-control-inline">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">Option 1</label>
+            </div>
+            <div class="custom-control custom-checkbox __custom-control-inline">
+              <input type="checkbox" class="custom-control-input" id="customCheck2">
+              <label class="custom-control-label" for="customCheck2">Option 2</label>
+            </div>
+            <div class="custom-control custom-checkbox __custom-control-inline">
+              <input type="checkbox" class="custom-control-input" id="customCheck3">
+              <label class="custom-control-label" for="customCheck3">Option 3</label>
+            </div>
+          </div>
+
+          <!-- RADIO BTN -->
+          <div class="form-group mt-5">
+            <p class="mb-2 text-info">Exemple boutons radio</p>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" required>
+              <label class="custom-control-label" for="customRadioInline1">Celui-ci ?</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" required>
+              <label class="custom-control-label" for="customRadioInline2">Ou celui-ci ?</label>
+            </div>
+          </div>
+
+          <!-- SUBMIT BTN -->
+          <button type="submit" class="btn btn-success mt-5">Validez</button>
+
+        </form>
+
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER - liens ressources -->
+    <footer class="footer container">
+
+      <div class=" pt-5 pb-5 col-md-8 col-lg-6 mx-auto">
+        <hr>
+        <h2 class="h5 text-uppercase">Bootstrap links</h2>
+        <ul class="list-unstyled">
+          <li><a href="https://getbootstrap.com/docs/4.0/components/forms/" target="_blank">BS Forms docs</a></li>
+          <li><a href="https://www.quackit.com/bootstrap/bootstrap_4/tutorial/bootstrap_forms.cfm" target="_blank">Exemples formulaires</a></li>
+        </ul>
+      </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- FORM VALIDATION -->
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+
+      }, false);
+
+    })();
+    </script>
+
+  </body>
+
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>How to customise Bootstrap with SASS and Koala</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- STYLES POUR CETTE DEMO -->
+    <link rel="stylesheet" href="css/demo-common.css">
+
+    <!-- VOS STYLES -->
+    <style>
+
+      /*CUSTOM CLASSES USING BOOSTRAP VARIABLES*/
+      .text-gray-dark {
+        color: var(--gray-dark);
+      }
+      .bg-gray-dark {
+        background-color: var(--gray-dark);
+      }
+
+
+    </style>
+
+  </head>
+
+
+  <body>
+
+    <!-- HEADER -->
+    <header class="header pt-5 pb-5">
+      <h1 class="text-center mb-0 display-3">How to customise Bootstrap</h1>
+      <p class="text-center mb-0 h5 text-secondary font-weight-300">Overwrite default BS values using SASS and Koala</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content container">
+
+      <!-- EXEMPLE - Colors-->
+      <section class="section">
+        <h2>Colors</h2>
+        <div class="exemple">
+
+          <h3 class="h5 mt-5">My new colors</h3>
+          <hr>
+          <div class="p-3 mb-2 bg-swiss-flag text-white">hi hi this is my class .swiss-flag (used as a background)</div>
+          <div class="p-3 mb-2 bg-white text-swiss-flag">hi hi ça c'est ma classe .swiss-flag (used as a text color)</div>
+          <div class="p-3 mb-2 bg-frommage">hi hi this is my class .frommage</div>
+          <div class="p-3 mb-2 bg-gray-dark text-white">.bg-gray-dark based on BS var</div>
+          <div class="p-3 mb-2 bg-white text-gray-dark">.tex-gray-dark based on BS var</div>
+          <hr>
+
+          <h3 class="h5 mt-5">Modified BS colors</h3>
+          <hr>
+          <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+          <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+          <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+          <hr>
+
+        </div>
+      </section>
+
+
+      <!-- EXEMPLE - Spacers-->
+      <section class="section">
+        <h2>Spacers</h2>
+        <div class="exemple">
+
+          <h3 class="h5">Custom Paddings</h3>
+          <hr>
+          <div class="p-6 mb-2 bg-dark text-white">.p-6</div>
+          <div class="p-6 pl-big-space mb-2 bg-dark text-white">.p-6 .pl-big-space</div>
+          <hr>
+
+          <h3 class="h5 mt-5">Custom Margins</h3>
+          <hr>
+          <div class="p-2 mb-7 bg-dark text-white">.mb-7</div>
+          <div class="p-2 ml-big-space bg-dark text-white">.ml-big-space</div>
+          <hr>
+
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER - liens ressources -->
+    <footer class="footer container pt-5 pb-5">
+      <h2>Bootstrap links</h2>
+      <ul class="list-unstyled">
+        <li><a href="https://getbootstrap.com/docs/4.3/getting-started/theming/" target="_blank">Theming Bootstrap Docs</a></li>
+        <li><a href="https://pikock.github.io/bootstrap-magic/app/#!/editor" target="_blank">Bootstrap Magic - Modify all BS defalt values !</a></li>
+      </ul>
+    </footer>
+
+
+    <!-- JQUERY SLIM .MIN [CDN] (bootstrap uses jquery for DOM manipulation) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <!-- POPPER .MIN [CDN] (used for drop-down menus and info bubbles) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- BOOTSTRAP JS .MIN CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+
+
+</html>

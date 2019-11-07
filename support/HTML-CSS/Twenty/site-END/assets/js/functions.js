@@ -1,14 +1,14 @@
 /**
  * CI-DESSOUS DES FONCTIONS JS UTILES POUR DES TACHES DIVERSES
  * --------------------------------------------------------------
- * is_loaded()				=> vérifier si un plugin existe dans la page (pour éviter les erreurs quand un plugin est manquant)
- * is_function()			=> vérifier si une fonction existe (pour éviter les erreurs quand une fonction est manquante)
- * getViewport()			=> pour récupérer la dimension (largeur + hauteur) du viewport (viewport = balise html)
- * scroll_sniffer()		=> ajouter une classe sur la balise body quand le scroll est à une certaine distance du haut
- * smartresize()			=> remplace le "resize" de jQuery, exécute le code seulement une fois que l'agrandissement est arrêté
- * scrollEnd()				=> remplace le "scroll" de jQuery, exécute le code seulement une fois quand le scroll est arrêté
- * viewportChecker()	=> un plugin jQuery qui détecte quand un élément rentre dans viewport et lui ajoute une classe.
- * CountUp.js					=> un plugin JS (SANS jQuery) anime des chiffres.
+ * is_loaded()				=> check if a plugin exists in the page (to avoid errors when a plugin is missing)
+ * is_function()			=> check if a function exists (to avoid errors when a function is missing)
+ * getViewport()			=> to retrieve the dimension (width + height) of viewport (viewport = html tag)
+ * scroll_sniffer()		=> add a class to the body tag when the scroll is at a certain distance from the top
+ * smartresize()			=> replaces the "resize" of jQuery, executes the code only after the resize is stopped
+ * scrollEnd()				=> replace the "scroll" of jQuery, execute the code only once when the scroll is stopped
+ * viewportChecker()	=> a jQuery plugin that detects when an item enters viewport and adds a class to it.
+ * CountUp.js					=> a JS plugin (WITHOUT jQuery) animates numbers.
  */
 
 
@@ -20,7 +20,6 @@
 function is_loaded(plugin) {
 	return !!$.fn[plugin];
 }
-
 
 
 /**
@@ -36,7 +35,6 @@ function is_function(function_name) {
 	return false;
 
 }
-
 
 
 /**
@@ -81,50 +79,21 @@ function getViewport() {
 /**
  * SCROLL SNIFFER
  * --------------------------------------------------------------
- * Ajoute une classe sur la body en fonction du scroll
+ * Add a class on the body based on the scroll
  */
-function scroll_sniffer(top_distance = 100, element = "body", css_class = "is-scrolled") {
-
-	//Function parameters dfault values - For older browser with no suppour for ECMAScript 2015
-	//top_distance	= (typeof top_distance	!== 'undefined') ?  top_distance	: 100;
-	//element				= (typeof element				!== 'undefined') ?  element				: "body";
-	//css_class			= (typeof css_class			!== 'undefined') ?  css_class			: "is-scrolled";
+function scroll_sniffer(top_distance) {
 
   //Get scroll position from top
-  var current_scroll = $(window).scrollTop();
+  var scroll = $(window).scrollTop();
 
   //Add/Remove body class "is-scrolled" depending on scroll position
-  if(current_scroll >= top_distance) {
-    $(element).addClass(css_class);
-  }
-	else {
-    $(element).removeClass(css_class);
+  if(scroll >= top_distance) {
+    $("body").addClass("is-scrolled");
+  } else {
+    $("body").removeClass("is-scrolled");
   }
 
 }
-
-
-
-/**
- * DISABLE / ENABLE SCROLL PLUGINS
- * --------------------------------------------------------------
- * From: http://stackoverflow.com/a/31974498
- */
-//DISABLE SCROLL
-$.fn.disableScroll = function() {
-	var oldScrollPos = $(window).scrollTop();
-
-	$(window).on('scroll.scrolldisabler',function ( event ) {
-		 $(window).scrollTop( oldScrollPos );
-		 event.preventDefault();
-	});
-};
-
-//ENABLE SCROLL
-$.fn.enableScroll = function() {
-	$(window).off('scroll.scrolldisabler');
-};
-
 
 
 /**
@@ -168,7 +137,6 @@ $.fn.enableScroll = function() {
 })(jQuery,'smartresize');
 
 
-
 /**
  * ON END SCROLLING
  * --------------------------------------------------------------
@@ -185,12 +153,11 @@ $.fn.scrollEnd = function(callback, timeout) {
       clearTimeout($this.data('scrollTimeout'));
     }
 
-    $this.data('scrollTimeout', setTimeout(callback, timeout));
+    $this.data('scrollTimeout', setTimeout(callback,timeout));
 
   });
 
 };
-
 
 
 /**
@@ -200,7 +167,6 @@ $.fn.scrollEnd = function(callback, timeout) {
  * https://github.com/dirkgroenen/jQuery-viewport-checker
  */
 !function(a){a.fn.viewportChecker=function(b){var c={classToAdd:"visible",classToRemove:"invisible",classToAddForFullView:"full-visible",removeClassAfterAnimation:!1,offset:100,repeat:!1,invertBottomOffset:!0,callbackFunction:function(a,b){},scrollHorizontal:!1,scrollBox:window};a.extend(c,b);var d=this,e={height:a(c.scrollBox).height(),width:a(c.scrollBox).width()};return this.checkElements=function(){var b,f;c.scrollHorizontal?(b=Math.max(a("html").scrollLeft(),a("body").scrollLeft(),a(window).scrollLeft()),f=b+e.width):(b=Math.max(a("html").scrollTop(),a("body").scrollTop(),a(window).scrollTop()),f=b+e.height),d.each(function(){var d=a(this),g={},h={};if(d.data("vp-add-class")&&(h.classToAdd=d.data("vp-add-class")),d.data("vp-remove-class")&&(h.classToRemove=d.data("vp-remove-class")),d.data("vp-add-class-full-view")&&(h.classToAddForFullView=d.data("vp-add-class-full-view")),d.data("vp-keep-add-class")&&(h.removeClassAfterAnimation=d.data("vp-remove-after-animation")),d.data("vp-offset")&&(h.offset=d.data("vp-offset")),d.data("vp-repeat")&&(h.repeat=d.data("vp-repeat")),d.data("vp-scrollHorizontal")&&(h.scrollHorizontal=d.data("vp-scrollHorizontal")),d.data("vp-invertBottomOffset")&&(h.scrollHorizontal=d.data("vp-invertBottomOffset")),a.extend(g,c),a.extend(g,h),!d.data("vp-animated")||g.repeat){String(g.offset).indexOf("%")>0&&(g.offset=parseInt(g.offset)/100*e.height);var i=g.scrollHorizontal?d.offset().left:d.offset().top,j=g.scrollHorizontal?i+d.width():i+d.height(),k=Math.round(i)+g.offset,l=g.scrollHorizontal?k+d.width():k+d.height();g.invertBottomOffset&&(l-=2*g.offset),k<f&&l>b?(d.removeClass(g.classToRemove),d.addClass(g.classToAdd),g.callbackFunction(d,"add"),j<=f&&i>=b?d.addClass(g.classToAddForFullView):d.removeClass(g.classToAddForFullView),d.data("vp-animated",!0),g.removeClassAfterAnimation&&d.one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",function(){d.removeClass(g.classToAdd)})):d.hasClass(g.classToAdd)&&g.repeat&&(d.removeClass(g.classToAdd+" "+g.classToAddForFullView),g.callbackFunction(d,"remove"),d.data("vp-animated",!1))}})},("ontouchstart"in window||"onmsgesturechange"in window)&&a(document).bind("touchmove MSPointerMove pointermove",this.checkElements),a(c.scrollBox).bind("load scroll",this.checkElements),a(window).resize(function(b){e={height:a(c.scrollBox).height(),width:a(c.scrollBox).width()},d.checkElements()}),this.checkElements(),this}}(jQuery);
-
 
 
 /**

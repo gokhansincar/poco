@@ -1,14 +1,14 @@
 /**
  * CI-DESSOUS DES FONCTIONS JS UTILES POUR DES TACHES DIVERSES
  * --------------------------------------------------------------
- * is_loaded()				=> vérifier si un plugin existe dans la page (pour éviter les erreurs quand un plugin est manquant)
- * is_function()			=> vérifier si une fonction existe (pour éviter les erreurs quand une fonction est manquante)
- * getViewport()			=> pour récupérer la dimension (largeur + hauteur) du viewport (viewport = balise html)
- * scroll_sniffer()		=> ajouter une classe sur la balise body quand le scroll est à une certaine distance du haut
- * smartresize()			=> remplace le "resize" de jQuery, exécute le code seulement une fois que l'agrandissement est arrêté
- * scrollEnd()				=> remplace le "scroll" de jQuery, exécute le code seulement une fois quand le scroll est arrêté
- * viewportChecker()	=> un plugin jQuery qui détecte quand un élément rentre dans viewport et lui ajoute une classe.
- * CountUp.js					=> un plugin JS (SANS jQuery) anime des chiffres.
+ * is_loaded()				=> check if a plugin exists in the page (to avoid errors when a plugin is missing)
+ * is_function()			=> check if a function exists (to avoid errors when a function is missing)
+ * getViewport()			=> to retrieve the dimension (width + height) of viewport (viewport = html tag)
+ * scroll_sniffer()		=> add a class to the body tag when the scroll is at a certain distance from the top
+ * smartresize()			=> replaces the "resize" of jQuery, executes the code only after the resize is stopped
+ * scrollEnd()				=> replace the "scroll" of jQuery, execute the code only once when the scroll is stopped
+ * viewportChecker()	=> a jQuery plugin that detects when an item enters viewport and adds a class to it.
+ * CountUp.js					=> a JS plugin (WITHOUT jQuery) animates numbers.
  */
 
 
@@ -79,7 +79,7 @@ function getViewport() {
 /**
  * SCROLL SNIFFER
  * --------------------------------------------------------------
- * Ajoute une classe sur la body en fonction du scroll
+ * Add a class on the body based on the scroll
  */
 function scroll_sniffer(top_distance) {
 

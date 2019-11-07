@@ -258,7 +258,7 @@ let view = {
  * Methods to LISTEN DOM events
  * ----------------------------------------------------------
  */
-let listeners = {
+let listen = {
 
   /* EVENT LISTENERS FOR UL
 	-----------------------------------*/
@@ -284,7 +284,7 @@ let listeners = {
 }
 
 
-listeners.ulEvents();
+listen.ulEvents();
 view.displayTodos();
 
 

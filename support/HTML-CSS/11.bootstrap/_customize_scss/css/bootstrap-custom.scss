@@ -1,0 +1,66 @@
+/* BOOTSTRAP OVERRIDES
+===============================================*/
+// Bootstrap 4 (DO NOT) ships with a _custom.scss file for easy overriding of default variables in /scss/_variables.scss.
+// Copy and paste relevant lines from there into this file, modify the values, and recompile your Sass to change our default values.
+// Be sure to remove the  !default flag from override values.
+// See more here: https://getbootstrap.com/docs/4.0/getting-started/theming/
+
+
+/* YOUR VARIABLES OVERRIDES
+===============================================*/
+/* BODY
+--------------------------------*/
+$body-bg: #fff;
+$body-color: #111;
+
+
+/* THEME COLORS
+--------------------------------*/
+$theme-colors: (
+
+  //DEFAULT COLORS - Only what you want to change
+  "primary": #5fd900,
+  "danger": #dd2221,
+  "success": #1196d0,
+
+  //CUSTOM COLORS - Your stuff !
+  "swiss-flag": #F00000,
+  "frommage": #f6eb84
+
+);
+
+
+/* SPACERS
+--------------------------------*/
+$spacer: 1rem;
+$spacers: (
+  //DEFAULT SPACERS - Only what you want to change
+  /*
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  */
+
+  //CUSTOM SPACERS - Your stuff !
+  6: ($spacer * 4),
+  7: ($spacer * 5),
+  8: ($spacer * 6),
+  "bob": ($spacer * 7),
+  "big-space":($spacer * 8)
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 800px,
+  lg: 1024px,
+  xl: 1368px
+);
+
+
+/* IMPORT ALL BOOTSTRAP VARIABLES
+===============================================*/
+@import "../bootstrap-4.3.1/scss/bootstrap";

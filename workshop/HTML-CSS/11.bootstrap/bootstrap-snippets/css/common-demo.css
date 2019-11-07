@@ -1,0 +1,17 @@
+/* FORMATAGE GLOBAL
+---------------------------------------*/
+html {
+  font-size: 16px;
+}
+
+/*FONT FAMILY*/
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+  background: #F5F5F5;
+}
+
+/*MAIN - */
+main {
+  min-height: 30rem; /*à la place du contenu...*/
+}

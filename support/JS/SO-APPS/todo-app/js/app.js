@@ -1,8 +1,8 @@
-/* HELPER - TARGET ANY DOM ELEMENT (jQuery style)
+/* HELPER - TARGET ANY DOM ELEMENT (jQuery style) [BAK]
 ======================================================*/
 //#region DOM HELPER FUNCTION
+/* 
 function $(elemStr, eventName, eventFunc) {
-
 
 	if (eventName !== undefined && eventFunc !== undefined) {
 
@@ -14,13 +14,12 @@ function $(elemStr, eventName, eventFunc) {
 
 	}
 
-
 	else {
 		return document.querySelector(elemStr);;
 	}
-
 	
 }
+*/
 //Usage:
 /*
 $('.myclass', 'click', function() {
@@ -562,7 +561,7 @@ let handlersVariante = {
 		const toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
 		
 		todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
-		toggleCompletedPositionInput = '';
+		toggleCompletedPositionInput.value = '';
 
 		view.displayTodos();
 
@@ -630,12 +629,14 @@ let utilities = {
 			countCompleted.textContent = uncompleted;
 
 
-			//CHANGE ITEMS TEXT IF uncompleted == 1 (items => item)
+			//CHANGE ITEMS PLURAL TEXT IF uncompleted == 1 (3 item[s] will be 1 item)
+			const pluralStr = document.getElementById("s"); //→ a span element containing the letter "s"
+
 			if(uncompleted === 1) {
-				$('#s').classList.add('hide');
+				pluralStr.classList.add('hide');
 			}
 			else {
-				$('#s').classList.remove('hide');
+				pluralStr.classList.remove('hide');
 			}	
 
 

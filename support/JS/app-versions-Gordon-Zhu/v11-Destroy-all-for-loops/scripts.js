@@ -1,6 +1,6 @@
 /* TODO LIST OBJECT
 ------------------------------------------------*/
-var todoList = {
+let todoList = {
 
 
 	todos: [
@@ -20,7 +20,7 @@ var todoList = {
 
 
 	//ADD TODO
-	addTodo: function (todoText) {
+	addTodo: function(todoText) {
 		this.todos.push({
 			todoText: todoText,
 			completed: false
@@ -29,36 +29,39 @@ var todoList = {
 
 
 	//CHANGE TODO
-	changeTodo: function (position, todoText) {
+	changeTodo: function(position, todoText) {
 		this.todos[position].todoText = todoText;
 	},
 
 
 	//DELETE TODO
-	deleteTodo: function (position) {
+	deleteTodo: function(position) {
 		this.todos.splice(position, 1);
 	},
 
 
 	//TOGGLE COMPLETED TODO
-	toggleCompleted: function (position) {
-		var todo = this.todos[position];
+	toggleCompleted: function(position) {
+		let todo = this.todos[position];
 		todo.completed = !todo.completed;
 	},
 
 
 	//TOGGLE ALL
-	toggleAll: function () {
+	toggleAll: function() {
 
-		var totalTodos = this.todos.length;
-		var completedTodos = 0;
+		let totalTodos = this.todos.length;
+		let completedTodos = 0;
+
 		// Get the number of completed todos
-		this.todos.forEach(function (todo) {
+		this.todos.forEach(function(todo) {
 			if (todo.completed === true) {
 				completedTodos++;
 			}
 		});
-		this.todos.forEach(function (todo) {
+
+		this.todos.forEach(function(todo) {
+
 			// If everything's true, make everything false.
 			if (completedTodos === totalTodos) {
 				todo.completed = false;
@@ -66,6 +69,7 @@ var todoList = {
 			} else {
 				todo.completed = true;
 			}
+
 		});
 
 	}
@@ -76,14 +80,14 @@ var todoList = {
 
 /* HANDLERS OBJECT
 ------------------------------------------------*/
-var handlers = {
+let handlers = {
 
 
 	/* ADD TODO
 	----------------------------------------------*/
-	addTodo: function () {
+	addTodo: function() {
 
-		var addTodoTextInput = document.getElementById('addTodoTextInput');
+		const addTodoTextInput = document.getElementById('addTodoTextInput');
 		todoList.addTodo(addTodoTextInput.value);
 		addTodoTextInput.value = '';
 
@@ -94,10 +98,10 @@ var handlers = {
 
 	/* CHANGE TODO
 	----------------------------------------------*/
-	changeTodo: function () {
+	changeTodo: function() {
 
-		var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
-		var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+		const changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+		const changeTodoTextInput = document.getElementById('changeTodoTextInput');
 		todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
 		changeTodoPositionInput.value = "";
 		changeTodoTextInput.value = '';
@@ -109,9 +113,9 @@ var handlers = {
 
 	/* DELETE TODO
 	----------------------------------------------*/
-	deleteTodo: function (position) {
+	deleteTodo: function(position) {
 
-		var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+		const deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
 		todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
 		deleteTodoPositionInput.value = '';
 
@@ -122,9 +126,9 @@ var handlers = {
 
 	/* TOGGLE (ITEM) COMPLETED STATUS
 	----------------------------------------------*/
-	toggleCompleted: function () {
+	toggleCompleted: function() {
 
-		var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+		const toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
 		todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
 		toggleCompletedPositionInput.value = '';
 
@@ -135,7 +139,7 @@ var handlers = {
 
 	/* TOGGLE ALL TODOs COMPLETED STATUS
 	----------------------------------------------*/
-	toggleAll: function () {
+	toggleAll: function() {
 
 		todoList.toggleAll();
 		view.displayTodos();
@@ -148,12 +152,12 @@ var handlers = {
 
 /* VIEW TODOs OBJECT
 ------------------------------------------------*/
-var view = {
+let view = {
 
 	//DISPLAY TODOs
-	displayTodos: function () {
+	displayTodos: function() {
 
-		var todoUl = document.querySelector('ul');
+		let todoUl = document.querySelector('ul');
 		todoUl.innerHTML = '';
 
 
@@ -163,12 +167,12 @@ var view = {
 			return;
 		}
 
-		todoList.todos.forEach(function (todo, position) {
+		todoList.todos.forEach(function(todo, position) {
 
-			var todoLi = document.createElement('li');
-			var todoTextWithCompletion = (todo.completed === true) ? '(x)' : '( )';
+			let todoLi = document.createElement('li');
+			let todoTextWithCompletion = (todo.completed === true) ? '(x)' : '( )';
 
-			var itemContent = '';
+			let itemContent = '';
 			itemContent += '<span class="item-state">' + todoTextWithCompletion + '</span>';
 			itemContent += '<span class="item-text">' + todo.todoText + '</span>';
 
@@ -183,9 +187,10 @@ var view = {
 	},
 
 
-	createDeleteButton: function (targetId) {
+	createDeleteButton: function(targetId) {
 
-		var deleteButton = document.createElement('button');
+		const deleteButton = document.createElement('button');
+		
 		deleteButton.textContent = 'x';
 		deleteButton.setAttribute('class', 'deleteButton');
 		deleteButton.setAttribute('data-id', targetId)
@@ -195,15 +200,15 @@ var view = {
 	},
 
 
-	setUpEventListeners: function () { //  Event Delegation Method
+	setUpEventListeners: function() { //  Event Delegation Method
 
-		var todosUl = document.querySelector('ul');
+		const todosUl = document.querySelector('ul');
 
-		todosUl.addEventListener('click', function (event) {
+		todosUl.addEventListener('click', function(event) {
 
 			// Get the element that was clicked on.
-			var elementClicked = event.target;
-			var targetId = parseInt(elementClicked.dataset.id); //console.log(targetId);
+			let elementClicked = event.target;
+			let targetId = parseInt(elementClicked.dataset.id); //console.log(targetId);
 
 			// Check if elementClicked is a delete button.
 			if (elementClicked.className === "deleteButton") {

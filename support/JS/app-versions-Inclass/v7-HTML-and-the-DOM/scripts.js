@@ -124,6 +124,7 @@ let toggleAllBtn = document.getElementById("toggleAllBtn");
 displayTodosBtn.addEventListener('click', function(event) {
   todoList.displayTodos();
 });
+
 toggleAllBtn.addEventListener('click', function() {
   todoList.toggleAll();
 });

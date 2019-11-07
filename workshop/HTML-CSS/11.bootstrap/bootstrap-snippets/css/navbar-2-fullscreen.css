@@ -1,0 +1,195 @@
+/* NAVIGATION
+---------------------------------------*/
+/*HAMBURGER*/
+.navbar-light .hamburger {
+  border: 0;
+}
+.hamburger {
+  position: relative;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 3;
+  transition: opacity .25s ease;
+}
+.hamburger:hover {
+  opacity: .7;
+}
+
+/*HAMBURGER - Design (seulement si on veut transformer le hamburger en close)*/
+.hamburger span {
+  background: #323232;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.hamburger.active span {
+  background: #FFF;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 11px;
+}
+.hamburger span:nth-of-type(3) {
+  top: 22px;
+}
+
+/*HAMBURGER - Transform hamburger to close*/
+.hamburger.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+}
+.hamburger.active .middle {
+  opacity: 0;
+}
+.hamburger.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+}
+
+
+/*OVERLAY*/
+.overlay {
+  position: fixed;
+  overflow: auto;
+  background-color: #333;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+}
+.overlay.open {
+  opacity: .93;
+  visibility: visible;
+  height: 100%;
+}
+
+/*NAV CONTENT*/
+.nav-content {
+  position: absolute;
+  z-index: 2;
+}
+.nav-content.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.nav-content.open .nav-content-inner {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/*MENU LIST (<ul>)*/
+.navbar-nav {
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+
+/*MENU LIST ITEMS (<li>)*/
+.navbar-nav li {
+  position: relative;
+  display: block;
+  height: 25%;
+  height: calc(100% / 3); /*remplacez 3 avec le nombre des vos menus !*/
+  min-height: 50px;
+  opacity: 0;
+}
+.nav-content.open li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+.nav-content.open li:nth-of-type(2) {
+  animation-delay: .4s;
+}
+.nav-content.open li:nth-of-type(3) {
+  animation-delay: .45s;
+}
+.nav-content.open li:nth-of-type(4) {
+  animation-delay: .50s;
+}
+
+/*MENU LIST LINKS (<a>)*/
+.navbar-nav li a {
+  display: block;
+  position: relative;
+}
+.navbar-nav li a:hover:after,
+.navbar-nav li a:focus:after,
+.navbar-nav li a:active:after,
+.navbar-nav li.active a:after {
+  width: 100%;
+}
+.navbar-nav li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #FFF;
+  transition: .35s;
+}
+
+/*LINKS COLOR*/
+.nav-content.open .navbar-nav .nav-link {
+  color: #FFF;
+}
+
+/*ANIMATION - Fade in right*/
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+
+/* MEDIA QUERIES
+---------------------------------------*/
+@media (min-width: 768px) {
+
+  /* NAVIGATION
+  --------------------------*/
+  .overlay {
+    display: none;
+  }
+
+  .nav-content,
+  .nav-content.open {
+    position: static;
+  }
+  .navbar-nav {
+    display: flex;
+  }
+  .navbar-nav li {
+    opacity: 1;
+    min-height: 0;
+  }
+  .navbar-nav li a:after {
+    display: none;
+  }
+
+}

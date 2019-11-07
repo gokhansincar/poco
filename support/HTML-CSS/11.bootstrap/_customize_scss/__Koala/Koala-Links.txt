@@ -1,0 +1,3 @@
+Koala is a GUI application for Less, Sass, Compass and CoffeeScript compilation, to help web developers to use them more efficiently. Koala can run in windows, linux and mac.
+
+Go to http://koala-app.com/ and download your version. It's FREE !

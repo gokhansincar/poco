@@ -1,0 +1,77 @@
+/*Juste pour formater un peu les exemples*/
+section + section {
+  margin-top: 3rem;
+}
+section > h2, section .h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #3d5c98;
+}
+section .h5 {
+  font-size: 1.3rem;
+}
+
+.exemple {
+  padding: 1.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  margin: 1rem -15px 0;
+  border: .2rem solid #f7f7f9;
+}
+
+.exemple .row > .col,
+.exemple .row > [class^=col-] {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid rgba(86,61,124,.2);
+}
+.exemple .row + .row {
+  margin-top: 1rem;
+}
+
+.bs-width div {
+  background-color: #eee;
+  margin-bottom: .5rem;
+}
+.bs-height {
+  height: 8rem;
+  background-color: rgba(255,0,0,0.1);
+}
+.bs-height div {
+  width: 120px;
+  background-color: rgba(0,0,255,.1);
+}
+
+/*FORM*/
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

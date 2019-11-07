@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Bootstrap custom CSS</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="css/bootstrap-default.css">
+
+    <!-- STYLES POUR CETTE DEMO -->
+    <link rel="stylesheet" href="css/demo-common.css">
+
+    <!-- YOUR STYLES - Default Boostrap values -->
+    <style>
+
+      /*GLOBAL CUSTOM CSS VARIABLES*/
+      :root {
+        --brand-link: #a86b0e;
+        --brand-link-hover: #754b09;
+      }
+
+      /*USING ROOT VARIABLES*/
+      a {
+        color: var(--brand-link);
+      }
+      a:hover {
+        color: var(--brand-link-hover);
+      }
+
+
+      /*CUSTOM CLASSES USING BOOSTRAP VARIABLES*/
+      .text-primary {
+        color: #69f000 !important;
+      }
+      .bg-primary {
+        background-color: #69f000 !important;
+      }
+
+      .text-success {
+        color: #c000f0 !important;
+      }
+      .bg-success {
+        background-color: #c000f0 !important;
+      }
+
+    </style>
+
+  </head>
+
+
+  <body>
+
+    <!-- HEADER -->
+    <header class="header pt-5 pb-5">
+      <h1 class="text-center mb-0 display-3">Bootstrap custom CSS</h1>
+      <p class="text-center mb-0 h5 text-secondary font-weight-300">How can you overwrite BS defailt values with your own CSS</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content container">
+
+      <!-- EXEMPLE - Colors-->
+      <section class="section">
+        <h2>Colors</h2>
+        <div class="exemple">
+
+          <h3 class="h5 mt-5">Bootstrap colors modified</h3>
+          <hr>
+          <div class="p-3 mb-2 bg-primary text-dark">.bg-primary is modified with !important</div>
+          <div class="p-3 mb-2 bg-success text-white">.bg-success is modified with !important</div>
+          <hr>
+
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER - RESSOURCES -->
+    <footer class="footer container pt-5 pb-5">
+      <h2>Bootstrap links</h2>
+      <ul class="list-unstyled">
+        <li><a href="https://getbootstrap.com/docs/4.3/getting-started/theming/" target="_blank">Theming Bootstrap Docs</a></li>
+        <li><a href="https://pikock.github.io/bootstrap-magic/app/#!/editor" target="_blank">Bootstrap Magic - Modify all BS defalt values !</a></li>
+      </ul>
+    </footer>
+
+  </body>
+
+
+</html>
