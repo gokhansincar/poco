@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remember CSS ?</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <header id="top-header" class="top-header row">
+
+      <figure id="logo" class="logo font700">
+        <a href="index.html">A-LOGO</a>
+      </figure>
+
+      <div id="nav-triggers" class="nav-triggers">
+        <a id="open-menu" class="open-menu trigger"><img src="img/burger-icon.svg" alt="burger icon"></a>
+        <a id="close-menu" class="close-menu trigger"><img src="img/close-icon.svg" alt="close icon"></a>
+      </div>
+
+      <nav id="main-nav" class="main-nav">
+        <ul id="menu" class="menu row">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    
+  </header>
+
+  <main>
+
+    <header class="AC">
+      <div class="deco-title">
+        <h1 id="main-title" class="main-title">Remember CSS ?</h1>
+        <h2 class="font300 M0">And after... the star attraction: <strong>jQuery</strong></h2>
+      </div>
+    </header>
+
+    <section id="section-1" class="section">
+      <h2>This is section 1</h2>
+      <div class="row container half">
+        <div class="col col-2">
+          <p><a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit. Vestibulum ac luctus metus. Maecenas dapibus turpis massa, a venenatis arcu elementum nec.</p>
+          <p>Aliquam erat volutpat. Aliquam a lacus pretium, fermentum justo vitae, maximus nisi. Proin consequat massa eget est semper, quis suscipit ligula vulputate.</p>
+        </div>
+        <div class="col col-2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac luctus metus. Maecenas dapibus turpis massa, a venenatis arcu elementum nec.</p>
+          <p>Aliquam erat volutpat. <a href="#">Aliquam a lacus pretium</a>, fermentum justo vitae, maximus nisi. Proin consequat massa eget est semper, quis suscipit ligula vulputate.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-2" class="section images">
+      <h2>This is section 2</h2>
+      <figure class="row">
+        <a data-fancybox="gallery" data-caption="Rusty" href="img/unsplash-01.jpg" class="col-3 scale"><img src="img/unsplash-01.jpg" alt="Rusty"></a>
+        <a data-fancybox="gallery" href="img/unsplash-02.jpg" class="col-3 scale"><img src="img/unsplash-02.jpg" alt="Mini houses"></a>
+        <a data-fancybox="gallery" href="img/unsplash-03.jpg" class="col-3 scale"><img src="img/unsplash-03.jpg" alt="Terra colors"></a>
+        <a data-fancybox="gallery" href="img/unsplash-04.jpg" class="col-3 scale"><img src="img/unsplash-04.jpg" alt="Terra colors"></a>
+        <a data-fancybox="gallery" href="img/unsplash-05.jpg" class="col-3 scale"><img src="img/unsplash-05.jpg" alt="Terra colors"></a>
+        <a data-fancybox="gallery" href="img/unsplash-06.jpg" class="col-3 scale"><img src="img/unsplash-06.jpg" alt="Swiss Mountain"></a>
+      </figure>
+
+      <iframe width="50%" height="315" src="https://www.youtube.com/embed/CefakRgj2xg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="50%" height="315" src="https://www.youtube.com/embed/NIcpH_MDR2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <p>
+        <a data-fancybox="video" href="https://www.youtube.com/embed/CefakRgj2xg">Click For See Videos </a>
+        <a data-fancybox="video" href="https://www.youtube.com/embed/NIcpH_MDR2Q"></a>
+
+      </p>
+
+    </section>
+
+    <section id="section-3" class="section">
+      <h2>This is section 3</h2>
+      <p>Phasellus consequat ligula ac ipsum semper eleifend. Donec pellentesque tortor sit amet aliquet interdum. Morbi commodo nisl nunc, ultrices blandit metus eleifend eu. Etiam ut diam diam. Duis euismod at augue ut hendrerit. Donec luctus, diam cursus ullamcorper mollis, nisl lectus facilisis odio, quis dapibus massa enim id ipsum.</p>
+      <p>Nam sodales tortor eget placerat laoreet. Cras nisi eros, sollicitudin nec nisi quis, iaculis congue mi. Etiam turpis metus, interdum sit amet dui vitae, iaculis ultrices mi. Sed sem nisl, dictum at ante malesuada, cursus vehicula eros. Praesent posuere, mauris id vestibulum blandit, est tortor condimentum eros.</p>
+    </section>
+
+    <section id="section-4" class="section">
+      <form action="" id="form1" class="form">
+        <h2>This is section 4 and this is a form</h2>
+        <p class="row">
+          <label for="user">Username:</label>
+          <input type="text" name="user" id="user" required>
+        </p>
+        <p class="row">
+          <label for="pass">Password:</label>
+          <input type="password" name="pass" id="pass" required>
+        </p>
+        <p>
+          <label></label>
+          <button type="submit">Submit</button>
+        </p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="AC">
+    <p>some &copy;2019 by nobody</p>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="app.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,483 @@
+ /*	Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+-------------------------------------------------------------------------- */
+/*#region RESET*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+/* Make box-sizing "border-box" as default */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*#endregion*/
+
+
+
+
+/* MAIN TAGS FORMATTING
+===================================================================================*/
+/*#region MAIN TAGS*/
+/* REFERENCE SIZE FOR FONTS
+ * We can use html{} ou :root{}
+----------------------------------------------*/
+html {
+  font-size: 17px;
+	scroll-behavior: smooth; /*optional*/
+}
+
+
+/* FONT - Default properties
+----------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	font-weight: 300; /*this is a "light" weight*/
+	letter-spacing: 0.025em;
+	line-height: 1.6em;
+	color: #333;
+}
+
+
+/* TITLES
+----------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+	font-weight: 300;
+	line-height: 1.75em;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
+h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+	margin-bottom: 0;
+}
+h2 {
+  font-weight: 400;
+  font-size: 1.3em;
+	letter-spacing: 0.03em;
+}
+h3 {
+	font-size: 1.1em;
+	font-weight: 400;
+}
+
+
+/* PARAGRAPHS
+----------------------------------------------*/
+p {
+  margin-bottom: 1em;
+}
+
+
+/* LINKS
+----------------------------------------------*/
+a {
+  text-decoration: none;
+	outline: none;
+	color: inherit; /*#3fb1a3*/
+}
+p a {
+	border-bottom: dotted 1px;
+	transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+section a:hover {
+	border-bottom-color: transparent;
+}
+
+
+/* STANDARD TAGS for bold
+----------------------------------------------*/
+strong, b {
+	font-weight: 400;
+}
+
+
+/* IMAGES
+----------------------------------------------*/
+img {
+	display: block;
+  width: 100%;
+  height: auto;
+  
+}
+
+
+/* FORM ELEMENTS
+----------------------------------------------*/
+input,
+select {
+  width: 200px;
+}
+label {
+  display: inline-block;
+  width: 100%;
+  max-width: 100px;
+}
+
+
+/* SELECTIONS, PLACEHOLDERS
+----------------------------------------------*/
+/*Document selection*/
+::selection {
+	background-color: #282e3e;
+	color:#fff;
+}
+
+/*Form elements placeholders*/
+::placeholder {
+	color:#ccc;
+}
+/*#endregion*/
+
+
+
+
+/* HELPER CLASSES - Useful classes to speed up the design
+===================================================================================*/
+/*#region HELPER CLASSES*/
+/*Font*/
+.font300 {
+  font-weight: 300;
+}
+.font400 {
+  font-weight: 400;
+}
+.font700 {
+  font-weight: 700;
+}
+
+.AC {
+  text-align: center;
+}
+
+
+/*Margins and Paddings*/
+.M0 {
+  margin: 0;
+}
+
+
+/*Rows and Columns*/
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+form .row,
+.row.flex-start {
+  justify-content: flex-start;
+  text-align: left;
+}
+.row.flex-end {
+  justify-content: flex-end;
+  text-align: right;
+}
+.col-2 {
+  width: 45%;
+}
+.col-3 {
+  width: 280px;
+}
+
+
+/*Header with borders top-bottom*/
+.deco-title {
+  width: auto;
+  display: inline-block;
+  padding: 1em .5em;
+  text-align: center;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+}
+
+
+/*Scale when hover helper*/
+.scale {
+  overflow: hidden;
+  height: 163px;
+  margin-bottom: 2em;
+}
+.scale img {
+	transition: transform .4s ease;
+}
+.scale img:hover {
+	transform: scale(1.5) rotate(10deg);
+}
+/*#endregion*/
+
+
+
+/* LAYOUT - DESKTOP FIRST STYLES
+===================================================================================*/
+/*#region LAYOUT*/
+/* COMMON
+----------------------------------------------*/
+/*Header*/
+header,
+footer {
+  padding: 2vh 4%;
+}
+
+header {
+  margin: 0 0 2em;
+}
+
+/*Main*/
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.header-is-fixed main {
+  margin-top: 6.4em;
+}
+
+/*Sections*/
+section {
+  background: #f5f5f5;
+  padding: 2em 4%;
+  margin-bottom: 3em;
+}
+
+
+/* TOP HEADER
+--------------------------------------------------*/
+.top-header {
+  min-height: 9vh;
+  border-bottom: solid 1px #e5e5e5;
+}
+.header-is-fixed .top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255,255,255,.95);
+}
+
+
+/* MENU
+--------------------------------------------------*/
+.menu li {
+  margin-left: 2em;
+  display: inline-block;
+  position: relative;
+}
+.menu li.active {
+  border-top: solid 1px #000;
+}
+.menu a {
+  text-transform: uppercase;
+  border: 0;
+  font-size: .88235em; /*the goal is 15px*/
+  font-weight: 400;
+  color: #8a8a8a;
+  transition: color .3s ease;
+}
+.menu a:hover,
+.menu .active a {
+  color: #000;
+}
+
+/*NAV TRIGGERS - Hide this for Desktops*/
+.nav-triggers {
+  display: none;
+}
+/*#endregion*/
+
+
+
+/* MEDIA QUERIES (REMEMBER! This is DESKTOP FIRST (so, use "max-width")
+===================================================================================*/
+/*#region MEDIA QUERIES*/
+/*TABLETS*/
+@media (max-width: 800px) {
+
+  /*Change the root font-size*/
+  html {
+    font-size: 18px;
+  }
+
+
+  /* NAV TRIGGERS
+  ---------------------------------------------*/
+  /*#region*/
+  /*Mobile menus triggers container*/
+  .nav-triggers {
+    width: 44px;
+    height: 44px;
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    /* background: #fc0; */
+  }
+
+  /*Common for both triggers*/
+  .trigger {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: position .3s ease;
+  }
+  .trigger img {
+    max-width: 60%;
+  }
+
+
+  /* WHEN MENU IS CLOSE
+  -------------------------------*/
+  .close-menu {
+    left: -44px;
+  }
+
+
+  /* WHEN MENU IS OPEN
+  -------------------------------*/
+  /* if you want to block the scroll when the menu is open do this: */
+  body.menu-is-open {
+    overflow: hidden;
+  }
+
+  /* if you don't block the scroll, use do this: */
+  /*
+  .menu-is-open .top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  */
+
+  /*If you want to see the logo when menu is open*/
+  .menu-is-open .logo {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .menu-is-open .open-menu {
+    left: -44px;
+  }
+  .menu-is-open .close-menu {
+    left: 0;
+    filter: invert(1);
+  }
+  /*#endregion*/
+
+
+  /* MOBILE MENU
+  ---------------------------------------------*/
+  /*#region*/
+  .main-nav {
+    /* display: none; */ /*Only if not using opacity or some animation*/
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0,0,0,.95);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity .6s ease;
+  }
+  .menu-is-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .main-nav .menu {
+    display: block; /*this will the flex display of the row*/
+    text-align: center;
+  }
+  .menu li {
+    display: block;
+  }
+  .menu li a,
+  .menu li.active a {
+    display: block;
+    padding: 1em 4%;
+    color: #888;
+
+    font-size: 5vw;
+  }
+  .menu li.active a,
+  .menu li a:hover {
+    color: #fff;
+  }
+  .menu li.active {
+    border-top: 0;
+  }
+  /*#endregion*/
+
+
+  /* LAYOUT FOR MOBILE DEVICES. Let's see...
+  ---------------------------------------------*/
+  /*#region*/
+  /*We want all display flexes (.row class) to be block, except for the top header*/
+  .row:not(.top-header) {
+    display: block; /* Try also  flex-direction: column;*/
+  }
+
+  .col-2, .col-3 {
+    width: 100%;
+  }
+
+  /* .images {
+  } */
+
+  .scale {
+    display: block; /*margin will not work on an inline element*/
+    margin-bottom: 2em;
+  }
+  .scale img:hover {
+    transform: none;
+  }
+  /*#endregion*/
+
+}
+
+
+/*PHONES*/
+@media (max-width: 480px) {
+
+  section {
+    text-align: center;
+  }
+
+}
+/*#endregion MEDIA QUERIES*/
