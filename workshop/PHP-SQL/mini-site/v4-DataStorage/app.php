@@ -1,14 +1,25 @@
 <?php
-// Default Page Key
-$page = 'index';
+// GRAB THE KEY FROM THE URL
+$explode_url = explode('/', $_SERVER['REQUEST_URI']);  // an array 
+$page = array_pop($explode_url); 
 
-// GET the key from URL if is set
-if( isset($_GET['page']) ){
-$page = $_GET['page']; // echo $page;
+// Default Page Key
+if(!$page) {
+   $page = 'index';
 }
 
-// compact version
-// $page = isset($_GET['page']) ? $_GET['page'] : 'index';
+
+
+/* SITE DATA
+-----------------------------------------------------------------------*/ 
+function site_data() {
+
+   $data_content = file_get_contents('data.json');  // debug($data_content);
+   $data_arr = json_decode($data_content, true); // debug($data_arr);
+
+   return $data_arr;
+
+}
 
 /* MENUS
 -----------------------------------------------------------------------*/ 
@@ -18,7 +29,8 @@ function pages($page = '', $location = '') {
 
 
     // PAGES DATA
-    $pages_arr = [
+/*  
+   $pages_arr = [
         'index' => [
            'title' => 'Title for INDEX page',
            'menu' => 'HOME'
@@ -39,6 +51,9 @@ function pages($page = '', $location = '') {
             'menu' => 'CONTACT'
          ]
     ];
+     */
+
+     $pages_arr = site_data() ;
 
     if($location === 'head') {
        $title = $pages_arr[$page]['title'];  // echo($title); 
@@ -52,8 +67,16 @@ function pages($page = '', $location = '') {
 
     $active = ($page === $key) ? ' active' : '';
 
-    echo '<li class="menu-item'.$active.'"><a href="?page='.$key.'">'.$item['menu'].'</a></li>';
+    echo '<li class="menu-item'.$active.'"><a href="'.$key.'">'.$item['menu'].'</a></li>';
 
     }
 
+}
+
+
+// CUSTOM DEBUG FUNCTION
+function debug($value) {
+   echo '<pre>'; 
+   print_r($value);
+   echo '</pre>';
 }

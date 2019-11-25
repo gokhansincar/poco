@@ -1,14 +1,12 @@
 <?php
+// GRAB THE KEY FROM THE URL
+$explode_url = explode('/', $_SERVER['REQUEST_URI']);  // an array 
+$page = array_pop($explode_url); 
+
 // Default Page Key
-$page = 'index';
-
-// GET the key from URL if is set
-if( isset($_GET['page']) ){
-$page = $_GET['page']; // echo $page;
+if(!$page) {
+   $page = 'index';
 }
-
-// compact version
-// $page = isset($_GET['page']) ? $_GET['page'] : 'index';
 
 /* MENUS
 -----------------------------------------------------------------------*/ 
@@ -52,7 +50,7 @@ function pages($page = '', $location = '') {
 
     $active = ($page === $key) ? ' active' : '';
 
-    echo '<li class="menu-item'.$active.'"><a href="?page='.$key.'">'.$item['menu'].'</a></li>';
+    echo '<li class="menu-item'.$active.'"><a href="'.$key.'">'.$item['menu'].'</a></li>';
 
     }
 
