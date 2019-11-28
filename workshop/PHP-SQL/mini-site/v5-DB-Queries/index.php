@@ -6,12 +6,12 @@
 
 <head>
   <meta charset="utf-8">
-  <title><?php echo pages($page, 'head'); ?></title>
+  <title><?php echo pages($page, 'head'); ?> || <?php echo $settings['global_title']; ?></title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How to use PHP to create a dynamic website">
-  <meta name="keywords" content="php,dynamic site,cool,raoul">
-  <meta name="author" content="Sorin Paun">
+  <meta name="description" content="<?php echo $settings['description']; ?>">
+  <meta name="keywords" content="<?php echo $settings['keywords']; ?>">
+  <meta name="author" content="<?php echo $settings['author']; ?>">
 
   <link rel="icon" href="img/favicon.png">
 

@@ -4,6 +4,7 @@
 
 // include_once();
 require_once('pdo.php');
+require_once('queries.php');
 
 // GRAB THE KEY FROM THE URL
 $explode_url = explode('/', $_SERVER['REQUEST_URI']); // an array
