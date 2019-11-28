@@ -8,11 +8,11 @@
 </head>
 <body>
   <ul>
-    <li><a href="v1-Static/">V1</a></li>
-    <li><a href="v2-PHP/">V2</a></li>
-    <li><a href="v3-Friendly-URL">V3</a></li>
-    <li><a href="v4-DataStorage">V4</a></li>
-    <li><a href=""></a></li>
+    <li><a href="v1-Static/">v1-Static/</a></li>
+    <li><a href="v2-PHP/">v2-PHP/</a></li>
+    <li><a href="v3-Friendly-URL/">v3-Friendly-URL/</a></li>
+    <li><a href="v4-Data-Storage/">v4-Data-Storage/</a></li>
+    <li><a href="v5-DB-Queries/">v5-DB-Queries</a></li>
     <li><a href=""></a></li>
     <li><a href=""></a></li>
     <li><a href=""></a></li>

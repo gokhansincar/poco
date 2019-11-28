@@ -1,15 +1,12 @@
 <?php
-
-include ("app.php");
-
+  include("app.php");
 ?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
-  <title><?php echo pages($page, 'head');?></title>
+  <title><?php echo pages('index', 'head'); ?></title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="How to use PHP to create a dynamic website">
@@ -50,7 +47,7 @@ include ("app.php");
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy;2019 -  <?php echo date("Y"); ?> Heavy Metal Company</p>
+    <p>&copy;1998 - <?php echo date('Y'); ?> - Heavy Metal Company</p>
   </footer>
 
 </body>

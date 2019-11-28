@@ -6,7 +6,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title><?php echo pages('index', 'head'); ?></title>
+  <title><?php echo pages($page, 'head'); ?></title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="How to use PHP to create a dynamic website">
